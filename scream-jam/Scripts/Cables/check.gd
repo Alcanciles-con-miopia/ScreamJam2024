@@ -18,10 +18,10 @@ func _check():
 			cantCorrectos += 1
 			print(grid[4-i].Clavija)
 			if grid[4-i].Clavija >= 0:
-				grid[4-i].clavijaState = Global.ClavijasState.VERDE
+				grid[i].clavijaState = Global.ClavijasState.VERDE
 		else:
 			if grid[4-i].Clavija >= 0:
-				grid[4-i].clavijaState = Global.ClavijasState.ROJA
+				grid[i].clavijaState = Global.ClavijasState.ROJA
 				Global.SceneManager.sfx_2.stream = load("res://Sounds/clavijas/Clavija_mal.wav")
 				Global.SceneManager.sfx_2.play()
 	

@@ -7,8 +7,8 @@ var snap = false 		# para saber si esta vinculada a una drop zone
 var refDropZone : StaticBody2D = null # guarda referencia a la dropZone cuando el objeto esta dentro
 var offset : Vector2
 var initialPos : Vector2
-var Clavija: int = 0 # al inicio se le carga un int sol != de 0 a la clavija y a la dropZone 
-					 # si coinciden respuesta correcta, las dropZones que no sean solucion = 0
+var Clavija: int = -2 # al inicio se le carga un int sol > de 0 a la clavija y a la dropZone 
+					# si coinciden respuesta correcta, las dropZones que no sean solucion < 0
 var refBombilla : Sprite2D = null # ref a su bombilla
 var BombillaApagada : Texture = load("res://Images/bombilla_apagada.png")
 var BombillaVerde : Texture = load("res://Images/bombilla_verde.png")
@@ -23,6 +23,8 @@ var ClavijaDentro : Texture = load("res://Images/clavija_inser.png")
 
 
 var clavijaState
+var timeToApagar: float = 3
+var elapsedTimeToApagar: float = 0
 
 var lastpos: Vector2
 var desfaseMovimiento: Vector2 = Vector2(0,0)
@@ -39,8 +41,18 @@ func _input(event: InputEvent) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _process(delta: float) -> void:
-	#if (clavijaState != Global.ClavijasState.VERDE or clavijaState != Global.ClavijasState.ROJA)and Clavija >= 0 :
-	#	clavijaState = Global.ClavijasState.REGU
+	if clavijaState == Global.ClavijasState.ROJA:
+		if elapsedTimeToApagar < timeToApagar:
+			elapsedTimeToApagar += delta
+		else:
+			if Clavija >=0:
+				clavijaState = Global.ClavijasState.REGU
+			else:
+				clavijaState = Global.ClavijasState.APAGADA
+			elapsedTimeToApagar = 0
+	
+	if Clavija < 0:
+		clavijaState = Global.ClavijasState.APAGADA
 	
 	match clavijaState:
 		Global.ClavijasState.APAGADA:
@@ -98,8 +110,9 @@ func _on_area_2d_mouse_exited():
 		scale = Vector2(1, 1) # feedback
 
 func _check_Clavija() -> void:
+	refBombilla.get_parent().llamadaID = Clavija
 	# si no esta conectada sale del metodo
-	if refDropZone == null:
+	if Clavija < 0 or refDropZone == null:
 		return
 	#-------Comprobacion y señales de que sea verdad-------
 	var verdad = false;

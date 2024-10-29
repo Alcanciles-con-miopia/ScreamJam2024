@@ -11,7 +11,7 @@ func _ready() -> void:
 	Global.totransition.connect(_cambio_idioma)
 
 func _cambio_idioma():
-	label.text = Global.contexto[Global.lenguaje]
+	label.text = JsonData.json_data.UI.Context
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

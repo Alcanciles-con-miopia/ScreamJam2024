@@ -70,5 +70,6 @@ color = Color(0.0784314, 0.0980392, 0.152941, 0)
 libraries = {
 "": SubResource("AnimationLibrary_ja8s8")
 }
+speed_scale = 3.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

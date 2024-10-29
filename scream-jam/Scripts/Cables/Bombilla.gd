@@ -1,6 +1,6 @@
 extends Node
 
-var llamadaID: int = -1
+var llamadaID: int = -2
 var cableID: int = 0
 
 func _PlayLlamada():

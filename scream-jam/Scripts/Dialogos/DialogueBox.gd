@@ -26,7 +26,7 @@ func _ready() -> void:
 	Global.playLlamada.connect(_start_quest)
 	Global.allClavijasCorrect.connect(_start_quest)
 	Global.nextLevel.connect(_next_level)
-	
+	$AnimationPlayer.play("NextDialogue")
 	label.text = ""
 
 func _process(delta: float) -> void:

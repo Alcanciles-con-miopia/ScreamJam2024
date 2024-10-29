@@ -28,6 +28,10 @@ var maxTime:float = 1
 var elapsedTime: float = 0
 var newlevel: bool = false
 
+
+var rng = RandomNumberGenerator.new()
+
+
 func _ready() -> void:
 	Global.nextLevel.connect(_onCheck)
 	#var ambient = SceneManager.ambient_sound
@@ -88,19 +92,29 @@ func _new_level():
 		$CheckClavijas.grid[i].refBombilla.get_parent().llamadaID =-1
 		$CheckClavijas.grid[i].clavijaState = Global.ClavijasState.APAGADA
 	
-	# vamos por el nivel 1, tenemos 1 llamada
+	var usedPos = []
 	
 	#establece las llamadas y sus clavijeros
 	for i in Global.niveles[Global.nivel]:
 		if Global.llamadaActual >= JsonData.json_data.Dialoges.size()-1:
 			noMasLlamadas= true
 			print("Se acabo el juego")
+		
+		# setea el numero en el clavijero
 		gridClavijeros[JsonData.json_data.Dialoges[Global.llamadaActual].Clavijero].DropZone = Global.llamadaActual
-		$CheckClavijas.grid[i].clavijaState = Global.ClavijasState.REGU
+		
+		# creamos un numero aleatorio no usado
+		var my_random_number = rng.randi_range(0, 4)
+		while not my_random_number in usedPos:
+			usedPos.append(my_random_number)
+			my_random_number = rng.randi_range(0, 4)
+			
+		# si no esta el numero en el array asigna sus cosas a la clavija
+		$CheckClavijas.grid[my_random_number].clavijaState = Global.ClavijasState.REGU
 		Global.SceneManager.sfx_2.stream = load("res://Sounds/clavijas/encendido_bombilla.wav")
 		Global.SceneManager.sfx_2.play()
-		$CheckClavijas.grid[i].Clavija = Global.llamadaActual
-		$CheckClavijas.grid[i].refBombilla.get_parent().llamadaID = Global.llamadaActual
+		$CheckClavijas.grid[my_random_number].Clavija = Global.llamadaActual
+		$CheckClavijas.grid[my_random_number].refBombilla.get_parent().llamadaID = Global.llamadaActual
 		Global.llamadaActual += 1
 	
 	Global.nivel += 1

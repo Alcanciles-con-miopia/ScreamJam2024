@@ -1,4 +1,12 @@
 {
+	"UI":{
+		"Lenguage": "Lenguage",
+		"Exit": "Exit",
+		"Papers": "<- Papers",
+		"Discarts": "Discarts ->",
+		"Context": "21st of November, 1946\nTomillar del Alba\nSpain",
+		"Clue": "Cattle blvd 15"
+	},
 	"Dialoges":[{
 			"Clavijero": 9,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
@@ -53,7 +61,7 @@
 			"Texts":[
 				{
 					"Person": 0,
-					"Text": "Hello, please connect the Channeled Avenue number 23 with Cattle Boulevard number 89 for me… My residence is on the far southeast part of the village.@"
+					"Text": "Hello, please connect the Channeled Avenue number 23 with Cattle Boulevard number 89 for me… My residence is on the far southweast part of the village.@"
 				},
 				{
 					"Person": 0,
