@@ -2,10 +2,10 @@
 	"UI": {
 		"Lenguage": "Language",
 		"Exit": "Exit",
-		"Papers": "<- Papers",
-		"Discarts": "Discards ->",
+		"Papers": "<- Pick up",
+		"Discarts": "Discard ->",
 		"Context": "21st of November, 1946\nTomillar del Alba\nSpain",
-		"Clue": "Cattle blvd 15"
+		"Clue": "Cattle Blvd. 15"
 	},
 	"Dialoges": [
 		{
