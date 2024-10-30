@@ -1,5 +1,5 @@
 {
-	"UI":{
+	"UI": {
 		"Lenguage": "Language",
 		"Exit": "Exit",
 		"Papers": "<- Papers",
@@ -7,26 +7,27 @@
 		"Context": "21st of November, 1946\nTomillar del Alba\nSpain",
 		"Clue": "Cattle blvd 15"
 	},
-	"Dialoges":[{
+	"Dialoges": [
+		{
 			"Clavijero": 9,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
-					"Text": "Greetings! I am D.A.I.S.Y (Displayed artificial intelligence system)! You are listening to a pre-recorded call. We shall commence. To start, connect Origin Street, number 114, with the Cattle Boulevard number 15."
+					"Text": "Greetings! I am D.A.I.S.Y (Displayed artificial intelligence system)! You are listening to a pre-recorded call. We shall commence. To start, connect Creation Street, number 114, with the Cattle Boulevard number 15."
 				},
 				{
 					"Person": 0,
@@ -42,26 +43,26 @@
 				}
 			]
 		},
-		{ 
+		{
 			"Clavijero": 19,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
-					"Text": "Hello, please connect the Channeled Avenue number 23 with Cattle Boulevard number 89 for me… My residence is on the far southweast part of the village.@"
+					"Text": "Hello, please connect the Channeled Avenue number 23 with Cattle Boulevard number 89 for me… My residence is on the far southeast part of the village.@"
 				},
 				{
 					"Person": 0,
@@ -101,19 +102,19 @@
 			"Clavijero": 7,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "Hello. May you please connect the Creation 60 street with the Pedro Domecq 64 Street? The latter is towards the center, a bit to the north.@"
@@ -152,19 +153,19 @@
 			"Clavijero": 11,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "Good afternoon… Would you be so kind as to please connect the Hope Avenue 46 with the Street of Independence number 34 for me? The Street of Independence is around the village center, facing the west just a smidge. It corners with Hope Avenue 46.@"
@@ -227,22 +228,22 @@
 			"Clavijero": 8,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
-					"Text": "Good Afternoon… If you are so kind as to link me with the Millán Astray 14 Street… it's the one between Cattle Boulevard and Creation Street…I am from Cattle Boulevard number 68.@"
+					"Text": "Good Afternoon… If you are so kind as to link me with the Millán Astray 14 Street… it's the one between Cattle Boulevard and Creation Street… I am from Cattle Boulevard number 68.@"
 				},
 				{
 					"Person": 0,
@@ -294,19 +295,19 @@
 			"Clavijero": 10,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "Hello, this is of the most utmost importance. Hope Avenue Number 17, please. I'm from Creation street number 10.@"
@@ -361,19 +362,19 @@
 			"Clavijero": 0,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "Hello, darling, I call from Pedro Domecq 22, it's north from Independence Street. I wonder if you would link me with Hope Street number 5, thank you in advance.@"
@@ -408,19 +409,19 @@
 			"Clavijero": 16,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "Evening…  Queipo Plains 2, which borders Channeled Street, please… I am in Cattle Boulevard 68…@"
@@ -463,19 +464,19 @@
 			"Clavijero": 12,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "If you could be so kind…put me on call with Street Of Independence 12, please. I'm from Hope Street 17@"
@@ -538,19 +539,19 @@
 			"Clavijero": 13,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "Link Hope 17 with Millán Astray 37.@"
@@ -585,19 +586,19 @@
 			"Clavijero": 17,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "Queipo Plains number 61 with number 37, thanks, thanks.@"
@@ -656,19 +657,19 @@
 			"Clavijero": 10,
 			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
 			"Color1": {
-				"R":0,
-				"G":1,
-				"B":1,
-				"A":1
+				"R": 0,
+				"G": 1,
+				"B": 1,
+				"A": 1
 			},
 			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2":{
-				"R":1,
-				"G":0,
-				"B":1,
-				"A":1
+			"Color2": {
+				"R": 1,
+				"G": 0,
+				"B": 1,
+				"A": 1
 			},
-			"Texts":[
+			"Texts": [
 				{
 					"Person": 0,
 					"Text": "Good day, if you do me the favour, link Independence Street number 34 with Hope Street number 17. Thank you.@"
