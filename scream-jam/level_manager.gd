@@ -73,13 +73,13 @@ func _ready() -> void:
 		clavija.origin.global_position = pos_abajo;
 		$CheckClavijas.grid[i].initialPos = pos
 		$CheckClavijas.grid[i].position = pos
+	Global.cables = $CheckClavijas.grid
 		
 	# Asignacion de valores
-	for i in height * weight:
-		gridClavijeros[i].DropZone = Global.grid[i]
-	for i in weight:
-		$CheckClavijas.grid[i].Clavija = i + 1;
-	Global.cables = $CheckClavijas.grid
+	#for i in height * weight:
+	#	gridClavijeros[i].DropZone = Global.grid[i]
+	#for i in weight:
+	#	$CheckClavijas.grid[i].Clavija = i + 1;
 
 func _new_level():
 	
@@ -108,7 +108,9 @@ func _new_level():
 		while not my_random_number in usedPos:
 			usedPos.append(my_random_number)
 			my_random_number = rng.randi_range(0, 4)
-			
+		# numero del cable a reproducir primero
+		Global.primerCable = my_random_number
+		
 		# si no esta el numero en el array asigna sus cosas a la clavija
 		$CheckClavijas.grid[my_random_number].clavijaState = Global.ClavijasState.REGU
 		Global.SceneManager.sfx_2.stream = load("res://Sounds/clavijas/encendido_bombilla.wav")

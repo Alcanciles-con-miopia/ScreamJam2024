@@ -31,7 +31,7 @@ func _check():
 	if correct:
 		Global.nivelCorrecto = true;
 		#emite la señal con la clavija de mas a la derecha
-		Global.allClavijasCorrect.emit(grid[0].Clavija)
+		Global.allClavijasCorrect.emit(grid[Global.primerCable].Clavija)
 		Global.IDCableActual = 0
 		cantCorrectos = 0
 		

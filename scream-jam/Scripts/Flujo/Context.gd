@@ -1,7 +1,7 @@
 extends Control
 
 var elapsedTime: float = 0
-var maxTime: float = 6
+var maxTime: float = 3
 var textDisplay: float = 0
 var aumentado: bool = false
 @onready var label: Label = $Label

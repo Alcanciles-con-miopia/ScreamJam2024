@@ -17,27 +17,9 @@ var current_scene : Scenes = 0
 
 enum ClavijasState {APAGADA, REGU, VERDE, ROJA, NULL }
 
-var lenguaje: int = 0
-var contexto: Array = [
-	"21st of November, 1946\nTomillar del Alba\nSpain",
-	"21 de Noviembre, 1946\nTomillar del Alba\nEspaña"
-]
-var botonLenguaje: Array = [
-	"Language",
-	"Idioma"
-]
-var botonSalir: Array = [
-	"Exit",
-	"Salir"
-]
-
 var SceneManager
 # LOGICA
-#grid ejemplo 0
-var grid := [ 0, 0, 0, 0, 1,  
-			  2, 0, 0, 0, 0,
-			  3, 0, 0, 0, 5,
-			  0, 0, 4, 0, 0]
+var primerCable: int = 0
 var correctos := [false, false, false, false, false]
 var nivelCorrecto : bool = false
 var cables = []
