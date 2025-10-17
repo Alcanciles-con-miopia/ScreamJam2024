@@ -23,7 +23,17 @@ func _process(delta: float) -> void:
 			label.visible_ratio =  1
 		elapsedTime += delta
 	elif not aumentado:
-		Global.current_scene = Global.Scenes.CONTEXT
-		Global.to_scene = Global.Scenes.CLAVIJAS
-		Global.totransition.emit()
-		aumentado = true
+		_to_clavijas()
+
+func _input(_event):
+	if Input.is_action_just_pressed("Skip"):
+		label.text = JsonData.json_data.UI.Context
+		label.visible_ratio =  1
+		textDisplay = 1
+		_to_clavijas()
+		
+func _to_clavijas():
+	Global.current_scene = Global.Scenes.CONTEXT
+	Global.to_scene = Global.Scenes.CLAVIJAS
+	Global.totransition.emit()
+	aumentado = true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://5w0xl8fledrk"]
 
-[ext_resource type="Script" path="res://Scripts/Flujo/fade.gd" id="1_mphof"]
+[ext_resource type="Script" uid="uid://lrntf3niqkiq" path="res://Scripts/Flujo/fade.gd" id="1_mphof"]
 
 [sub_resource type="Animation" id="Animation_slqx3"]
 length = 0.001
@@ -49,9 +49,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ja8s8"]
 _data = {
-"RESET": SubResource("Animation_slqx3"),
-"fade_in": SubResource("Animation_fm15p"),
-"fade_out": SubResource("Animation_2ljnn")
+&"RESET": SubResource("Animation_slqx3"),
+&"fade_in": SubResource("Animation_fm15p"),
+&"fade_out": SubResource("Animation_2ljnn")
 }
 
 [node name="FadeScene" type="CanvasLayer"]

@@ -1,16 +1,16 @@
 [gd_scene load_steps=12 format=3 uid="uid://cqhpk5lnxqt8g"]
 
-[ext_resource type="Script" path="res://Scripts/Dialogos/DialogueBox.gd" id="1_scsyc"]
+[ext_resource type="Script" uid="uid://bcv5chpx60n4n" path="res://Scripts/Dialogos/DialogueBox.gd" id="1_scsyc"]
 [ext_resource type="StyleBox" uid="uid://bg66b6fu8do5t" path="res://Styles/Buttons/dialogue_box.tres" id="2_451hf"]
 [ext_resource type="FontFile" uid="uid://ciftagbtm0u2v" path="res://Fonts/subs.ttf" id="3_m2pdd"]
 [ext_resource type="Texture2D" uid="uid://d1wqqqqxep4sr" path="res://Images/flecha.png" id="4_nec1o"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8o80"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwjd2"]
+bg_color = Color(0.105882, 0.105882, 0.105882, 0.654902)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cin5k"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwjd2"]
-bg_color = Color(0.105882, 0.105882, 0.105882, 0.654902)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8o80"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2vx2i"]
 content_margin_left = 150.0
@@ -26,10 +26,10 @@ tracks/0/path = NodePath("TextureRect:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
+"times": PackedFloat32Array(0.033333335, 0.5, 1),
 "transitions": PackedFloat32Array(12.5, 0.5, 2.5),
 "update": 0,
-"values": [Vector2(1799, 105), Vector2(1799, 120), Vector2(1799, 105)]
+"values": [Vector2(1900, 60), Vector2(1900, 75), Vector2(1900, 60)]
 }
 
 [sub_resource type="Animation" id="Animation_6q6ub"]
@@ -49,8 +49,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_csf0i"]
 _data = {
-"NextDialogue": SubResource("Animation_f0lgt"),
-"RESET": SubResource("Animation_6q6ub")
+&"NextDialogue": SubResource("Animation_f0lgt"),
+&"RESET": SubResource("Animation_6q6ub")
 }
 
 [node name="DialogueBox" type="Control"]
@@ -66,22 +66,26 @@ script = ExtResource("1_scsyc")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 179.0
+offset_bottom = 144.0
 grow_horizontal = 2
-theme_override_styles/focus = SubResource("StyleBoxEmpty_v8o80")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cin5k")
-theme_override_styles/hover = ExtResource("2_451hf")
-theme_override_styles/pressed = ExtResource("2_451hf")
 theme_override_styles/normal = SubResource("StyleBoxFlat_wwjd2")
+theme_override_styles/pressed = ExtResource("2_451hf")
+theme_override_styles/hover = ExtResource("2_451hf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cin5k")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v8o80")
 autowrap_mode = 3
 icon_alignment = 1
 expand_icon = true
 
 [node name="Label" type="Label" parent="Button"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = -0.053000003
+anchor_right = 1.0530001
+anchor_bottom = 0.90400004
+offset_left = -0.23999023
+offset_right = 0.23986816
+offset_bottom = 13.82399
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3_m2pdd")
@@ -104,7 +108,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -121.0
 offset_top = -96.0
-offset_bottom = 25.0
+offset_bottom = 25.00003
 grow_horizontal = 0
 grow_vertical = 0
 rotation = 1.5708
@@ -113,7 +117,7 @@ texture = ExtResource("4_nec1o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_csf0i")
+&"": SubResource("AnimationLibrary_csf0i")
 }
 
 [connection signal="pressed" from="Button" to="." method="_next_dialogue"]

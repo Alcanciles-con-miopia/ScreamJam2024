@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://1wce6sj1bl8d"]
 
-[ext_resource type="Script" path="res://Scripts/Flujo/Context.gd" id="1_fey3i"]
+[ext_resource type="Script" uid="uid://iej2cl3qnf8v" path="res://Scripts/Flujo/Context.gd" id="1_fey3i"]
 [ext_resource type="FontFile" uid="uid://britoq7xhgwig" path="res://Fonts/Jersey20Charted-Regular.ttf" id="3_phknk"]
 
 [node name="ContextoScene" type="Control"]

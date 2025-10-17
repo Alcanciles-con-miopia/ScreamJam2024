@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://b1xwb2nm08umh"]
 
-[ext_resource type="Script" path="res://Scripts/Cables/Bombilla.gd" id="1_px86v"]
+[ext_resource type="Script" uid="uid://cbo7tw0pbmcxp" path="res://Scripts/Cables/Bombilla.gd" id="1_px86v"]
 [ext_resource type="Texture2D" uid="uid://b47ldqjmtbv0u" path="res://Images/bombilla_apagada.png" id="2_1pqeo"]
 [ext_resource type="Texture2D" uid="uid://dq8ug4oig1leq" path="res://Images/bombilla_hover.png" id="2_bd6yt"]
 

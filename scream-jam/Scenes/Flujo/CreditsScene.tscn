@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://whxja3o8nmc6"]
 
-[ext_resource type="Script" path="res://Scripts/Flujo/credits.gd" id="1_4f4al"]
+[ext_resource type="Script" uid="uid://cbqcfp515bqsc" path="res://Scripts/Flujo/credits.gd" id="1_4f4al"]
 [ext_resource type="FontFile" uid="uid://ciftagbtm0u2v" path="res://Fonts/subs.ttf" id="2_mtwmy"]
 
 [node name="Credits" type="Control"]

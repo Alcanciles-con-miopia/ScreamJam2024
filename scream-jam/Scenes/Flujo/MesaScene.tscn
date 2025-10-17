@@ -1,17 +1,17 @@
 [gd_scene load_steps=15 format=3 uid="uid://btqpasjgf1reh"]
 
-[ext_resource type="Script" path="res://Scenes/Flujo/mesa_manager.gd" id="1_b02ew"]
+[ext_resource type="Script" uid="uid://j1k4tpjc0ybl" path="res://Scenes/Flujo/mesa_manager.gd" id="1_b02ew"]
 [ext_resource type="Texture2D" uid="uid://cflii03gwvmit" path="res://Images/mesa.png" id="1_udlly"]
-[ext_resource type="Script" path="res://Scripts/Flujo/transition_area.gd" id="1_ys18o"]
+[ext_resource type="Script" uid="uid://gg6uxp13h6r6" path="res://Scripts/Flujo/transition_area.gd" id="1_ys18o"]
 [ext_resource type="PackedScene" uid="uid://bcd4gb5wvrm13" path="res://Scenes/Postits/TacoPostits.tscn" id="3_q2nii"]
 [ext_resource type="PackedScene" uid="uid://cl568k5ri0dju" path="res://Prefabs/Basura.tscn" id="4_inovu"]
 [ext_resource type="PackedScene" uid="uid://c0nvlhnobhpue" path="res://Prefabs/Flecha.tscn" id="6_5hbod"]
 [ext_resource type="StyleBox" uid="uid://ci153uwprdb5d" path="res://Styles/Buttons/new_style_box_flat.tres" id="7_dymgk"]
 [ext_resource type="Texture2D" uid="uid://c1m6qto4k2xjg" path="res://Images/etiqueta.png" id="8_atrgb"]
-[ext_resource type="Script" path="res://Scripts/Postits/posit_movible.gd" id="8_srlq0"]
+[ext_resource type="Script" uid="uid://2e474km2q6cq" path="res://Scripts/Postits/posit_movible.gd" id="8_srlq0"]
 [ext_resource type="Texture2D" uid="uid://b7fgmvs5kdm6r" path="res://Images/etiqueta_hover.png" id="9_hr3oy"]
 [ext_resource type="FontFile" uid="uid://ckwpjql6f81my" path="res://Fonts/posits.ttf" id="10_mdqb7"]
-[ext_resource type="Script" path="res://Scenes/Postits/text_edit.gd" id="12_p2gf5"]
+[ext_resource type="Script" uid="uid://c6qsrkml466ca" path="res://Scenes/Postits/text_edit.gd" id="12_p2gf5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_443pt"]
 content_margin_left = 10.0

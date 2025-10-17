@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6ixnnj7d48qe"]
 
 [ext_resource type="PackedScene" uid="uid://dnjkx16ballsh" path="res://Prefabs/TransitionArea.tscn" id="1_7ruou"]
-[ext_resource type="Script" path="res://Scripts/Flujo/transition_area.gd" id="1_dmtrx"]
-[ext_resource type="Script" path="res://Scripts/Flujo/clavijas_scene.gd" id="1_mxnlp"]
+[ext_resource type="Script" uid="uid://gg6uxp13h6r6" path="res://Scripts/Flujo/transition_area.gd" id="1_dmtrx"]
+[ext_resource type="Script" uid="uid://bjhodcy2pdff3" path="res://Scripts/Flujo/clavijas_scene.gd" id="1_mxnlp"]
 
 [node name="ClavijasScene" type="Control"]
 layout_mode = 3

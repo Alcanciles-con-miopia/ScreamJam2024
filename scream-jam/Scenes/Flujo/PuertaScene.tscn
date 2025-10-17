@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cjg05jclufg5g" path="res://Images/puerta.png" id="1_x8256"]
 [ext_resource type="StyleBox" uid="uid://ci153uwprdb5d" path="res://Styles/Buttons/new_style_box_flat.tres" id="3_e7dei"]
-[ext_resource type="Script" path="res://Scripts/Flujo/transition_area.gd" id="3_kfdc0"]
+[ext_resource type="Script" uid="uid://gg6uxp13h6r6" path="res://Scripts/Flujo/transition_area.gd" id="3_kfdc0"]
 [ext_resource type="PackedScene" uid="uid://c0nvlhnobhpue" path="res://Prefabs/Flecha.tscn" id="4_mmfgi"]
 
 [node name="PuertaScene" type="Control"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cl568k5ri0dju"]
 
-[ext_resource type="Script" path="res://Prefabs/basura.gd" id="1_5amb4"]
+[ext_resource type="Script" uid="uid://cjgl8v2o4die5" path="res://Prefabs/basura.gd" id="1_5amb4"]
 [ext_resource type="Texture2D" uid="uid://ci0buk0wt47ae" path="res://Images/cenicero.png" id="1_4044y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kv085"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ca00e6afd76xl"]
 
-[ext_resource type="Script" path="res://Scripts/Cables/dropZone.gd" id="1_wig5y"]
+[ext_resource type="Script" uid="uid://c3q6adt4d17ls" path="res://Scripts/Cables/dropZone.gd" id="1_wig5y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8vhh"]
 
