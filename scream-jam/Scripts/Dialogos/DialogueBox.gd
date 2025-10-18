@@ -1,5 +1,6 @@
 extends Node
 
+@export var chars_per_second: float = 30.0
 @onready var audio_stream: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var button: Button = $Button
 @onready var label: Label = $Button/Label
@@ -20,6 +21,7 @@ var dialogueID: int = 0
 var dialogueTextID: int = 0
 
 var ultimaLlamadaReprod: int = -1
+var text_length = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
@@ -31,8 +33,9 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if textDisplayed < 1:
-		textDisplayed += delta 
-		label.visible_ratio = textDisplayed
+		if text_length > 0:
+			textDisplayed += (chars_per_second / text_length) * delta
+			label.visible_ratio = min(textDisplayed, 1.0)
 
 func _next_dialogue():
 	
@@ -60,10 +63,12 @@ func _next_dialogue():
 		
 		if "@" in JsonData.dialogos[dialogueID].Texts[dialogueTextID].Text:
 			label.text = JsonData.dialogos[dialogueID].Texts[dialogueTextID].Text.replace('@', '')
+			text_length = label.text.length()
 			#DEBUG: se llama a este metodo cuando se ha contrastado soluciones
 			#_start_dialogue(true)
 		else:
 			label.text = JsonData.dialogos[dialogueID].Texts[dialogueTextID].Text
+			text_length = label.text.length()
 			dialogueTextID +=1
 	
 
