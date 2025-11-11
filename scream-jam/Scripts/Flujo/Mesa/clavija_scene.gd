@@ -3,11 +3,9 @@ extends Node2D
 var height : int = 4
 var weight : int = 5
 
-# clavijeros
-var off_cr_x = 723; # offset clavijeros
-var off_cr_y = 246; # aka posicion incial del primer clavijero
-var sep_cr_x = 115; # separacion entre clavijeros
-var sep_cr_y = 97; # separacion entre clavijeros
+# Enchufes
+const ENCHUFES_MANAGER = preload("uid://bwi8usa3ntofn")
+var enchufesManager;
 # clavijas
 var off_cs_x = 722; # offset clavijas
 var off_cs_y = 258; # aka posicion incial de la primera clavija
@@ -34,26 +32,10 @@ var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	Global.nextLevel.connect(_onCheck)
-	#var ambient = SceneManager.ambient_sound
-	#ambient.stream = load("res://Sounds/ambiente.mp3")
-	#ambient.play()
-	#ambient.set_bus_volume_db
 	
-	# Posicionamiento 
-	var w = 0
-	var h = 0
+	enchufesManager = ENCHUFES_MANAGER.instantiate()
+	self.add_child(enchufesManager)
 	
-	for i in height * weight: #clavijeros
-		var clavijero = load("res://Scenes/Cables/DropZone.tscn").instantiate()
-		gridClavijeros.append(clavijero)
-		$"Clavija y clavijero".add_child(gridClavijeros[i])
-		
-		if w == weight:
-			h += 1
-			w = 0
-		
-		gridClavijeros[i].position = Vector2(w * sep_cr_x + off_cr_x, h * sep_cr_y + off_cr_y) 
-		w += 1
 	
 	for i in weight: # bombillas
 		var bombilla = load("res://Prefabs/Bombilla.tscn").instantiate()
@@ -74,13 +56,7 @@ func _ready() -> void:
 		$CheckClavijas.grid[i].initialPos = pos
 		$CheckClavijas.grid[i].position = pos
 	Global.cables = $CheckClavijas.grid
-		
-	# Asignacion de valores
-	#for i in height * weight:
-	#	gridClavijeros[i].DropZone = Global.grid[i]
-	#for i in weight:
-	#	$CheckClavijas.grid[i].Clavija = i + 1;
-
+	
 func _new_level():
 	
 	

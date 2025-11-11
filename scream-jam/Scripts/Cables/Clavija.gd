@@ -5,9 +5,8 @@ var inDropZone = false 	# para saber si esta sobre una drop zone
 var clicked = false 	# para saber si esta sobre una drop zone
 var snap = false 		# para saber si esta vinculada a una drop zone
 var refDropZone : StaticBody2D = null # guarda referencia a la dropZone cuando el objeto esta dentro
-var offset : Vector2
 var initialPos : Vector2
-var Clavija: int = -2 # al inicio se le carga un int sol > de 0 a la clavija y a la dropZone 
+var objetivo: int = -2 # al inicio se le carga un int sol > de 0 a la clavija y a la dropZone 
 					# si coinciden respuesta correcta, las dropZones que no sean solucion < 0
 var refBombilla : Sprite2D = null # ref a su bombilla
 var BombillaApagada : Texture = load("res://Images/bombilla_apagada.png")
@@ -20,60 +19,32 @@ var ClavijaDentro : Texture = load("res://Images/clavija_inser.png")
 @onready var line_2d: Line2D = $Line2D
 @onready var origin: Node2D = $Origin
 
-
-
 var clavijaState
 var timeToApagar: float = 3
 var elapsedTimeToApagar: float = 0
 
 var lastpos: Vector2
 var desfaseMovimiento: Vector2 = Vector2(0,0)
+@onready var clavija: Node2D = $Node2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _input(event: InputEvent) -> void:
 	if isDraggable:
 		if event is InputEventMouseButton:
-			offset = get_global_mouse_position() - global_position
 			Global.isDragging = true
 		if clicked:
 			if event is InputEventMouseMotion:
-				position = (event.position - offset)
+				position = event.position
 
 # Called when the node enters the scene tree for the first time.
-func _process(delta: float) -> void:
-	if clavijaState == Global.ClavijasState.ROJA:
-		if elapsedTimeToApagar < timeToApagar:
-			elapsedTimeToApagar += delta
-		else:
-			if Clavija >=0:
-				clavijaState = Global.ClavijasState.REGU
-			else:
-				clavijaState = Global.ClavijasState.APAGADA
-			elapsedTimeToApagar = 0
-	
-	if Clavija < 0:
-		clavijaState = Global.ClavijasState.APAGADA
-	
-	match clavijaState:
-		Global.ClavijasState.APAGADA:
-			refBombilla.texture = BombillaApagada
-		Global.ClavijasState.REGU:
-			refBombilla.texture = BombillaRegu
-		Global.ClavijasState.VERDE:
-			refBombilla.texture = BombillaVerde
-		Global.ClavijasState.ROJA:
-			refBombilla.texture = BombillaRoja
-		_:
-			refBombilla.texture = BombillaApagada
-	
+func _process(delta: float) -> void:	
 	if clicked:
-		global_position = get_global_mouse_position() - offset
-		$Node2D.look_at(origin.position)
+		global_position = get_global_mouse_position()
+		clavija.look_at(origin.position)
 		#sprite.rotation_degrees = origin.get_angle_to(get_global_mouse_position())
 		
 	else:
-		$Node2D.rotation_degrees = 90;
-		Global.isDragging = false
+		clavija.rotation_degrees = 90;
 		# ---- tween
 		var tween = get_tree().create_tween() # crea tween en la jerarquia
 		if inDropZone:
@@ -109,36 +80,6 @@ func _on_area_2d_mouse_exited():
 		isDraggable = false 	# resetea isDraggable
 		scale = Vector2(1, 1) # feedback
 
-func _check_Clavija() -> void:
-	refBombilla.get_parent().llamadaID = Clavija
-	# si no esta conectada sale del metodo
-	if Clavija < 0 or refDropZone == null:
-		return
-	#-------Comprobacion y señales de que sea verdad-------
-	var verdad = false;
-	if (refDropZone.DropZone == Clavija):
-		verdad = true;
-	Global.clavijaConected.emit(verdad, Clavija)	
-	Global.correctos[(Global.llamadaActual - Clavija)-1] = verdad
-	
-	if verdad:
-		clavijaState = Global.ClavijasState.VERDE
-	else:
-		clavijaState = Global.ClavijasState.ROJA
-		
-	#print("CLAVIJA ", Clavija, ": ", Global.correctos[Clavija - 1])
-	#--------Bombillas--------
-	# si no hay bombilla y no esta encendida sale del metodo
-	#if refBombilla != null and not refBombilla.texture == BombillaRegu:
-	#	return
-	
-	# si la clavija es correcta se pone la bombilla en su color correspondiente
-	#if verdad:
-	#	refBombilla.texture = BombillaVerde
-	#if not verdad:
-	#	refBombilla.texture = BombillaRoja
-
-
 func _on_area_2d_body_entered(body:StaticBody2D):
 	if body.is_in_group('dropZone') and not body.ocupada:
 		inDropZone = true
@@ -165,6 +106,4 @@ func _on_button_button_down() -> void:
 func _on_button_button_up() -> void:
 	clicked = false
 	
-
-func _llamada_escuchada() ->void:
-	clavijaState = Global.ClavijasState.APAGADA
+func reset

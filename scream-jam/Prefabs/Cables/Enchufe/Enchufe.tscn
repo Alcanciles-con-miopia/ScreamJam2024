@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://ca00e6afd76xl"]
 
-[ext_resource type="Script" uid="uid://c3q6adt4d17ls" path="res://Scripts/Cables/dropZone.gd" id="1_wig5y"]
+[ext_resource type="Script" uid="uid://c3q6adt4d17ls" path="res://Scripts/Cables/enchufe.gd" id="1_g0wke"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m8vhh"]
 
 [node name="DropZone" type="StaticBody2D" groups=["dropZone"]]
-script = ExtResource("1_wig5y")
+script = ExtResource("1_g0wke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m8vhh")

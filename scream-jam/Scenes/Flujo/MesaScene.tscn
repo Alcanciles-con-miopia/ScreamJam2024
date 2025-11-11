@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://btqpasjgf1reh"]
 
-[ext_resource type="Script" uid="uid://j1k4tpjc0ybl" path="res://Scenes/Flujo/mesa_manager.gd" id="1_b02ew"]
+[ext_resource type="Script" uid="uid://j1k4tpjc0ybl" path="res://Scripts/Flujo/Mesa/mesa_manager.gd" id="1_b02ew"]
 [ext_resource type="Texture2D" uid="uid://cflii03gwvmit" path="res://Images/mesa.png" id="1_udlly"]
 [ext_resource type="PackedScene" uid="uid://bcd4gb5wvrm13" path="res://Scenes/Postits/TacoPostits.tscn" id="3_q2nii"]
 [ext_resource type="PackedScene" uid="uid://cl568k5ri0dju" path="res://Prefabs/Basura.tscn" id="4_inovu"]

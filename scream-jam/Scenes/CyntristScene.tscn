@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://ckex341bqe6oj"]
-
-[node name="CyntristScene" type="Node2D"]
-
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="Node2D"]

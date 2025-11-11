@@ -47,12 +47,6 @@ func _process(delta: float) -> void:
 var llamadasReprodEnEsteNivel: int = 0
 #funcion para cuando termina una llamada suma uno al contador de llamadas y decide cuando generar el siguiente caso
 func _llamada_terminada(llamadaEnReproduccion: int)->void:
-	llamadasReprodEnEsteNivel +=1
-	cables[IDCableActual]._llamada_escuchada()
-	if llamadasReprodEnEsteNivel >= niveles[nivel-1]:
-		nextLevel.emit()
-		nivelCorrecto = false
-		llamadasReprodEnEsteNivel = 0
 
 func _poner_los_creditos()->void:
 	current_scene = Scenes.CLAVIJAS

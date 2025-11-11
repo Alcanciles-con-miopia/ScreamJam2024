@@ -1,24 +1,24 @@
 [gd_scene load_steps=8 format=3 uid="uid://c6ixnnj7d48qe"]
 
-[ext_resource type="Script" uid="uid://cyt5aihkhokub" path="res://level_manager.gd" id="1_kktuk"]
+[ext_resource type="Script" uid="uid://cyt5aihkhokub" path="res://Scripts/Flujo/Mesa/clavija_scene.gd" id="1_kktuk"]
 [ext_resource type="Texture2D" uid="uid://bo0hhbtrlysoo" path="res://Images/clavijero.png" id="2_1203f"]
 [ext_resource type="PackedScene" uid="uid://cqhpk5lnxqt8g" path="res://Scenes/Dialogos/dialogue_box.tscn" id="3_n760j"]
-[ext_resource type="PackedScene" uid="uid://bg5e1gbjrhc4l" path="res://Scenes/Cables/checkClavijas.tscn" id="4_56dma"]
+[ext_resource type="PackedScene" uid="uid://bg5e1gbjrhc4l" path="res://Prefabs/Cables/checkClavijas.tscn" id="4_56dma"]
 [ext_resource type="Script" uid="uid://by88sp5i3yvii" path="res://Scripts/Cables/check.gd" id="5_loonc"]
-[ext_resource type="Texture2D" uid="uid://bjli4v16j6psk" path="res://Images/clavijeroAbajo.png" id="6_kf5mh"]
+[ext_resource type="Script" uid="uid://bdcgrrwj6a7lc" path="res://Prefabs/Bombillas/bombillas_manager.gd" id="6_7vrkg"]
 [ext_resource type="PackedScene" uid="uid://dcod2yvxj0ak3" path="res://Prefabs/TransicionInGame/TransitionAreaManager.tscn" id="7_7vrkg"]
 
-[node name="LevesScene" type="Node2D"]
+[node name="ClavijasScene" type="Node2D"]
 script = ExtResource("1_kktuk")
 
-[node name="Control2" type="Control" parent="."]
+[node name="Fondo" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1913.0
 offset_bottom = 1078.0
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control2"]
+[node name="TextureRect" type="TextureRect" parent="Fondo"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_1203f")
 
-[node name="DialogueBox" parent="Control2" instance=ExtResource("3_n760j")]
+[node name="DialogueBox" parent="Fondo" instance=ExtResource("3_n760j")]
 visible = false
 layout_mode = 1
 
@@ -42,14 +42,10 @@ offset_right = 1178.0
 offset_bottom = 900.0
 script = ExtResource("5_loonc")
 
-[node name="Bombillas" type="Node2D" parent="."]
+[node name="BombillasManager" type="Node2D" parent="."]
+script = ExtResource("6_7vrkg")
 
-[node name="Clavija y clavijero" type="Node2D" parent="."]
-z_index = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(957, 539)
-texture = ExtResource("6_kf5mh")
+[node name="ClavijasManager" type="Node2D" parent="."]
 
 [node name="TransitionAreaManager" parent="." instance=ExtResource("7_7vrkg")]
 current_scene = 1
