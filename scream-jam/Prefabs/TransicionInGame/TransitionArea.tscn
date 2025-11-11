@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwjm2d85wwbrd"]
+
+[ext_resource type="Script" uid="uid://gg6uxp13h6r6" path="res://Scripts/Flujo/transition_area.gd" id="1_g6hcm"]
+[ext_resource type="Texture2D" uid="uid://d1wqqqqxep4sr" path="res://Images/flecha.png" id="2_ktnfw"]
+[ext_resource type="StyleBox" uid="uid://ci153uwprdb5d" path="res://Styles/Buttons/new_style_box_flat.tres" id="3_xyyaj"]
+
+[node name="AreaDeTransicion" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_g6hcm")
+current_scene = 1
+to_scene = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -837.5
+offset_top = -48.0
+offset_right = 837.5
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = ExtResource("3_xyyaj")
+theme_override_styles/focus = ExtResource("3_xyyaj")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Flecha" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 40.5
+offset_top = -80.5
+offset_right = 161.5
+offset_bottom = 40.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+texture = ExtResource("2_ktnfw")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_click"]

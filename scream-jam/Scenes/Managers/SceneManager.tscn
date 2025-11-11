@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dyph5mqd443d5" path="res://Scenes/Flujo/MainMenu.tscn" id="3_b721g"]
 [ext_resource type="PackedScene" uid="uid://5w0xl8fledrk" path="res://Scenes/Flujo/FadeScene.tscn" id="4_88r4u"]
 [ext_resource type="PackedScene" uid="uid://btqpasjgf1reh" path="res://Scenes/Flujo/MesaScene.tscn" id="4_w2nar"]
-[ext_resource type="PackedScene" uid="uid://b4ejt2epaoh1k" path="res://Scenes/level_manager.tscn" id="5_p2e8t"]
+[ext_resource type="PackedScene" uid="uid://b4ejt2epaoh1k" path="res://Scenes/Flujo/ClavijasScene.tscn" id="5_p2e8t"]
 [ext_resource type="PackedScene" uid="uid://1wce6sj1bl8d" path="res://Scenes/Flujo/ContextoScene.tscn" id="6_ce53t"]
 [ext_resource type="PackedScene" uid="uid://dnysdn0d3o7b2" path="res://Scenes/Flujo/Intro.tscn" id="7_qf5p5"]
 [ext_resource type="AudioStream" uid="uid://bfbtd3txlu21k" path="res://Sounds/sonidillosOfi.mp3" id="8_dg2h0"]

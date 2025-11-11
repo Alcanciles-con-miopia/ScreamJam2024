@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcod2yvxj0ak3"]
+
+[ext_resource type="Script" uid="uid://cv4pluamusho5" path="res://Scripts/Flujo/transicion_area_manager.gd" id="1_f5xya"]
+
+[node name="TransitionAreaManager" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_f5xya")
