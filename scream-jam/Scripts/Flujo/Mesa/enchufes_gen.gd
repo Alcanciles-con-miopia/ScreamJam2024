@@ -16,15 +16,16 @@ func _ready() -> void:
 	var h = 0
 	var w = 0
 	for i in height * weight: #clavijeros
-		_clavijeros[i] = ENCHUFE.instance()
+		_clavijeros.append(ENCHUFE.instantiate())
 		self.add_child(_clavijeros[i])
 		
 		if w == weight:
 			h += 1
 			w = 0
 		
-		_clavijeros[i].position = Vector2(w * sep_cr_x + off_cr_x, h * sep_cr_y + off_cr_y) 
+		_clavijeros[i].position = Vector2(w * 100, h * 100) 
 		w += 1
+
 # comprueba si la solucion es correcta
 func check() -> bool:
 	for c in _clavijeros:

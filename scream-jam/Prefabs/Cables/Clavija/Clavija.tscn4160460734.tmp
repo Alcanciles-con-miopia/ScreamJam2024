@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dvv71t1i4lt83" path="res://Prefabs/Cables/Clavija/clavija.gd" id="1_1vwyp"]
 [ext_resource type="Texture2D" uid="uid://djiuuiilhi5j6" path="res://Images/clavija_suelta.png" id="2_nbbka"]
-[ext_resource type="Script" uid="uid://bwyu1tqr0uf63" path="res://Scripts/Cables/draggerClavija.gd" id="2_pqbh5"]
+[ext_resource type="Script" uid="uid://bwyu1tqr0uf63" path="res://Scripts/Cables/Clavija.gd" id="2_pqbh5"]
 [ext_resource type="Texture2D" uid="uid://c5gde3aod438r" path="res://Images/cable_solo_rellenado.png" id="3_pqbh5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l4bj"]
@@ -27,8 +27,8 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqe1e"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_nbbka"]
-radius = 84.63724
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uonrh"]
+size = Vector2(111.538, 142.308)
 
 [node name="Clavija" type="Node2D"]
 script = ExtResource("1_1vwyp")
@@ -36,11 +36,9 @@ script = ExtResource("1_1vwyp")
 [node name="visual" type="Node2D" parent="."]
 script = ExtResource("2_pqbh5")
 
-[node name="ButtonContainer" type="Node2D" parent="visual"]
-position = Vector2(0, 55)
-rotation = 1.5707964
+[node name="Node2D" type="Node2D" parent="visual"]
 
-[node name="Button" type="Button" parent="visual/ButtonContainer"]
+[node name="Button" type="Button" parent="visual/Node2D"]
 offset_left = -95.0
 offset_top = 46.0
 offset_right = 2.0
@@ -63,41 +61,27 @@ expand_icon = true
 metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="visual"]
-position = Vector2(0, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="visual/Area2D"]
+position = Vector2(0.999999, -4)
 scale = Vector2(0.52, 0.52)
-shape = SubResource("CircleShape2D_nbbka")
+shape = SubResource("RectangleShape2D_uonrh")
 
-[node name="CablePoint" type="Node2D" parent="visual"]
-position = Vector2(0, 102)
-
-[node name="ColorRect" type="ColorRect" parent="visual/CablePoint"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_right = 10.0
-offset_bottom = 10.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="Origin" type="Node2D" parent="."]
-
-[node name="Line2D" type="Line2D" parent="."]
+[node name="Line2D" type="Line2D" parent="visual"]
 z_index = -1
 texture_repeat = 2
-position = Vector2(1, 0)
 points = PackedVector2Array(0, 0, 0, 0)
 width = 20.0
 texture = ExtResource("3_pqbh5")
 texture_mode = 1
 
-[connection signal="button_down" from="visual/ButtonContainer/Button" to="visual" method="_on_button_button_down"]
-[connection signal="button_up" from="visual/ButtonContainer/Button" to="visual" method="_on_button_button_up"]
-[connection signal="mouse_entered" from="visual/ButtonContainer/Button" to="visual" method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="visual/ButtonContainer/Button" to="visual" method="_on_area_2d_mouse_exited"]
-[connection signal="body_entered" from="visual/Area2D" to="visual" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="visual/Area2D" to="visual" method="_on_area_2d_body_exited"]
+[node name="Origin" type="Node2D" parent="."]
+
+[connection signal="button_down" from="visual/Node2D/Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="visual/Node2D/Button" to="." method="_on_button_button_up"]
+[connection signal="mouse_entered" from="visual/Node2D/Button" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="visual/Node2D/Button" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="body_entered" from="visual/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="visual/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="visual/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="visual/Area2D" to="." method="_on_area_2d_mouse_exited"]

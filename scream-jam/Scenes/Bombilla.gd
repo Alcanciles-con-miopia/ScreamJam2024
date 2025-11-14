@@ -3,6 +3,9 @@ extends Node
 var llamadaID: int = -2
 var cableID: int = 0
 
+func _ready() -> void:
+	pass
+
 func _PlayLlamada():
 	if not llamadaID < 0:
 		print("reproduce llamada" , llamadaID)
@@ -10,3 +13,6 @@ func _PlayLlamada():
 		Global.IDCableActual = cableID
 	else:
 		print("No hay llamada") 
+
+func _checkCable():
+	pass

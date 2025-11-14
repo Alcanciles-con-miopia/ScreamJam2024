@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddjov15tq2lh0"]
+
+[ext_resource type="PackedScene" uid="uid://bgoopn5ii5cak" path="res://Prefabs/Cables/Clavija/Clavija.tscn" id="1_6s3sa"]
+[ext_resource type="PackedScene" uid="uid://bwi8usa3ntofn" path="res://Prefabs/Cables/Enchufe/enchufes_manager.tscn" id="2_p55jg"]
+
+[node name="PruebasAndres" type="Node2D"]
+
+[node name="Clavija" parent="." instance=ExtResource("1_6s3sa")]
+
+[node name="Clavija" parent="Clavija" instance=ExtResource("1_6s3sa")]
+position = Vector2(0, 159)
+
+[node name="EnchufesManager" parent="." instance=ExtResource("2_p55jg")]
+position = Vector2(507, 230)
+height = 3
+weight = 3
