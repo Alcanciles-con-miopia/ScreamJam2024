@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj60g0tse11v2"]
+
+[ext_resource type="Script" uid="uid://b6psgx04o3r7g" path="res://Prefabs/Cables/Clavija/clavijas_manager.gd" id="1_xv6ow"]
+
+[node name="ClavijasManager" type="Node2D"]
+script = ExtResource("1_xv6ow")
