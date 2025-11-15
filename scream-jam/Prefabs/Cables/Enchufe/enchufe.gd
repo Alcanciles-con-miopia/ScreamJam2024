@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var _dropZone: int = 0
+var _id: int = 0
 var _clavija: Node2D
 
 # Called when the node enters the scene tree for the first time.
@@ -18,7 +18,7 @@ func insertar(clavija) -> void:
 func correcta() ->bool:
 	# Objetivo de la clavija es esta dropzone.
 	if _clavija == null: return false
-	if _clavija.objetivo == _dropZone:
+	if _clavija.objetivo == _id:
 		_clavija.check(true)
 		return true
 	_clavija.check(false)

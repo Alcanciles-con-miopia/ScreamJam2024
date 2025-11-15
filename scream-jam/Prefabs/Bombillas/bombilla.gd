@@ -17,6 +17,19 @@ func _ready() -> void:
 	self.add_to_group("bombillas")
 	reset()
 
+var countdown:bool = false
+var timeToStopMal:float = 2
+var elapsedTime:float = 0
+func _process(delta: float) -> void:
+	if _state == BombillaState.MAL:
+		if !countdown: return
+		if elapsedTime >= timeToStopMal:
+			setState(BombillaState.ENCENDIDA)
+			elapsedTime = 0
+			countdown = false
+		else: 
+			elapsedTime += delta
+
 # --- METODOS PUBLICOS ------------------------------------------------
 func setState(state:BombillaState):
 	_state = state
@@ -47,6 +60,7 @@ func _setImage():
 			visual.texture = BOMBILLA_BIEN
 		BombillaState.MAL:
 			visual.texture = BOMBILLA_MAL
+			countdown = true
 
 func _PlayLlamada():
 	pass

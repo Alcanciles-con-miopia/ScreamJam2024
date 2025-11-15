@@ -14,25 +14,22 @@ func _ready() -> void:
 	pass
 
 func start():
-	var h = 0
-	var w = 0
-	for i in height * weight: #clavijeros
-		_enchufes.append(ENCHUFE.instantiate())
-		self.add_child(_enchufes[i])
-		
-		if w == weight:
-			h += 1
-			w = 0
-		
-		_enchufes[i].position = Vector2(w * sep_cr_x, h * sep_cr_y) 
-		w += 1
+	for h in height: #clavijeros
+		for w in weight:
+			_enchufes.append(ENCHUFE.instantiate())
+			self.add_child(_enchufes[h*weight +w])
+			
+			_enchufes[h*weight +w].position = Vector2(w * sep_cr_x, h * sep_cr_y) 
+			_enchufes[h*weight +w]._id = h*weight +w
+			w += 1
 
 # comprueba si la solucion es correcta
 func check() -> bool:
+	var correcta = true
 	for e in _enchufes:
 		if not e.correcta():
-			return false
-	return true
+			correcta = false
+	return correcta
 
 # resetea todos los enchufes
 func reset() :

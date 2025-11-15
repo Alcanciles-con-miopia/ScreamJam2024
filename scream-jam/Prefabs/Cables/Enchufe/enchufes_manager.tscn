@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwi8usa3ntofn"]
 
-[ext_resource type="Script" uid="uid://boa72ai8sj4yd" path="res://Scripts/Flujo/Mesa/enchufes_gen.gd" id="1_k2yes"]
+[ext_resource type="Script" uid="uid://di8yv36fa6huh" path="res://Prefabs/Cables/Enchufe/enchufes_manager.gd" id="1_k2yes"]
 
 [node name="EnchufesManager" type="Node2D"]
 editor_description = "Nodo para instanciar los huecos de las clavijas."
