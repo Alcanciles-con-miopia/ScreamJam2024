@@ -115,13 +115,12 @@ func rotate_around_pivot_global(pivot_global: Vector2, angle: float) -> void:
 	# Ajusta la rotacion global del nodo.
 	global_rotation += angle_rad
 
-# --- Conexiones ------------------------------------------------
+# --- CONEXIONES ------------------------------------------------
 ## PRIVATE
 func _on_area_2d_mouse_entered():
 	if not Global.isDragging: # si no se esta draggeando nada
 		isDraggable = true 		# se puede draggear
 		scale = Vector2(1.05, 1.05) # feedback
-		
 ## PRIVATE
 func _on_area_2d_mouse_exited():
 	if not Global.isDragging: # si no se esta draggeando nada

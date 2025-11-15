@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5ixutm1rtqq0"]
+
+[ext_resource type="Script" uid="uid://bdcgrrwj6a7lc" path="res://Prefabs/Bombillas/bombillas_manager.gd" id="1_3hvch"]
+
+[node name="BombillasManager" type="Node2D"]
+script = ExtResource("1_3hvch")

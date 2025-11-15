@@ -7,9 +7,12 @@ var objetivo: int
 @onready var Dragger: Node2D = $visual
 
 func _ready() -> void:
+	self.add_to_group("clavijas")
 	reset()
-	
 
 func reset() -> void:
-	objetivo = -1
+	#objetivo = -1
 	Dragger.reset()
+func check(correct):
+	if bombilla!= null:
+		bombilla.check(correct)

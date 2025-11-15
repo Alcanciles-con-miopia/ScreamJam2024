@@ -1,16 +1,26 @@
 extends Node
 
 @export var weight : int = 5
+@export var separacion:int = 100
+
 var _clavijas = []
 const CLAVIJA = preload("uid://bgoopn5ii5cak")
 
 func _ready() -> void:
+	pass
+
+func start():
 	for i in  weight: #clavijas
 		_clavijas.append(CLAVIJA.instantiate())
 		self.add_child(_clavijas[i])
 		
-		_clavijas[i].position = Vector2(i * 100, 100) 
+		_clavijas[i].position = Vector2(i * separacion, 0) 
 		_clavijas[i].reset()
+		_clavijas[i].objetivo = i
+
+func setBombillas(bombillas = []):
+	for i in bombillas.size():
+		_clavijas[i].bombilla = bombillas[i]
 
 func find_closest_enchufe(point: Vector2, max_distance: float = INF) -> Node2D:
 	var ref_point: Vector2 = point

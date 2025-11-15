@@ -1,23 +1,5 @@
 extends Node2D
 
-var height : int = 4
-var weight : int = 5
-
-# Enchufes
-const ENCHUFES_MANAGER = preload("uid://bwi8usa3ntofn")
-var enchufesManager;
-# clavijas
-var off_cs_x = 722; # offset clavijas
-var off_cs_y = 258; # aka posicion incial de la primera clavija
-var sep_cs_x = 78; # separacion entre clavijas
-# bombillas
-var off_b_x = 565;
-var off_b_y = 220; 
-var sep_b_y = 90;
-
-var gridClavijeros = []
-var bombillas = []
-
 #fin de juego
 var noMasLlamadas: bool = false
 
@@ -26,47 +8,27 @@ var maxTime:float = 1
 var elapsedTime: float = 0
 var newlevel: bool = false
 
+# Managers
+@onready var clavijas_manager: Node2D = $ClavijasManager
+@onready var enchufes_manager: Node2D = $EnchufesManager
+@onready var bombillas_manager: Node2D = $BombillasManager
+
 
 var rng = RandomNumberGenerator.new()
 
 
 func _ready() -> void:
-	Global.nextLevel.connect(_onCheck)
+	#Global.nextLevel.connect(_onCheck)
+	# Inicializacion de las cosas
+	clavijas_manager.start()
+	enchufes_manager.start()
+	bombillas_manager.start()
 	
-	enchufesManager = ENCHUFES_MANAGER.instantiate()
-	self.add_child(enchufesManager)
-	
-	
-	for i in weight: # bombillas
-		var bombilla = load("res://Prefabs/Bombilla.tscn").instantiate()
-		bombilla.cableID = i
-		bombillas.append(bombilla)
-		$Bombillas.add_child(bombilla)
-		#print(DisplayServer.window_get_size().y)
-		bombilla.position = Vector2(1918 - off_b_x, i * sep_b_y + off_b_y)
-	
-	for i in weight: #clavijas
-		var clavija = load("res://Scenes/Cables/Draggable.tscn").instantiate()
-		$CheckClavijas.grid.append(clavija)
-		$"Clavija y clavijero".add_child($CheckClavijas.grid[i])
-		clavija.refBombilla = bombillas[i].get_node("Sprite2D")
-		var pos = Vector2(i*sep_cs_x + off_cs_x, 1078 - off_cs_y) 
-		var pos_abajo = Vector2(pos.x + 3, pos.y + 90)
-		clavija.origin.global_position = pos_abajo;
-		$CheckClavijas.grid[i].initialPos = pos
-		$CheckClavijas.grid[i].position = pos
-	Global.cables = $CheckClavijas.grid
-	
+	clavijas_manager.setBombillas(bombillas_manager._bombillas)
+
 func _new_level():
-	
-	
+	pass
 	#asigna los numeros 0 a los clavijeros
-	for i in height * weight:
-		gridClavijeros[i].DropZone = -1
-	for i in weight:
-		$CheckClavijas.grid[i].Clavija = -2;
-		$CheckClavijas.grid[i].refBombilla.get_parent().llamadaID =-1
-		$CheckClavijas.grid[i].clavijaState = Global.ClavijasState.APAGADA
 	
 	var usedPos = []
 	
@@ -77,7 +39,7 @@ func _new_level():
 			print("Se acabo el juego")
 		
 		# setea el numero en el clavijero
-		gridClavijeros[JsonData.json_data.Dialoges[Global.llamadaActual].Clavijero].DropZone = Global.llamadaActual
+		#gridClavijeros[JsonData.json_data.Dialoges[Global.llamadaActual].Clavijero].DropZone = Global.llamadaActual
 		
 		# creamos un numero aleatorio no usado
 		var my_random_number = rng.randi_range(0, 4)
@@ -97,23 +59,8 @@ func _new_level():
 	
 	Global.nivel += 1
 func _process(delta: float) -> void:
-	if elapsedTime < maxTime:
-		elapsedTime += delta
-	elif !newlevel:
-		if Global.nivel == 0:
-			Global.playLlamada.emit(0)
-		newlevel = true
-		_new_level()
+	pass
 
-func _onCheck():
-	if noMasLlamadas:
-		Global._poner_los_creditos()
-		return
-	newlevel = false;
-	elapsedTime =0
-	
-	for i in weight:
-		$CheckClavijas.grid[i].Clavija = -2;
-		$CheckClavijas.grid[i].refBombilla.get_parent().llamadaID =-1
-		$CheckClavijas.grid[i].clavijaState = Global.ClavijasState.APAGADA
+func check():
+	enchufes_manager.check()
 	pass
