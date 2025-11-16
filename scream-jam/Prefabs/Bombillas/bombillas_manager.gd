@@ -16,3 +16,6 @@ func start():
 		
 		_bombillas[i].position = Vector2(0, i * separacion) 
 		_bombillas[i].reset()
+
+func showDialogue(id) -> void:
+	

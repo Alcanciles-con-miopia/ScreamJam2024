@@ -35,3 +35,7 @@ text = "Puerta
 
 [node name="TransitionAreaManager" parent="." instance=ExtResource("2_fsl0f")]
 layout_mode = 0
+current_scene = 3
+to_scene_left = 1
+to_scene_right = 1
+to_scene_down = 2

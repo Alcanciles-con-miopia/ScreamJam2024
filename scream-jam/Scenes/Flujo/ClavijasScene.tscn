@@ -48,6 +48,7 @@ weight = 5
 
 [node name="BombillasManager" parent="." instance=ExtResource("7_kktuk")]
 position = Vector2(1343, 216)
+cant = null
 separacion = 90
 
 [node name="CheckClavijas" parent="." instance=ExtResource("4_56dma")]
@@ -58,9 +59,8 @@ offset_bottom = 900.0
 
 [node name="TransitionAreaManager" parent="." instance=ExtResource("8_ok6cb")]
 current_scene = 1
-to_scene_left = 2
-to_scene_right = 7
-to_scene_down = 7
-to_scene_top = 7
+to_scene_left = 3
+to_scene_right = 3
+to_scene_down = 2
 
 [connection signal="button_down" from="CheckClavijas" to="." method="_on_check_clavijas_button_down"]

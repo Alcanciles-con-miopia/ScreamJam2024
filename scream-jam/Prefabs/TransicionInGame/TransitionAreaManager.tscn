@@ -1,8 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcod2yvxj0ak3"]
+[gd_scene load_steps=3 format=3 uid="uid://dcod2yvxj0ak3"]
 
-[ext_resource type="Script" uid="uid://cv4pluamusho5" path="res://Scripts/Flujo/transicion_area_manager.gd" id="1_f5xya"]
+[ext_resource type="Script" uid="uid://cv4pluamusho5" path="res://Prefabs/TransicionInGame/transicion_area_manager.gd" id="1_f5xya"]
+[ext_resource type="PackedScene" uid="uid://dwjm2d85wwbrd" path="res://Prefabs/TransicionInGame/TransitionArea.tscn" id="2_wd5ao"]
 
 [node name="TransitionAreaManager" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_f5xya")
+
+[node name="Arriba" parent="." instance=ExtResource("2_wd5ao")]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 44.0
+offset_right = 960.0
+offset_bottom = 44.0
+rotation = 3.1415927
+
+[node name="Derecha" parent="." instance=ExtResource("2_wd5ao")]
+layout_mode = 0
+offset_left = 1879.0
+offset_top = 565.0
+offset_right = 1879.0
+offset_bottom = 565.0
+rotation = -1.5707964
+
+[node name="Abajo" parent="." instance=ExtResource("2_wd5ao")]
+layout_mode = 0
+offset_left = 966.0
+offset_top = 1036.0
+offset_right = 966.0
+offset_bottom = 1036.0
+
+[node name="IIzquierda" parent="." instance=ExtResource("2_wd5ao")]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 517.0
+offset_right = 44.0
+offset_bottom = 517.0
+rotation = 1.5707964

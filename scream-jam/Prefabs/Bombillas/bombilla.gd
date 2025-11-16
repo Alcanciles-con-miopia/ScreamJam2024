@@ -2,8 +2,7 @@ extends Node
 
 var llamadaID: int = -1
 
-enum BombillaState { ENCENDIDA, APAGADA, BIEN, MAL }
-var _state: BombillaState = BombillaState.APAGADA
+var _state: Global.BombillaState = Global.BombillaState.APAGADA
 
 @onready var visual: Sprite2D = $Sprite2D
 
@@ -20,10 +19,10 @@ func _ready() -> void:
 var countdown: bool = false
 var timeToStopMal: float = 2.0
 var elapsedTime: float = 0.0
-var _last_state: BombillaState = BombillaState.APAGADA
+var _last_state: Global.BombillaState = Global.BombillaState.APAGADA
 
 func _process(delta: float) -> void:
-	if _state == BombillaState.MAL:
+	if _state == Global.BombillaState.MAL:
 		if not countdown:
 			return
 		if elapsedTime >= timeToStopMal:
@@ -34,16 +33,16 @@ func _process(delta: float) -> void:
 			elapsedTime += delta
 
 # --- METODOS PUBLICOS ------------------------------------------------
-func setState(state: BombillaState) -> void:
+func setState(state: Global.BombillaState) -> void:
 	# Guardar el estado anterior si vamos a entrar en MAL (o siempre si lo necesitas)
-	if state == BombillaState.MAL:
+	if state == Global.BombillaState.MAL:
 		_last_state = _state   # guardamos el estado anterior antes de cambiar
 		_state = state
 		elapsedTime = 0.0
 		countdown = true
 	else:
 		# Si salimos de MAL, asegurarnos de detener el countdown
-		if _state == BombillaState.MAL:
+		if _state == Global.BombillaState.MAL:
 			countdown = false
 			elapsedTime = 0.0
 		_state = state
@@ -51,36 +50,36 @@ func setState(state: BombillaState) -> void:
 	_setImage()
 
 func reset() -> void:
-	setState(BombillaState.APAGADA)
+	setState(Global.BombillaState.APAGADA)
 	llamadaID = -1
 
 func check(correcta: bool) -> void:
 	if correcta:
-		setState(BombillaState.BIEN)
+		setState(Global.BombillaState.BIEN)
 	else:
-		setState(BombillaState.MAL)
+		setState(Global.BombillaState.MAL)
 
 func unPlug() -> void:
 	if llamadaID != -1:
-		setState(BombillaState.ENCENDIDA)
+		setState(Global.BombillaState.ENCENDIDA)
 	else:
-		setState(BombillaState.APAGADA)
+		setState(Global.BombillaState.APAGADA)
 
 func setLlamada(id: int) -> void:
 	llamadaID = id
-	setState(BombillaState.ENCENDIDA)
+	setState(Global.BombillaState.ENCENDIDA)
 
 # --- METODOS PRIVADOS ------------------------------------------------
 func _setImage() -> void:
 	# SONIDO AQUI
 	match _state:
-		BombillaState.ENCENDIDA:
+		Global.BombillaState.ENCENDIDA:
 			visual.texture = BOMBILLA_ENCENDIDA
-		BombillaState.APAGADA:
+		Global.BombillaState.APAGADA:
 			visual.texture = BOMBILLA_APAGADA
-		BombillaState.BIEN:
+		Global.BombillaState.BIEN:
 			visual.texture = BOMBILLA_BIEN
-		BombillaState.MAL:
+		Global.BombillaState.MAL:
 			visual.texture = BOMBILLA_MAL
 
 func _PlayLlamada() -> void:
@@ -92,7 +91,7 @@ func _PlayLlamada() -> void:
 # --- CONEXIONES ------------------------------------------------
 func _on_button_pressed() -> void:
 	# Queremos ejecutar solo si el estado NO es APAGADA y NO es BIEN:
-	if _state != BombillaState.APAGADA and _state != BombillaState.BIEN:
+	if _state != Global.BombillaState.APAGADA and _state != Global.BombillaState.BIEN:
 		_PlayLlamada()
 
 func _on_button_mouse_entered() -> void:

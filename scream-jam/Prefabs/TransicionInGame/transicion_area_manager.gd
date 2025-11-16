@@ -14,27 +14,19 @@ const TRANSITION_AREA = preload("uid://dwjm2d85wwbrd")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
-	# Izquierda
-	if to_scene_left != Global.Scenes.NULL:
-		_create_transition_area(to_scene_left)
-	# Derecha
-	if to_scene_left != Global.Scenes.NULL:
-		_create_transition_area(to_scene_right)
-	# Abajo
-	if to_scene_left != Global.Scenes.NULL:
-		_create_transition_area(to_scene_down)
 	# Arriba
-	if to_scene_left != Global.Scenes.NULL:
-		_create_transition_area(to_scene_top)
+	_configure_button(get_child(0), to_scene_top)
+	# Derecha
+	_configure_button(get_child(1), to_scene_right)
+	# Abajo
+	_configure_button(get_child(2), to_scene_down)
+	# Izquierda
+	_configure_button(get_child(3), to_scene_left)
 
-# Crea un boton
-func _create_transition_area(to_scene) -> void:
-	var TA = TRANSITION_AREA.instantiate()
-	TA.reparent(self)
+# configura el boton
+func _configure_button(TA, to_scene) -> void:
+	if to_scene == Global.Scenes.NULL: 
+		TA.visible  = false
+		return
 	TA.current_scene = current_scene
 	TA.to_scene = to_scene
-
-# ajusta el tamanyo
-func _configure_button() -> void:
-	pass
