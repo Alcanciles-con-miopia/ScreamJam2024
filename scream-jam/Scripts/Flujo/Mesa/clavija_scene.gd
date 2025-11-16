@@ -17,8 +17,9 @@ var newlevel: bool = false
 var rng = RandomNumberGenerator.new()
 
 
+# --- BASE --------------------------------------------------------
+
 func _ready() -> void:
-	#Global.nextLevel.connect(_onCheck)
 	# Inicializacion de las cosas
 	clavijas_manager.start()
 	enchufes_manager.start()
@@ -26,12 +27,18 @@ func _ready() -> void:
 	
 	clavijas_manager.setBombillas(bombillas_manager._bombillas)
 
-func _new_level():
-	pass
-
 func _process(delta: float) -> void:
 	pass
 
+# --- METODOS PUBLICOS --------------------------------------------------------
 func check():
 	enchufes_manager.check()
 	pass
+
+# --- METODOS PRIVADOS --------------------------------------------------------
+func _new_level():
+	pass
+
+# --- CONEXIONES --------------------------------------------------------
+func _on_check_clavijas_button_down() -> void:
+	check()

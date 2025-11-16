@@ -83,9 +83,7 @@ func _checkDropZone() -> void:
 	global_position = dz.global_position
 	button.icon = CLAVIJA_INSER
 	clavijaVis.position = Vector2(0,0)
-	# Sonido
-	#Global.SceneManager.sfx.stream = load("res://Sounds/clavijas/210313__soundscape_leuphana__20131209_plug-out_olympusls10_xy.wav")
-	#Global.SceneManager.sfx.play()
+	# SONIDO AQUI
 
 ## Hace que el nodo "mire" al objetivo `target_global` pero rotando alrededor de `pivot_global`.
 ## offset_degrees sirve para compensar el "frente" del sprite (p. ej. la clavija esta rotada (0,90).
@@ -128,12 +126,15 @@ func _on_area_2d_mouse_exited():
 		scale = Vector2(1, 1) # feedback
 ## PRIVATE
 func _on_button_button_down() -> void:
+	# SONIDO AQUI
+	# Coger una clavija
 	button.icon = CLAVIJA_SUELTA
 	clicked = true
 	clavijaVis.position = MOVEMENT_CLAVIJA_OFFSET
 	# Si ya estabas en una dropzone, limpiar:
 	if _dropzone != null and _dropzone._clavija == get_parent():
 		_dropzone._clavija = null
+		get_parent().unPlug()
 ## PRIVATE
 func _on_button_button_up() -> void:
 	clicked = false

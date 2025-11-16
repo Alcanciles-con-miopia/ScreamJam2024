@@ -10,7 +10,7 @@ func _ready() -> void:
 	pass
 
 func start():
-	for i in  weight: #clavijas
+	for i in weight: #clavijas
 		_clavijas.append(CLAVIJA.instantiate())
 		self.add_child(_clavijas[i])
 		

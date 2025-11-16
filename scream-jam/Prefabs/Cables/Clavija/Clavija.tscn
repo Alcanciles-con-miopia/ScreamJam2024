@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dvv71t1i4lt83" path="res://Prefabs/Cables/Clavija/clavija.gd" id="1_1vwyp"]
 [ext_resource type="Texture2D" uid="uid://djiuuiilhi5j6" path="res://Images/clavija_suelta.png" id="2_nbbka"]
-[ext_resource type="Script" uid="uid://bwyu1tqr0uf63" path="res://Scripts/Cables/draggerClavija.gd" id="2_pqbh5"]
+[ext_resource type="Script" uid="uid://bwyu1tqr0uf63" path="res://Prefabs/Cables/Clavija/draggerClavija.gd" id="2_pqbh5"]
 [ext_resource type="Texture2D" uid="uid://c5gde3aod438r" path="res://Images/cable_solo_rellenado.png" id="3_pqbh5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3l4bj"]

@@ -4,8 +4,10 @@ extends Node2D
 @export var weight:int
 
 # clavijeros
-var sep_cr_x = 115; # separacion entre clavijeros
-var sep_cr_y = 97; # separacion entre clavijeros
+## Separacion X entre enchufes
+@export var sep_cr_x = 115; 
+## Separacion Y entre enchufes
+@export var sep_cr_y = 97; 
 
 const ENCHUFE = preload("uid://ca00e6afd76xl")
 var _enchufes = []

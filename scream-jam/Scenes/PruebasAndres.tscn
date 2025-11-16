@@ -26,4 +26,4 @@ offset_top = 894.0
 offset_right = 1533.0
 offset_bottom = 986.0
 
-[connection signal="button_down" from="CheckClavijas" to="EnchufesManager" method="check"]
+[connection signal="button_down" from="CheckClavijas" to="." method="_on_check_clavijas_button_down"]
