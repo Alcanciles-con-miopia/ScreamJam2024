@@ -12,10 +12,19 @@ var continue_ := true
 ## Constructora
 ## [code]txt[code] (String) texto a mostrar
 ## [code]snd[code] (String) ruta al sonido
-func _init(chr : NarrativeCharacter, emt := NarrativeCharacter.Emotion.NEUTRAL, txt := "") -> void:
+func _init(chr : NarrativeCharacter = null, emt := NarrativeCharacter.Emotion.NEUTRAL, txt := "") -> void:
 	emotion = emt
 	character = chr
 	text = txt
+
+## Crea un bloque “vacio” sin texto ni sonido
+static func empty_block() -> NarrativeBLock:
+	var block = NarrativeBLock.new()
+	# No ponemos character, no ponemos texto → queda “vacío”
+	block.character = null
+	block.emotion = NarrativeCharacter.Emotion.NULL
+	block.text = ""
+	return block
 
 ## Cambia el texto a mostrar
 ## [code]txt[code] (String) texto a mostrar
@@ -41,6 +50,7 @@ func add_condition(call:Callable) -> void:
 
 ## Configura la label segun el hablante
 func configure_label(label: Label) ->void:
+	if character== null: return
 	label.add_theme_font_override("font", character.font)
 	label.add_theme_color_override("font_color", character.color)
 

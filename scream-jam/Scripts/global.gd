@@ -68,7 +68,9 @@ func generate_narrative() -> void:
 				
 			narrative.add_block(bloq)
 		
+		#narrative.add_block(NarrativeBLock.empty_block())
 		narrativas.push_back(narrative)
+	
 
 # Esta funcion comprueba si el clavijero actual es el esperado para pasar al siguiente dialogo.
 # current_clavijero se pasa en ejecucion y expected_clavijero al crear la funcion (el valor del JSON).

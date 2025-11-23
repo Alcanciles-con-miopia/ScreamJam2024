@@ -5,26 +5,28 @@ class_name NarrativeBox
 
 var actualNarrative := -1
 
-var textDisplayed: float = 0 # contador para que se escriba letra a letra
+#var textDisplayed: float = 0 # contador para que se escriba letra a letra
 
 func _ready() -> void:
 	pass
 
 func _process(delta: float) -> void:
-	if textDisplayed < 1:
-		textDisplayed += delta 
-		label.visible_ratio = textDisplayed
-	elif self.visible:
-		if Global.narrativas[actualNarrative].is_end():
-			await get_tree().create_timer(2.0).timeout  # Espera 1 segundo
-			self.visible = false
-			return
+	if label.visible_ratio < 1:
+		label.visible_ratio += delta 
 
 ### METODOS BOTONES
 
 func next_dialogue() -> void:
+	
+	if self.visible and Global.narrativas[actualNarrative].is_end() and label.visible_ratio == 1:
+		#await get_tree().create_timer(2.0).timeout  # Espera 1 segundo
+		self.visible = false
+	
+	if label.visible_ratio < 1 : 
+		label.visible_ratio = 1
+		return
 	Global.narrativas[actualNarrative].advance_block(label)
-	textDisplayed = 0
+	label.visible_ratio = 0
 
 func _on_button_mouse_entered():
 	var tween = create_tween()
