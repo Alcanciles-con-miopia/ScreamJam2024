@@ -2,6 +2,8 @@ extends Node2D
 
 #fin de juego
 var noMasLlamadas: bool = false
+# Numero de llamadas completadas este nivel
+var completedCalls: int = 0
 
 # tiempo de espera para tener un nuevo nivel
 var maxTime:float = 1
@@ -21,29 +23,24 @@ var rng = RandomNumberGenerator.new()
 # --- BASE --------------------------------------------------------
 
 func _ready() -> void:
+	Global.connect("endedCall",_endedCall)
+	
 	# Genera las estructuras de datos de las narrativas.
 	enchufes_manager.start()
-	Global.generate_narrative()
 	# Inicializacion de las cosas
 	clavijas_manager.start()
 	bombillas_manager.start()
 	
 	clavijas_manager.setBombillas(bombillas_manager._bombillas)
-	
+	Global.startGame.connect(_startGame)
 
-func _process(delta: float) -> void:
-	pass
+func _startGame() ->void:
+	Global.generate_narrative()
+	_new_level()
 
 # --- METODOS PUBLICOS --------------------------------------------------------
 func check():
 	enchufes_manager.check()
-	pass
-
-func validate_dialogue(narrativeBloc:NarrativeBLock, clavijero_actual:int):
-	if narrativeBloc.get_condition().call(clavijero_actual):
-		
-		# Cargar esta narrativa
-		pass
 	pass
 
 func play_call(id:int):
@@ -52,8 +49,26 @@ func play_call(id:int):
 	pass
 	
 # --- METODOS PRIVADOS --------------------------------------------------------
+# Contador de llamadas atendidas
+func _endedCall(id: int) ->void:
+	completedCalls += 1
+	if completedCalls >= Global.niveles[Global.nivel]:
+		_new_level()
+		completedCalls = 0
+# Empieza el siguiente nivel
 func _new_level():
-	pass
+	Global.nivel += 1
+	# Se han completado todos los niveles.
+	if Global.nivel >= len(Global.niveles):
+		noMasLlamadas = true
+		# TRANSICION A LA ESCENA FINAL.
+		Global.current_scene = Global.Scenes.CLAVIJAS
+		Global.to_scene = Global.Scenes.CREDITS
+		Global.totransition.emit()
+		return
+	# Empieza nivel nuevo
+	await get_tree().create_timer(2.0).timeout  # Espera 1 segundo
+	clavijas_manager.setCallID()
 
 # --- CONEXIONES --------------------------------------------------------
 func _on_check_clavijas_button_down() -> void:

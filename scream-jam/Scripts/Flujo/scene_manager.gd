@@ -10,12 +10,6 @@ func _ready() -> void:
 	Global.totransition.connect(_on_totransition)
 	Global.transitioned.connect(_on_fade_scene_transitioned)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_totransition() -> void: #fade in
 	$FadeScene.transition()
 

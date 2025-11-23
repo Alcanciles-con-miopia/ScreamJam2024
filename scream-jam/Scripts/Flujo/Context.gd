@@ -11,7 +11,7 @@ func _ready() -> void:
 	Global.totransition.connect(_cambio_idioma)
 
 func _cambio_idioma():
-	label.text = JsonData.json_data.UI.Context
+	label.text = JsonParser.json_data.UI.Context
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 
 func _input(_event):
 	if Input.is_action_just_pressed("Skip"):
-		label.text = JsonData.json_data.UI.Context
+		label.text = JsonParser.json_data.UI.Context
 		label.visible_ratio =  1
 		textDisplay = 1
 		_to_clavijas()

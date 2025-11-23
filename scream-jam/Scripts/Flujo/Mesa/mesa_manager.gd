@@ -9,8 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if JsonData.json_data != null and not postitsTraducidos:
+	if JsonParser.json_data != null and not postitsTraducidos:
 		postitsTraducidos = true
-		$PostitiTutoPapel/Label.text = JsonData.json_data.UI.Papers
-		$PostitiTutoBasura/Label.text = JsonData.json_data.UI.Discarts
-		$PostitiTutoCalle/Label.text = JsonData.json_data.UI.Clue
+		$PostitiTutoPapel/Label.text = JsonParser.json_data.UI.Papers
+		$PostitiTutoBasura/Label.text = JsonParser.json_data.UI.Discarts
+		$PostitiTutoCalle/Label.text = JsonParser.json_data.UI.Clue

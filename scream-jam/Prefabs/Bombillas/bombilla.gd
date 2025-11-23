@@ -33,6 +33,10 @@ func _process(delta: float) -> void:
 			elapsedTime += delta
 
 # --- METODOS PUBLICOS ------------------------------------------------
+func setCall(id:int) -> void:
+	llamadaID = id
+	setState(Global.BombillaState.ENCENDIDA)
+
 func setState(state: Global.BombillaState) -> void:
 	# Guardar el estado anterior si vamos a entrar en MAL (o siempre si lo necesitas)
 	if state == Global.BombillaState.MAL:

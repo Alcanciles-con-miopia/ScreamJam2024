@@ -33,7 +33,7 @@ var lines := []
 
 var credits = [
 	[
-		"HELLO GIRL"
+		"HELLO CONNECT ME WITH..."
 	], [
 		"GAME DESIGN",
 		"Nieves Alonso Gilsanz",

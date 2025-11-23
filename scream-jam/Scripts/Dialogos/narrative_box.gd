@@ -17,9 +17,10 @@ func _process(delta: float) -> void:
 ### METODOS BOTONES
 
 func next_dialogue() -> void:
-	
 	if self.visible and Global.narrativas[actualNarrative].is_end() and label.visible_ratio == 1:
 		#await get_tree().create_timer(2.0).timeout  # Espera 1 segundo
+		Global.endedCall.emit(actualNarrative) # Notifica que se ha terminado la actual narrative
+		actualNarrative = -1
 		self.visible = false
 	
 	if label.visible_ratio < 1 : 

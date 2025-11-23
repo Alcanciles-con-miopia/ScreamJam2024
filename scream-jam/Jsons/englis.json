@@ -2,720 +2,723 @@
 	"UI": {
 		"Lenguage": "Language",
 		"Exit": "Exit",
-		"Papers": "<- Pick up",
-		"Discarts": "Discard ->",
-		"Context": "21st of November, 1946\nTomillar del Alba\nSpain",
-		"Clue": "Cattle Blvd. 15"
+		"Context": "21 November, 1946\nTomillar del Alba\nSpain",
+		"Papers": "<- Papers",
+		"Discarts": "Discards ->",
+		"Clue": "c/Reatas 15"
 	},
+	"Persons": [
+		{
+			"Name":"",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 0.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		}
+	],
 	"Dialoges": [
 		{
 			"Clavijero": 9,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Greetings! I am D.A.I.S.Y (Displayed artificial intelligence system)! You are listening to a pre-recorded call. We shall commence. To start, connect Creation Street, number 114, with the Cattle Boulevard number 15."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "The lightbulb indicates the peg with an incoming call, tap it to listen to the caller's indications. You may proceed by linking the peg matching the lightbulb number to the plug 2E. Please flick the switch beside the pegs to check the connection.@"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Excellent! You've already gotten the hang of it! Truthfully, there's not much left to teach you. You’ve already learnt the basics of what your work entails. Connecting wires, that is! Have you any questions, see the detailed map available at “Thyme of the Dawn”, our county!"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Have a wonderful day, goodbye!"
 				}
 			]
 		},
 		{
 			"Clavijero": 19,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Hello, please connect the Channeled Avenue number 23 with Cattle Boulevard number 89 for me… My residence is on the far southeast part of the village.@"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Hey, is this Zacarías?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Hello, yes. Greetings. With whom do I have the pleasure of speaking?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Juan Marcos. Remember me?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Why, yes, of course. Of course I remember. Pray tell, what is it that you need?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Well, you see… I need your help with acquiring fertilizer for this Sunday. Ive found it hard to do so by myself… and so I thought you might lend me a hand, Zacharias."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "I see… I’ll see what I can do. Either way I was planning to go to the greenhouse later this evening. Stop by and we may talk about this more in depth. Is this ok with you?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Oh, sure! Fine by me. I’ll see you there- Have a good day, thanks!"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "You too! See you in a bit."
 				}
 			]
 		},
 		{
 			"Clavijero": 7,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Hello. May you please connect the Creation 60 street with the Pedro Domecq 64 Street? The latter is towards the center, a bit to the north.@"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Good afternoon Jorge, how’s it going? It's Francisco speaking."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Greetings, Francisco. I'm stupendously well. How's everything on your end?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Honestly, so far so good. I was wondering… Would you want to go this Saturday to the city? I've got a ticket to see Concha Piquer live- She's just released a new record."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Is that so? Oh, that sounds wonderful! I'd be delighted- My wife will be green with envy when she hears, she loves her music! Count me in!"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Got it. We can get down to the details later. Cheers!"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "For sure. Thank you so much. Take care. Cheers!"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "See you!"
 				}
 			]
 		},
 		{
 			"Clavijero": 11,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Good afternoon… Would you be so kind as to please connect the Hope Avenue 46 with the Independence Street number 34 for me? Independence Street is around the village center, facing the west just a smidge. It corners with Hope Avenue 46.@"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Yes? Who is this?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Hi Magdalene, I'm Isaiah. Do you recognize my voice?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Why… yes, I do… Is something the matter?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Oh, nothing… I was just calling to ask if we could go out for a coffee before I leave… as a farwell. I'm embarking on a trip this Sunday and I don't know if we'll see each other again."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Indeed… Truthfully, it quite saddens me that you have to leave so soon… But you  have got to look on the bright side- this is going to be good for you, it’s a completely unique opportunity for you to bloom! Were you to stay here, you would stagnate… And I know you can aim a lot higher than that- you are worth so much more!"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Yes, you are completely right… I’m going to miss you."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Isaiah…"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Will you come visit me, though?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "I will do everything in my power to be there for you."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "I've always thought I would've been happier were I to have been with you… If it's ok, we could meet tomorrow morning at Plaza de España and discuss everything."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Yes… Let's talk about it all."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "I love you…"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "And I… you."
 				}
 			]
 		},
 		{
 			"Clavijero": 8,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Good Afternoon… If you are so kind as to link me with the Millán Astray 14 Street… it's the one between Cattle Boulevard and Creation Street… I am from Cattle Boulevard number 68.@"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Rosario, hey, how's it going? My god, the stuff I've got for you to hear…"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Oh, Dolores, I'm a happy camper! How about you? And, pray tell!"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "You remember that my husband worked in the police force, yes?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "How could I ever forget! Such an honor for your family."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Well… just yesterday they sent out a warning… a complaint about commies…. a sighting near the mountains! It was a Shepard, one passing through, the one who saw them first-hand."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "So…"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "So it was true! They sent out a workforce and as soon as they saw them, they opened fire, of course. No gangsters left alive!"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Just terrifying! Thank heavens for your husband and his kind- our national pride-those who cleanse our Spain of the filth. Those plagues… rats! Long live Spain and its police!"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Long live Spain, now and forever!"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Lola, you better tell me everything anytime something like this happens- they just don’t mention anything on the radio these days! Dear, I’ve gotta go, I have something on the stove."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Bye, bye!"
 				}
 			]
 		},
 		{
 			"Clavijero": 10,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Hello, this is of the most utmost importance. Hope Avenue Number 17, please. I'm from Creation street number 10.@"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Hello? Hello, hi, hello…"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Good evening. What's up?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "We’ve got a problem, I've misplaced my watering can… I've looked for it everywhere, but I can't find it for the life of me… I don't know what to do…"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "You've gotta be kidding me…"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "I'm sorry, I'm sorry…! May I speak to the Gardner?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "I'll see what I can do… but this won't be cheap."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Please search for it dutifully… with intent… I don't know what to do anymore. No seed can grow without a watering can nor fertilizer… I'm scared. Deeply so."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Don't tell me you're missing fertilizer, too.. I'll see what can be arranged, we’ll keep our peepers open, but you have to do your part, too. I'll repeat myself: This won't be done free of charge. There will be an additional fee. Every dutiful job must be dutifully rewarded."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "I'll keep looking for it, for the love of God."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "You sir tight, sir. We’ll call you back."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Thank you. Thank you."
 				}
 			]
 		},
 		{
 			"Clavijero": 0,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Hello, darling, I call from Pedro Domecq 22, it's north from Independence Street. I wonder if you would link me with Hope Street number 5, thank you in advance.@"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Encarna, niece of mine, you. How's everything? Have you taken a gander at the book already?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Hi, auntie. Not yet, no… I've just moved, I haven't had the time."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "That's fine, love, but find the time, yes? I know how you always leave everything for the last minute… is the house to your liking?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Of course, auntie! And yeah, the house is fine- I mean, minus the filth. I've already chosen my room, though."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Oh dear… well,  you know how It's been forever since I had lived there… Sorry it was left in such a state. I do hope you grow to like it, even still, my love."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Auntie, I'll call you back. I think one of my shelves fell off."
 				}
 			]
 		},
 		{
 			"Clavijero": 16,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Evening…  Queipo Plains 2, which borders Channeled Street, please… I am in Cattle Boulevard 68…@"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Hello?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Gonzalo, we can't continue this whole hiding thing. We've gotta leave."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "What? Why? Has anything happened?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "I've been telling my wife that I’ve been hunting for commies during our escapades… just so she keeps her nose out of it… I don't know how much longer I can stomach living a lie. Let 's just leave."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "You've got nothing to worry about, come on. It's our little mountain secret, that's all."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Gonzalo, I cannot bear living like this anymore. Let's run away, leave our lives behind… We're going to end up getting caught."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Can't you see how paranoid you're being?! We’ll always have Almorada mountains."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Not for much longer if you keep on having that mindset. Coward."
 				}
 			]
 		},
 		{
 			"Clavijero": 12,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "If you could be so kind…put me on call with Independence Street 12, please. I'm from Hope Street 17@"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "It's a pleasure greeting you, Yesbeth"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "I believe you are mistaken, sir. There is no such Yesbeth here."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "No, this is no error. Stop it with this foolishness, Yesbeth, and pay attention."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Yes… Yes, you are right.. I forgive myself- gosh, just where is my mind these days… My god! You reach an age where you simply forget your own name, yes? I've always had my head on the clouds… My bad."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "You better focus on the now. I call you from the greenhouse. You should've been here today. And yet nobody's seen a hide or hair of you. What gives?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "I apologize once more, sir… today I had to take my youngest to the doctor… He woke up at dawn burning with fever… it has been impossible for me to attend."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "This better be a one time occurrence. You are earning the hatred of those who awaited you, and that shall not do any good for you. Under no circumstance shall any kind of negligence be tolerated. Shall your way of work fog with murkiness and gloom, there shall be no leaf revealing itself to be lush. Do not forget- the natural remedy always heals what modern medicine does not. Had you come here, we would've helped you properly."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "R-Right you are, as always…I shall do that next time, sir. B-But, is there perhaps a way to somehow repair my innocuous wrongdoing?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Innocuous I would deem it not. Indeed, though, there are ways. We’ll discuss them once you come see us. Don't miss it."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "May my wondrous roots lead me to the most exhilarating of journeys…"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Silence!"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Forgive me."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "So be it."
 				}
 			]
 		},
 		{
 			"Clavijero": 13,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Link Hope 17 with Millán Astray 37.@"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Hello?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "What’s all this mumbling about you being against the interior evolution?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "That is nothing but mere hearsay. It doesn't stand to truth as there is no truth to it."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "The lord detests lying lips, but he delights in people who are trustworthy. A prudent man concealeth knowledge… But the heart of fools proclaimeth foolishness. The hand of the diligent shall bear rule; But the slothful shall be put under taskwork."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "I’m afraid I do not understand."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Your ideas shall soon be elucidated, don't you worry. Your inner seed awaits blooming in the soil."
 				}
 			]
 		},
 		{
 			"Clavijero": 17,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Queipo Plains number 61 with number 37, thanks, thanks.@"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Yes?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Antonio? It's Martirio."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Yes, tell me, what's going on?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Are your wife and children at home?"
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "No, why?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Tell them they have to go home right away, God! our neighbour, the police officer, has been killed. It's dangerous to be on the streets."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Don't you say! What in the world happened? Who killed him?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "The blue shirts killed him for being a fag. They caught him in Almorada with other officer, they chased them, shot them twice... and that's it."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Fags? What a pity, I wish God forgives them, guides them and have them in his glory. So scary... Hey, what could have happened with Lola?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "What a great shame, the whole family is devastated. I'm going to pray Our Father ten times, when your family gets home tell them, and they be careful. Things are getting ugly lately."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Yes, I will tell them. Thank you for calling and telling me, it has left me feeling awful... See you, Martirio."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Bye, bye..."
 				}
 			]
 		},
 		{
 			"Clavijero": 10,
-			"Sound1": "res://Sounds/Placeholders/SonidoPH1.wav",
-			"Color1": {
-				"R": 0,
-				"G": 1,
-				"B": 1,
-				"A": 1
-			},
-			"Sound2": "res://Sounds/Placeholders/SonidoPH2.wav",
-			"Color2": {
-				"R": 1,
-				"G": 0,
-				"B": 1,
-				"A": 1
-			},
 			"Texts": [
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Good day, if you do me the favour, link Independence Street number 34 with Hope Street number 17. Thank you.@"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Hi there, I have a problem. I'm Rut."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Hello, adressing what?"
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "My offspring refuses to flood its interior with sap."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "I see... This means trouble."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "I don't know what to do, they won't accept it, he won't listen to me. Whoever said that you have to whisper foreign melodies to plants was lying."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Well, they weren't doing what is known as lying. If there is no flowering through water, sun and chants, other means will have to be chosen. "
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Anything."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "Make use of Piper methysticum in a highly concentrated dose and take the plant to the nursery garden. The gardener will take care of the rest. To be fully conscious sometimes the only thing to do is turn off your senses and open the psyche. The only way out is towards the inside."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "Thank you so much."
 				},
 				{
 					"Person": 1,
+					"Emotion": "neutral",
 					"Text": "It will be your sprout who will be eternally grateful when it wakes up. The gardener fills everything with his neverending and generous love, allowing one to see with the heart's eyes."
 				},
 				{
 					"Person": 0,
+					"Emotion": "neutral",
 					"Text": "So be it."
 				}
 			]

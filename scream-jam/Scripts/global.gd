@@ -4,8 +4,8 @@ extends Node
 signal totransition
 signal transitioned
 signal nextLevel # senial para avanzar el nivel
-signal playLlamada(index) # Senial para reproducir llamada
-
+signal endedCall(index) # Senial para notificar cuando se ha acabado una llamada
+signal startGame
 # FLUJO
 enum Scenes { MAIN_MENU, CLAVIJAS, MESA, PUERTA, CREDITS, INTRO, CONTEXT, NULL }
 var to_scene : Scenes = 0
@@ -19,7 +19,7 @@ var SceneManager
 var isDragging = false
 
 # nivel actual
-var nivel: int = 0
+var nivel: int = -1
 var niveles = [1,1,2,2,3,3]
 
 var nPostits = 0;

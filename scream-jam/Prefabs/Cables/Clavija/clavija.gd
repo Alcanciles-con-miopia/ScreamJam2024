@@ -8,6 +8,7 @@ var llamadaID: int
 @onready var Dragger: Node2D = $visual
 
 func _ready() -> void:
+	Global.connect("endedCall",_endedCall)
 	self.add_to_group("clavijas")
 	reset()
 
@@ -23,7 +24,7 @@ func setCallID(callId: int) -> void:
 	llamadaID = callId
 	objetivo = Global.soluciones[callId]
 	if bombilla != null:
-		bombilla.llamadaID = callId
+		bombilla.setCall(callId)
 
 func check(correct):
 	if bombilla!= null:
@@ -36,3 +37,7 @@ func unPlug() -> void:
 		bombilla.unPlug()
 
 # --- METODOS PRIVADOS --------------------------------------------------------
+
+func _endedCall(callid:int):
+	if callid == llamadaID:
+		reset()

@@ -18,6 +18,7 @@ func insertar(clavija) -> void:
 func correcta() ->bool:
 	# Objetivo de la clavija es esta dropzone.
 	if _clavija == null: return false
+	print("CHECK: " + str(_clavija.objetivo) + "/" + str(_id))
 	if _clavija.objetivo == _id:
 		_clavija.check(true)
 		return true

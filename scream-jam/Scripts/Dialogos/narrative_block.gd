@@ -50,9 +50,9 @@ func add_condition(call:Callable) -> void:
 
 ## Configura la label segun el hablante
 func configure_label(label: Label) ->void:
-	if character== null: return
-	label.add_theme_font_override("font", character.font)
-	label.add_theme_color_override("font_color", character.color)
+	if character == null: return
+	if character.font != null: label.add_theme_font_override("font", character.font)
+	if character.color != null: label.add_theme_color_override("font_color", character.color)
 
 ## Coprueba si puede pasar al siguiente dialogo
 ## [code]return[code] (bool)
