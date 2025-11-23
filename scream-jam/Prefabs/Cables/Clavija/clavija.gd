@@ -3,6 +3,7 @@ extends Node2D
 var bombilla: Node2D = null
 # Enchufe al que tiene que ir la clavija
 var objetivo: int
+var llamadaID: int
 # Dragger de la clavija
 @onready var Dragger: Node2D = $visual
 
@@ -12,8 +13,17 @@ func _ready() -> void:
 
 # --- METODOS PUBLICOS --------------------------------------------------------
 func reset() -> void:
-	#objetivo = -1
 	Dragger.reset()
+	objetivo = -1
+	llamadaID = -1
+	if bombilla != null:
+		bombilla.reset()
+
+func setCallID(callId: int) -> void:
+	llamadaID = callId
+	objetivo = Global.soluciones[callId]
+	if bombilla != null:
+		bombilla.llamadaID = callId
 
 func check(correct):
 	if bombilla!= null:

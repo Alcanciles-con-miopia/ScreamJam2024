@@ -84,15 +84,17 @@ func _setImage() -> void:
 
 func _PlayLlamada() -> void:
 	# Si no hay llamada return
-	if llamadaID == -1:
-		return
+	if llamadaID == -1: return
+	var clavijascene = get_parent().get_parent()
+	clavijascene.play_call(llamadaID)
 	# SONIDO AQUI
 
 # --- CONEXIONES ------------------------------------------------
 func _on_button_pressed() -> void:
 	# Queremos ejecutar solo si el estado NO es APAGADA y NO es BIEN:
 	if _state != Global.BombillaState.APAGADA and _state != Global.BombillaState.BIEN:
-		_PlayLlamada()
+		pass
+	_PlayLlamada()
 
 func _on_button_mouse_entered() -> void:
 	self.scale = Vector2(1.05, 1.05) # feedback

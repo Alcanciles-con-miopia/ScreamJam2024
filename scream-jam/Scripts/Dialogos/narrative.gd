@@ -1,12 +1,12 @@
 extends Node
 class_name Narrative
+
 var narrativeBlqs: Array[NarrativeBLock]
-var actualblock: int = 0
+var actualblock: int = -1
 var label : Label
 
-func _init(lbl:Label) -> void:
-	if lbl:
-		label = lbl
+func _init() -> void:
+	pass
 
 ## Aniade un dialogo 
 func add_block(NarrtBlq:NarrativeBLock = null) ->bool:
@@ -15,6 +15,9 @@ func add_block(NarrtBlq:NarrativeBLock = null) ->bool:
 	narrativeBlqs.append(NarrtBlq)
 	return true
 
+func get_actual_block_ID() -> int:
+	return actualblock
+	
 func get_actual_block() -> NarrativeBLock:
 	return narrativeBlqs[actualblock]
 
@@ -29,18 +32,22 @@ func get_first_block() -> NarrativeBLock:
 
 ## Avanza 1 bloque
 ## [code]return[code] (String) el bloque siguiente
-func advance_block() -> void:
+func advance_block(lbl: Label) -> void:
+	# Asignacion de label.
+	if lbl and label != lbl:
+		label = lbl
+	if label == null: return
+	
+	# Si no ha llegado al final y puede continuar avanza el bloque
+	if not is_end() and narrativeBlqs[actualblock].can_continue():
+		actualblock += 1
+	if actualblock >= len(narrativeBlqs): actualblock = len(narrativeBlqs)-1
 	print("SIGUIENTE BLOQUE: ", actualblock)
-	if actualblock >= len(narrativeBlqs):
-		return
 	var block = narrativeBlqs[actualblock]
 	# Si no hay dialogo devuelve vacio
 	if block == null:
 		printerr("[NARRATIVE ERROR] No hay dialogo valido.")
 		return 
-	# Si no ha llegado al final y puede continuar avanza el bloque
-	if actualblock < (len(narrativeBlqs) + 1) and block.can_continue():
-		actualblock += 1
 	
 	block.configure_label(label)
 	label.text = block.reproduce()
@@ -85,7 +92,7 @@ func restart_block_end() -> void:
 	label.text = block.reproduce()
 
 func is_end() -> bool:
-	return actualblock >= len(narrativeBlqs)
+	return actualblock >= len(narrativeBlqs)-1
 
 func is_begining() -> bool:
 	return actualblock <= 0

@@ -48,6 +48,7 @@ weight = 5
 
 [node name="BombillasManager" parent="." instance=ExtResource("7_kktuk")]
 position = Vector2(1343, 216)
+cant = null
 separacion = 90
 
 [node name="CheckClavijas" parent="." instance=ExtResource("4_56dma")]

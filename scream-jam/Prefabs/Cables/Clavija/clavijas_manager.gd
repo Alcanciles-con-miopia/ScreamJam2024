@@ -15,12 +15,28 @@ func start():
 		self.add_child(_clavijas[i])
 		
 		_clavijas[i].position = Vector2(i * separacion, 0) 
-		_clavijas[i].reset()
-		_clavijas[i].objetivo = i
+	reset()
+
+func reset():
+	var i = 0 #para sacar el numero de narrativa
+	# Contador de narrativas.
+	for j in Global.nivel-1:
+		if j < 0: break
+		i +=  Global.niveles[j]
+	# Reseteo de clavijas.
+	for c in _clavijas:
+		c.reset()
+	# Asignacion de objetivos.
+	for j in Global.niveles[Global.nivel]:
+		_clavijas[j].setCallID(i)
+		++i
+
 
 func setBombillas(bombillas = []):
 	for i in bombillas.size():
 		_clavijas[i].bombilla = bombillas[i]
+		_clavijas[i].bombilla.llamadaID = _clavijas[i].llamadaID
+		print("LLAMADA ASIGNADA A BOMBILLA "+str(i) +"/"+ str(_clavijas[i].llamadaID))
 
 func find_closest_enchufe(point: Vector2, max_distance: float = INF) -> Node2D:
 	var ref_point: Vector2 = point

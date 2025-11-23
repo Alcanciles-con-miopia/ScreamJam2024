@@ -47,14 +47,13 @@ func configure_label(label: Label) ->void:
 ## Coprueba si puede pasar al siguiente dialogo
 ## [code]return[code] (bool)
 func can_continue() -> bool:
-	if not condition_continue.is_valid() or not continue_:
-		return true
-	
-	return condition_continue.call() or continue_
+	if condition_continue.is_null(): return true
+	return condition_continue.call()
 
 ## Devuelve el texto y ejecuta los callbacks y el sonido del dialogo
 func reproduce() -> String:
 	for c in callbacks:
 		c.call()
-	SoundSystem.play_sfx(character.get_sound(emotion), soundChannel)
+	# SONIDO AQUI
+	#SoundSystem.play_sfx(character.get_sound(emotion), soundChannel)
 	return text

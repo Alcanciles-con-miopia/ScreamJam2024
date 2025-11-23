@@ -24,6 +24,8 @@ func start():
 			_enchufes[h*weight +w].position = Vector2(w * sep_cr_x, h * sep_cr_y) 
 			_enchufes[h*weight +w]._id = h*weight +w
 			w += 1
+	
+	Global.enchufes = _enchufes
 
 # comprueba si la solucion es correcta
 func check() -> bool:
