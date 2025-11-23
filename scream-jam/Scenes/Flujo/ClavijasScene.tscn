@@ -38,8 +38,8 @@ visible = false
 layout_mode = 1
 
 [node name="ClavijasManager" parent="." instance=ExtResource("5_ok6cb")]
-position = Vector2(723, 833)
-separacion = 70
+position = Vector2(723, 770)
+separacion = 79
 
 [node name="EnchufesManager" parent="." instance=ExtResource("6_c3kym")]
 position = Vector2(723, 246)

@@ -64,13 +64,12 @@ func generate_narrative() -> void:
 			var bloq = NarrativeBLock.new(characters[blq["Person"]], NarrativeCharacter.Emotion[blq["Emotion"].to_upper()], blq["Text"])
 			if "@" in blq["Text"]:
 				bloq.add_condition(condition_lambda)
-				pass
-				
+				bloq.set_text(blq["Text"].replace("@", ""))
 			narrative.add_block(bloq)
 		
 		#narrative.add_block(NarrativeBLock.empty_block())
 		narrativas.push_back(narrative)
-	
+
 
 # Esta funcion comprueba si el clavijero actual es el esperado para pasar al siguiente dialogo.
 # current_clavijero se pasa en ejecucion y expected_clavijero al crear la funcion (el valor del JSON).
