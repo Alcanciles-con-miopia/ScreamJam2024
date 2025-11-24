@@ -24,9 +24,8 @@ var ultimaLlamadaReprod: int = -1
 var text_length = 0;
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:	
+func _ready() -> void:
 	Global.playLlamada.connect(_start_quest)
-	Global.allClavijasCorrect.connect(_start_quest)
 	Global.nextLevel.connect(_next_level)
 	$AnimationPlayer.play("NextDialogue")
 	label.text = ""

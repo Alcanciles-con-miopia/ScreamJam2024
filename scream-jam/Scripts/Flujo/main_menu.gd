@@ -1,14 +1,16 @@
-class_name MainMenu
 extends Control
+class_name MainMenu
 
 @onready var start_button: Button = $Start as Button
 @onready var exit_button: Button = $VBoxContainer/Exit as Button
 @onready var v_box_container: VBoxContainer = $VBoxContainer/VBoxContainer
 @onready var exit: TextureButton = $VBoxContainer/Exit
+@onready var labelLenguajes: Label = $VBoxContainer/Lenguages/Label
+@onready var labelExit: Label = $VBoxContainer/Exit/Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	JsonParser._load_lenguage("res://Jsons/englis.json")
 	#start_button.button_down.connect(_on_start_down)
 	#exit_button.button_down.connect(_on_exit_down)
 
@@ -16,39 +18,43 @@ func _on_start_down() -> void:
 	Global.current_scene = Global.Scenes.MAIN_MENU
 	Global.to_scene = Global.Scenes.CONTEXT
 	Global.totransition.emit()
+	Global.startGame.emit()
+	# SONIDO AQUI
 	Global.SceneManager.sfx.stream = load("res://Sounds/cascos/422651__trullilulli__sfx-player-action-phone-pick-up.wav")
 	Global.SceneManager.sfx.play()
 
 
 func _on_exit_down() -> void:
+	# SONIDO AQUI
 	Global.SceneManager.sfx.stream = load("res://Sounds/papel/428652__jomse__postit1.wav")
 	Global.SceneManager.sfx.play()
 	get_tree().quit()
 	pass
 
 func _show_lenguages()-> void:
+	# SONIDO AQUI
 	Global.SceneManager.sfx.stream = load("res://Sounds/papel/428652__jomse__postit1.wav")
 	Global.SceneManager.sfx.play()
 	v_box_container.visible = not v_box_container.visible 
-	$VBoxContainer/Lenguages/Label.text = JsonData.json_data.UI.Lenguage
-	$VBoxContainer/Exit/Label.text = JsonData.json_data.UI.Exit
+	labelLenguajes.text = JsonParser.json_data.UI.Lenguage
+	labelExit.text = JsonParser.json_data.UI.Exit
 	exit.visible = not exit.visible
 
 func _set_ingles()->void:
+	# SONIDO AQUI
 	Global.SceneManager.sfx.stream = load("res://Sounds/papel/428652__jomse__postit1.wav")
 	Global.SceneManager.sfx.play()
-	JsonData._load_lenguage("res://Jsons/englis.json")
+	JsonParser._load_lenguage("res://Jsons/englis.json")
 	_show_lenguages()
 
 func _set_espaniol()->void:
 	Global.SceneManager.sfx.stream = load("res://Sounds/papel/428652__jomse__postit1.wav")
 	Global.SceneManager.sfx.play()
-	JsonData._load_lenguage("res://Jsons/spanish.json")
+	JsonParser._load_lenguage("res://Jsons/spanish.json")
 	_show_lenguages()
 
 
 func _on_start_button_down() -> void:
-
 	Global.current_scene = Global.Scenes.MAIN_MENU
 	Global.to_scene = Global.Scenes.CLAVIJAS
 	Global.totransition.emit()

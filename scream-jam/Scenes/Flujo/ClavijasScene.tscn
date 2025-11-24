@@ -1,63 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6ixnnj7d48qe"]
+[gd_scene load_steps=9 format=3 uid="uid://c6ixnnj7d48qe"]
 
-[ext_resource type="PackedScene" uid="uid://dnjkx16ballsh" path="res://Prefabs/TransitionArea.tscn" id="1_7ruou"]
-[ext_resource type="Script" uid="uid://gg6uxp13h6r6" path="res://Scripts/Flujo/transition_area.gd" id="1_dmtrx"]
-[ext_resource type="Script" uid="uid://bjhodcy2pdff3" path="res://Scripts/Flujo/clavijas_scene.gd" id="1_mxnlp"]
+[ext_resource type="Script" uid="uid://cyt5aihkhokub" path="res://Scripts/Flujo/Mesa/clavija_scene.gd" id="1_kktuk"]
+[ext_resource type="Texture2D" uid="uid://bo0hhbtrlysoo" path="res://Images/clavijero.png" id="2_1203f"]
+[ext_resource type="PackedScene" uid="uid://cqhpk5lnxqt8g" path="res://Scenes/Dialogos/dialogue_box.tscn" id="3_n760j"]
+[ext_resource type="PackedScene" uid="uid://bg5e1gbjrhc4l" path="res://Prefabs/Cables/checkClavijas.tscn" id="4_56dma"]
+[ext_resource type="PackedScene" uid="uid://cj60g0tse11v2" path="res://Prefabs/Cables/Clavija/clavijas_manager.tscn" id="5_ok6cb"]
+[ext_resource type="PackedScene" uid="uid://bwi8usa3ntofn" path="res://Prefabs/Cables/Enchufe/enchufes_manager.tscn" id="6_c3kym"]
+[ext_resource type="PackedScene" uid="uid://c5ixutm1rtqq0" path="res://Prefabs/Bombillas/BombillasManager.tscn" id="7_kktuk"]
+[ext_resource type="PackedScene" uid="uid://dcod2yvxj0ak3" path="res://Prefabs/TransicionInGame/TransitionAreaManager.tscn" id="8_ok6cb"]
 
-[node name="ClavijasScene" type="Control"]
+[node name="ClavijasScene" type="Node2D"]
+script = ExtResource("1_kktuk")
+
+[node name="Fondo" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1913.0
+offset_bottom = 1078.0
 mouse_filter = 2
-script = ExtResource("1_mxnlp")
 
-[node name="Backcolor" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="Fondo"]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -3.5
+offset_top = -1.0
+offset_right = 3.5
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-color = Color(0.0784314, 0.0980392, 0.152941, 1)
+texture = ExtResource("2_1203f")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 920.0
-offset_top = 36.0
-offset_right = 1051.0
-offset_bottom = 86.0
-theme_override_font_sizes/font_size = 36
-text = "Clavijas"
+[node name="DialogueBox" parent="Fondo" instance=ExtResource("3_n760j")]
+visible = false
+layout_mode = 1
 
-[node name="World" type="Node2D" parent="."]
+[node name="ClavijasManager" parent="." instance=ExtResource("5_ok6cb")]
+position = Vector2(723, 770)
+separacion = 79
 
-[node name="Izq" parent="World" instance=ExtResource("1_7ruou")]
+[node name="EnchufesManager" parent="." instance=ExtResource("6_c3kym")]
+position = Vector2(723, 246)
+height = 4
+weight = 5
 
-[node name="Der" type="Area2D" parent="World"]
-script = ExtResource("1_dmtrx")
+[node name="BombillasManager" parent="." instance=ExtResource("7_kktuk")]
+position = Vector2(1343, 216)
+separacion = 90
+
+[node name="CheckClavijas" parent="." instance=ExtResource("4_56dma")]
+offset_left = 1111.0
+offset_top = 808.0
+offset_right = 1179.0
+offset_bottom = 900.0
+
+[node name="TransitionAreaManager" parent="." instance=ExtResource("8_ok6cb")]
 current_scene = 1
-to_scene = 3
+to_scene_left = 3
+to_scene_right = 3
+to_scene_down = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Der"]
-top_level = true
-position = Vector2(1918, 1080)
-scale = Vector2(-1, -1)
-polygon = PackedVector2Array(148, 172, 150, 927, -2, 1083, 0, 1)
-
-[node name="Abajo" type="Area2D" parent="World"]
-script = ExtResource("1_dmtrx")
-current_scene = 1
-to_scene = 2
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="World/Abajo"]
-position = Vector2(12, 1075)
-rotation = 1.5708
-scale = Vector2(-1, -1.75208)
-polygon = PackedVector2Array(131.001, 105.589, 131.006, 984.544, -1.99988, 1091.63, 0, 1)
-
-[connection signal="mouse_entered" from="World/Der" to="World/Der" method="_on_mouse_entered"]
-[connection signal="mouse_entered" from="World/Abajo" to="World/Abajo" method="_on_mouse_entered"]
+[connection signal="button_down" from="CheckClavijas" to="." method="_on_check_clavijas_button_down"]

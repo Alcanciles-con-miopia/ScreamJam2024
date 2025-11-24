@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 	if pressed:
 		position = mousePos
 	if to_delete:
+		# SONIDO AQUI
 		Global.SceneManager.sfx.stream = load("res://Sounds/papel/409098__kash15__cigerette-being-put-out-in-water-sound.wav")
 		Global.SceneManager.sfx.play()
 		queue_free()
@@ -27,6 +28,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.pressed and (event.keycode == KEY_ENTER or event.keycode == KEY_KP_ENTER):
 			_intro()
+			# SONIDO AQUI
 			Global.SceneManager.sfx.stream = load("res://Sounds/papel/181052__jakobhandersen__pencil_check_mark_1.wav")
 			Global.SceneManager.sfx.play()
 	if event is InputEventMouseMotion:

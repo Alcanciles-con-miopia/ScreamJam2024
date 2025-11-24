@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddjov15tq2lh0"]
+
+[ext_resource type="PackedScene" uid="uid://cj60g0tse11v2" path="res://Prefabs/Cables/Clavija/clavijas_manager.tscn" id="1_6s3sa"]
+[ext_resource type="Script" uid="uid://cyt5aihkhokub" path="res://Scripts/Flujo/Mesa/clavija_scene.gd" id="1_mycru"]
+[ext_resource type="PackedScene" uid="uid://bwi8usa3ntofn" path="res://Prefabs/Cables/Enchufe/enchufes_manager.tscn" id="2_p55jg"]
+[ext_resource type="PackedScene" uid="uid://c5ixutm1rtqq0" path="res://Prefabs/Bombillas/BombillasManager.tscn" id="4_d4qbv"]
+[ext_resource type="PackedScene" uid="uid://bg5e1gbjrhc4l" path="res://Prefabs/Cables/checkClavijas.tscn" id="6_8q4ng"]
+
+[node name="PruebasAndres" type="Node2D"]
+script = ExtResource("1_mycru")
+
+[node name="ClavijasManager" parent="." instance=ExtResource("1_6s3sa")]
+position = Vector2(410, 820)
+
+[node name="EnchufesManager" parent="." instance=ExtResource("2_p55jg")]
+position = Vector2(507, 230)
+height = 1
+weight = 5
+
+[node name="BombillasManager" parent="." instance=ExtResource("4_d4qbv")]
+position = Vector2(1566, 171)
+
+[node name="CheckClavijas" parent="." instance=ExtResource("6_8q4ng")]
+offset_left = 1465.0
+offset_top = 894.0
+offset_right = 1533.0
+offset_bottom = 986.0
+
+[connection signal="button_down" from="CheckClavijas" to="." method="_on_check_clavijas_button_down"]

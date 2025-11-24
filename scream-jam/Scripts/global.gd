@@ -1,58 +1,80 @@
 extends Node
 
-# SEÑALES
+# SENYALES
 signal totransition
 signal transitioned
-signal levelChanged(level)
-#senial que se manda cuando es conectada una clavija: TRUE es correcto || FALSE incorrecto
-signal clavijaConected(correct, index) #index es el indice de la clavija conectada
 signal nextLevel # senial para avanzar el nivel
-signal playLlamada(index) # senial para avanzar el nivel
-signal allClavijasCorrect (index) #senial para cuando todas las clavijas dan correcto, se manda la llamada de la clavija mas a la izquierda
-
+signal endedCall(index) # Senial para notificar cuando se ha acabado una llamada
+signal startGame
 # FLUJO
 enum Scenes { MAIN_MENU, CLAVIJAS, MESA, PUERTA, CREDITS, INTRO, CONTEXT, NULL }
 var to_scene : Scenes = 0
 var current_scene : Scenes = 0
 
-enum ClavijasState {APAGADA, REGU, VERDE, ROJA, NULL }
+enum BombillaState { ENCENDIDA, APAGADA, BIEN, MAL }
 
 var SceneManager
-# LOGICA
-var primerCable: int = 0
-var correctos := [false, false, false, false, false]
-var nivelCorrecto : bool = false
-var cables = []
 
 # para saber si se esta draggeando algo o no
 var isDragging = false
 
 # nivel actual
-var nivel: int = 0
+var nivel: int = -1
 var niveles = [1,1,2,2,3,3]
-var llamadaActual: int = 0 # llamada por la que va
-var IDCableActual: int = 0 # llamada por la que va
 
 var nPostits = 0;
 
-# METODOS
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+## Narrativas
+var narrativas: Array = [] # Array para almacenar objetos Narrative
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var enchufes: Array = [] # Array de enchufes para obtener su callable
+var soluciones: Array = []
 
-var llamadasReprodEnEsteNivel: int = 0
-#funcion para cuando termina una llamada suma uno al contador de llamadas y decide cuando generar el siguiente caso
-func _llamada_terminada(llamadaEnReproduccion: int)->void:
-	llamadasReprodEnEsteNivel +=1
-	cables[IDCableActual]._llamada_escuchada()
-	if llamadasReprodEnEsteNivel >= niveles[nivel-1]:
-		nextLevel.emit()
-		nivelCorrecto = false
-		llamadasReprodEnEsteNivel = 0
+## Funcion para generar las narrativas del juego.
+func generate_narrative() -> void:
+	var persons = JsonParser.json_data["Persons"]
+	var dialogos = JsonParser.json_data["Dialoges"]
+	# Guardamos los personajes
+	var characters: Array[NarrativeCharacter]
+	for p in persons:
+		# Settea nombre y color.
+		var character = NarrativeCharacter.new(p["Name"], Color(p["Color"]["R"], p["Color"]["G"], p["Color"]["B"]))
+		character.set_font(load(p["Font"]))
+		# Recorrer cada emocion y sus sonidos.
+		for emo_name in p["Sound"].keys():
+			var emo_enum = NarrativeCharacter.Emotion[emo_name.to_upper()]
+			var paths = p["Sound"][emo_name]
+			# Por si hay varios sonidos para la emocion.
+			if paths is Array:
+				character.sounds[emo_enum] = paths.duplicate()
+		characters.push_back(character)
+	
+	# Guardamos los dialogos.
+	for narr_data in dialogos:
+		var narrative = Narrative.new()
+		var clavijero_esperado: int = narr_data["Clavijero"] # Obtener el valor objetivo del enchufe objetivo.
+		soluciones.append(clavijero_esperado)
+		
+		# Funcion lambda (Callable) para la condicion
+		# Se coge como argumento el clavijero_actual que se le pasara al verificar la narrativa.
+		# Devuelve true si el clavijero_actual es igual al clavijero_esperado.
+		var condition_lambda = Callable(enchufes[clavijero_esperado], "correcta")
+		
+		for blq in narr_data["Texts"]: # Usar "Texts" que es donde están los bloques en el JSON
+			var bloq = NarrativeBLock.new(characters[blq["Person"]], NarrativeCharacter.Emotion[blq["Emotion"].to_upper()], blq["Text"])
+			if "@" in blq["Text"]:
+				bloq.add_condition(condition_lambda)
+				bloq.set_text(blq["Text"].replace("@", ""))
+			narrative.add_block(bloq)
+		
+		#narrative.add_block(NarrativeBLock.empty_block())
+		narrativas.push_back(narrative)
+
+
+# Esta funcion comprueba si el clavijero actual es el esperado para pasar al siguiente dialogo.
+# current_clavijero se pasa en ejecucion y expected_clavijero al crear la funcion (el valor del JSON).
+func _check_clavijero_condition(clavijeroEsperado:int) -> bool:
+	return true
 
 func _poner_los_creditos()->void:
 	current_scene = Scenes.CLAVIJAS
