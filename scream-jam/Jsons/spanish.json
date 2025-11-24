@@ -284,47 +284,37 @@
 				{
 					"Person": 0.0,
 					"Emotion": "neutral",
-					"Text": " Ya… A mí me da un poco de pena que tengas que irte tan pronto, la verdad… Pero tienes que pensar que te va a venir genial, es una oportunidad única, y tú tienes que florecer. Si te quedas, tu destino aquí es estar estancado, y yo sé que tú vales mucho, y puedes aspirar a mucho más."
-				},
-				{
-					"Person": 0.0,
-					"Emotion": "neutral",
-					"Text": "Tienes toda la razón… Te voy a echar mucho de menos."
+					"Text": "Pues ayer mandaron una denuncia en la que se sospechaba que había rojos por el monte.Fue enviada por un ganadero que transitaba la zona"
 				},
 				{
 					"Person": 1.0,
 					"Emotion": "neutral",
-					"Text": "Isaías…"
+					"Text": "¿Y…?"
 				},
 				{
 					"Person": 0.0,
 					"Emotion": "neutral",
-					"Text": "¿Pero vendrás a visitarme?"
+					"Text": "Resultó ser cierto, mandaron a una brigada y en cuanto los interceptaron abrieron fuego. No quedó ningún guerrillero vivo."
 				},
 				{
 					"Person": 1.0,
 					"Emotion": "neutral",
-					"Text": "Siempre que pueda estaré ahí para ti…"
+					"Text": "Qué miedo, menos mal que hay gente como tu marido que limpia nuestra España de toda esa plaga de ratas. Orgullo nacional, ¡viva la Guardia Civil y Arriba España!"
 				},
 				{
 					"Person": 0.0,
 					"Emotion": "neutral",
-					"Text": "He pensado siempre que contigo todo habría sido más feliz… Si te parece bien mañana por la mañana quedamos en la Plaza de España y hablamos de todo esto."
+					"Text": "¡Arriba España, ahora y siempre!"
 				},
 				{
 					"Person": 1.0,
 					"Emotion": "neutral",
-					"Text": "Sí… allí hablaremos de todo esto y más."
+					"Text": "Lola, tú cuéntame todas estas cosas que en la radio ya no dicen nada. Te dejo, que se me pega el guiso."
 				},
 				{
 					"Person": 0.0,
 					"Emotion": "neutral",
-					"Text": "Te… quiero…"
-				},
-				{
-					"Person": 1.0,
-					"Emotion": "neutral",
-					"Text": "Y… yo…"
+					"Text": "Adiós, adiós…"
 				}
 			]
 		},
