@@ -38,19 +38,19 @@ func setCall(id:int) -> void:
 	setState(Global.BombillaState.ENCENDIDA)
 
 func setState(state: Global.BombillaState) -> void:
-	# Guardar el estado anterior si vamos a entrar en MAL (o siempre si lo necesitas)
+	# Guardar el estado anterior si vamos a entrar en MAL.
 	if state == Global.BombillaState.MAL:
-		_last_state = _state   # guardamos el estado anterior antes de cambiar
+		_last_state = _state   # guardamos el estado anterior antes de cambiar.
 		_state = state
 		elapsedTime = 0.0
 		countdown = true
 	else:
-		# Si salimos de MAL, asegurarnos de detener el countdown
+		# Si salimos de MAL, detener el countdown.
 		if _state == Global.BombillaState.MAL:
 			countdown = false
 			elapsedTime = 0.0
 		_state = state
-
+		
 	_setImage()
 
 func reset() -> void:
