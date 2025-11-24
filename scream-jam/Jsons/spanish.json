@@ -9,7 +9,7 @@
 	},
 	"Persons": [
 		{
-			"Name":"",
+			"Name":"M.A.I.T.E",
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
@@ -33,7 +33,414 @@
 			}
 		},
 		{
-			"Name":"",
+			"Name":"Juan Marcos",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 0.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Zacarías",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Francisco",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 0.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},{
+			"Name":"Jorge",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Isaías",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 0.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Magdalena",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Dolores",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 0.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Rosario",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"???",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 0.0
+			}
+		},
+		{
+			"Name":"???",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Sagrario",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 0.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Encarna",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Felipe",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 0.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Gonzalo",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Yesbeth",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Martirio",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 0.0,
+				"G": 1.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Antonio",
+			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
+			"Sound": {
+				"neutral": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"happy": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"sad": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				],
+				"angry": [
+					"res://Sounds/Placeholders/SonidoPH1.wav"
+				]
+			},
+			"Color": {
+				"R": 1.0,
+				"G": 0.0,
+				"B": 1.0,
+				"A": 1.0
+			}
+		},
+		{
+			"Name":"Rut",
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
@@ -56,6 +463,9 @@
 				"A": 1.0
 			}
 		}
+
+
+
 	],
 	"Dialoges": [
 		{
