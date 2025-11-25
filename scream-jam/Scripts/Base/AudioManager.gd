@@ -3,6 +3,7 @@ extends Node
 @onready var sfx_emitter: FmodEventEmitter2D = $sfx_2D
 @onready var music_emitter: FmodEventEmitter2D = $music_2D
 @onready var ambience_emitter: FmodEventEmitter2D = $ambience_2D
+@onready var listener: FmodListener2D = $FmodListener2D
 
 var banks:= Array()
 
@@ -51,7 +52,16 @@ func play_sfx_2d(event_path: String, pos: Vector2):
 func play_ambience(event_path: String):
 	print(event_path + "  |  "+ FmodServer.get_event_guid(event_path))
 	ambience_emitter.event_guid = FmodServer.get_event_guid(event_path)
+	var hello = FmodServer.get_all_event_descriptions()
+	var hola: FmodEventDescription = FmodServer.get_event(event_path)
+	var ostia = hello[0]
+	ostia.get_guid()
+	var mecago = hola.get_path()
+	var puta: FmodEventDescription = ostia
+	ambience_emitter.event_name = "event:/Tormenta/Tormenta_Ej1"
+	print("Event path: ", ambience_emitter.event_name)
 	ambience_emitter.play()
+
 
 func stop_ambience():
 	ambience_emitter.stop()
