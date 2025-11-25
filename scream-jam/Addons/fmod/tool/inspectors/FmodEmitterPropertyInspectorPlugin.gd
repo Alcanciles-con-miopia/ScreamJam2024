@@ -3,7 +3,7 @@ class_name FmodEmitterPropertyInspectorPlugin extends EditorInspectorPlugin
 var _open_project_explorer_callable: Callable
 var _event_editor_property_scene: PackedScene = load("res://addons/fmod/tool/property_editors/FmodEventEditorProperty.tscn")
 
-func _init(plugin: FmodPlugin):
+func _init(plugin):
 	_open_project_explorer_callable = plugin.open_project_explorer_events
 
 func _can_handle(object: Object):

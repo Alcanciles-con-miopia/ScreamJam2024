@@ -1,6 +1,6 @@
 @tool
-class_name FmodPlugin extends EditorPlugin
-
+extends EditorPlugin
+#class_name FmodPlugin
 
 const ADDON_PATH: StringName = &"res://addons/fmod"
 const FmodManager_Autoload_Name: StringName = &"FmodManager"

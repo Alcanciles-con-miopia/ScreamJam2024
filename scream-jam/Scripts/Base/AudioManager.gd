@@ -5,21 +5,16 @@ extends Node
 @onready var ambience_emitter: FmodEventEmitter2D = $ambience_2D
 @onready var listener: FmodListener2D = $FmodListener2D
 
-var banks:= Array()
-
-func _ready():
-	# Cargar bancos FMOD
-	banks.append(FmodServer.load_bank("res://FMOD/banks/Master.strings.bank", FmodServer.FMOD_STUDIO_LOAD_BANK_NORMAL))
-	banks.append(FmodServer.load_bank("res://FMOD/banks/Master.bank", FmodServer.FMOD_STUDIO_LOAD_BANK_NORMAL))
-	banks.append(FmodServer.load_bank("res://FMOD/banks/Tormenta.bank", FmodServer.FMOD_STUDIO_LOAD_BANK_NORMAL))
-	print("FMOD: Bancos cargados correctamente " + str(FmodServer.get_all_banks().size()))
-
 # --- MUSICA ----------------------------------------------------------------
-## Reproduce musica en bucle.
-func play_music(event_path: String):
-	music_emitter.set_event(event_path)
+## Reproduce musica.
+func play_music(event_name: String):
+	# Paramos
+	music_emitter.stop()
+	# Setteamos
+	music_emitter.set_event_name(event_name)
+	# Reproducimos
 	music_emitter.play()
-	
+
 ## Para la musica.
 func stop_music():
 	music_emitter.stop()
@@ -31,17 +26,21 @@ func set_music_param(param: String, value: float):
 
 # --- SFX ----------------------------------------------------------------
 ## Reproduce un SFX sin posicion.
-func play_sfx(event_path: String):
-	sfx_emitter.set_event_name (event_path)
+func play_sfx(event_name: String):
+	# Paramos
+	sfx_emitter.stop()
+	# Setteamos
+	sfx_emitter.set_event_name(event_name)
+	# Reproducimos
 	sfx_emitter.play()
 
 ## Reproduce un sfx con posicion.
-func play_sfx_2d(event_path: String, pos: Vector2):
+func play_sfx_2d(event_name: String, pos: Vector2):
 	# Creamos y colocamos el emitter
 	var emitter := FmodEventEmitter2D.new()
 	add_child(emitter)
 	emitter.global_position = pos
-	emitter.set_event_name (event_path)
+	emitter.set_event_name (event_name)
 	emitter.play()
 	
 	# borramos automaticamente cuando termina.
@@ -49,17 +48,13 @@ func play_sfx_2d(event_path: String, pos: Vector2):
 
 # --- AMBIENCE ----------------------------------------------------------------
 
-func play_ambience(event_path: String):
-	print(event_path + "  |  "+ FmodServer.get_event_guid(event_path))
-	ambience_emitter.event_guid = FmodServer.get_event_guid(event_path)
-	var hello = FmodServer.get_all_event_descriptions()
-	var hola: FmodEventDescription = FmodServer.get_event(event_path)
-	var ostia = hello[0]
-	ostia.get_guid()
-	var mecago = hola.get_path()
-	var puta: FmodEventDescription = ostia
-	ambience_emitter.event_name = "event:/Tormenta/Tormenta_Ej1"
-	print("Event path: ", ambience_emitter.event_name)
+## Reproduce un sonido ambiente
+func play_ambience(event_name: String):
+	# Paramos
+	ambience_emitter.stop()
+	# Setteamos
+	ambience_emitter.set_event_name(event_name)
+	# Reproducimos
 	ambience_emitter.play()
 
 

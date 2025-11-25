@@ -1,8 +1,4 @@
 extends Node
-@onready var ambient_sound: AudioStreamPlayer2D = $AmbientSound
-@onready var ambient_sound_2: AudioStreamPlayer2D = $AmbientSound2
-@onready var sfx: AudioStreamPlayer2D = $SFX
-@onready var sfx_2: AudioStreamPlayer2D = $SFX2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

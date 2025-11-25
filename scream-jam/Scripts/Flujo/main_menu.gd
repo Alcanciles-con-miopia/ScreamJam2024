@@ -13,8 +13,6 @@ func _ready() -> void:
 	JsonParser._load_lenguage("res://Jsons/englis.json")
 	#start_button.button_down.connect(_on_start_down)
 	#exit_button.button_down.connect(_on_exit_down)
-	AudioManager.play_ambience("event:/Tormenta/Tormenta_Ej1")
-	AudioManager.set_ambience_param("Volumen", 1)
 
 func _on_start_down() -> void:
 	Global.current_scene = Global.Scenes.MAIN_MENU
@@ -62,3 +60,7 @@ func _on_start_button_down() -> void:
 func _on_exit_button_down() -> void:
 	get_tree().quit()
 	pass # Replace with function body.
+
+func on_enable() -> void:
+	AudioManager.play_ambience("event:/Tormenta_Ej1")
+	AudioManager.set_ambience_param("Volumen", 0.25)
