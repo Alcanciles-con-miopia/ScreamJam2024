@@ -1,4 +1,4 @@
-extends Control
+extends Scene
 class_name MainMenu
 
 @onready var start_button: Button = $Start as Button
@@ -18,7 +18,6 @@ func _on_start_down() -> void:
 	Global.current_scene = Global.Scenes.MAIN_MENU
 	Global.to_scene = Global.Scenes.CONTEXT
 	Global.totransition.emit()
-	Global.startGame.emit()
 	# SONIDO AQUI
 	Global.SceneManager.sfx.stream = load("res://Sounds/cascos/422651__trullilulli__sfx-player-action-phone-pick-up.wav")
 	Global.SceneManager.sfx.play()

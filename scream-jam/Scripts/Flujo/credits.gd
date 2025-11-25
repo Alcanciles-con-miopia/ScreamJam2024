@@ -1,4 +1,4 @@
-extends Control
+extends Scene
 
 @export var bg_color : Color = Color.BLACK
 @export var to_scene : PackedScene = null

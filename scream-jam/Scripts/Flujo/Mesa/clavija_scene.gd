@@ -1,4 +1,4 @@
-extends Node2D
+extends Scene
 
 #fin de juego
 var noMasLlamadas: bool = false
@@ -24,6 +24,7 @@ var rng = RandomNumberGenerator.new()
 
 func _ready() -> void:
 	Global.connect("endedCall",_endedCall)
+	Global.connect("startTutorial", _start_tutorial)
 	
 	# Genera las estructuras de datos de las narrativas.
 	enchufes_manager.start()
@@ -32,11 +33,10 @@ func _ready() -> void:
 	bombillas_manager.start()
 	
 	clavijas_manager.setBombillas(bombillas_manager._bombillas)
-	Global.startGame.connect(_startGame)
 
-func _startGame() ->void:
-	Global.generate_narrative()
-	_new_level()
+func on_enable() -> void:
+	await get_tree().create_timer(2.0).timeout  # Espera 2 segundo
+	_startGame()
 
 # --- METODOS PUBLICOS --------------------------------------------------------
 func check():
@@ -55,6 +55,7 @@ func _endedCall(id: int) ->void:
 	if completedCalls >= Global.niveles[Global.nivel]:
 		_new_level()
 		completedCalls = 0
+
 # Empieza el siguiente nivel
 func _new_level():
 	Global.nivel += 1
@@ -73,3 +74,10 @@ func _new_level():
 # --- CONEXIONES --------------------------------------------------------
 func _on_check_clavijas_button_down() -> void:
 	check()
+
+func _start_tutorial():
+	$Fondo/DialogueBox.start_narrative_ID(0)
+
+func _startGame() ->void:
+	Global.generate_narrative()
+	_new_level()

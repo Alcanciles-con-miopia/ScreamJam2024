@@ -3,9 +3,10 @@ extends Node
 # SENYALES
 signal totransition
 signal transitioned
+signal endedCall(int)
 signal nextLevel # senial para avanzar el nivel
-signal endedCall(index) # Senial para notificar cuando se ha acabado una llamada
-signal startGame
+signal narrativeLoaded # Senial para marcar cuando se han cargado las narrativas
+signal startTutorial
 # FLUJO
 enum Scenes { MAIN_MENU, CLAVIJAS, MESA, PUERTA, CREDITS, INTRO, CONTEXT, NULL }
 var to_scene : Scenes = 0
@@ -52,29 +53,24 @@ func generate_narrative() -> void:
 	# Guardamos los dialogos.
 	for narr_data in dialogos:
 		var narrative = Narrative.new()
-		var clavijero_esperado: int = narr_data["Clavijero"] # Obtener el valor objetivo del enchufe objetivo.
+		var clavijero_esperado: int = narr_data["Clavijero"] # Obtener el enchufe objetivo.
 		soluciones.append(clavijero_esperado)
 		
 		# Funcion lambda (Callable) para la condicion
-		# Se coge como argumento el clavijero_actual que se le pasara al verificar la narrativa.
-		# Devuelve true si el clavijero_actual es igual al clavijero_esperado.
+		# Coge la funcion "correcta" dentro del enchufe esperado.
 		var condition_lambda = Callable(enchufes[clavijero_esperado], "correcta")
 		
-		for blq in narr_data["Texts"]: # Usar "Texts" que es donde están los bloques en el JSON
+		# Carga los textos.
+		for blq in narr_data["Texts"]:
 			var bloq = NarrativeBLock.new(characters[blq["Person"]], NarrativeCharacter.Emotion[blq["Emotion"].to_upper()], blq["Text"])
 			if "@" in blq["Text"]:
 				bloq.add_condition(condition_lambda)
 				bloq.set_text(blq["Text"].replace("@", ""))
 			narrative.add_block(bloq)
 		
-		#narrative.add_block(NarrativeBLock.empty_block())
 		narrativas.push_back(narrative)
-
-
-# Esta funcion comprueba si el clavijero actual es el esperado para pasar al siguiente dialogo.
-# current_clavijero se pasa en ejecucion y expected_clavijero al crear la funcion (el valor del JSON).
-func _check_clavijero_condition(clavijeroEsperado:int) -> bool:
-	return true
+	
+	narrativeLoaded.emit()
 
 func _poner_los_creditos()->void:
 	current_scene = Scenes.CLAVIJAS

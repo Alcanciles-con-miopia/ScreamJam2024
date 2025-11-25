@@ -27,9 +27,7 @@ visible = false
 process_mode = 4
 visible = false
 
-[node name="level_manager" parent="." instance=ExtResource("5_p2e8t")]
-process_mode = 4
-visible = false
+[node name="ClavijasScene" parent="." instance=ExtResource("5_p2e8t")]
 
 [node name="ContextoScene" parent="." instance=ExtResource("6_ce53t")]
 process_mode = 4
@@ -57,5 +55,3 @@ volume_db = 5.0
 
 [connection signal="transitioned" from="FadeScene" to="." method="_on_fade_scene_transitioned"]
 [connection signal="transitioned" from="FadeScene" to="MainMenu" method="_on_fade_scene_transitioned"]
-
-[editable path="level_manager"]

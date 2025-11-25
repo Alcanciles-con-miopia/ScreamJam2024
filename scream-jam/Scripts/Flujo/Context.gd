@@ -1,4 +1,4 @@
-extends Control
+extends Scene
 
 var elapsedTime: float = 0
 var maxTime: float = 3

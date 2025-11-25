@@ -1,4 +1,4 @@
-extends Control
+extends Scene
 
 var postitsTraducidos: bool = false
 
