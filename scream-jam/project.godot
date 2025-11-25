@@ -8,6 +8,10 @@
 
 config_version=5
 
+[Fmod]
+
+General/banks_path="res://FMOD/banks"
+
 [application]
 
 config/name="Scream-Jam"
@@ -19,6 +23,7 @@ config/icon="res://icon.png"
 
 Global="*res://Scripts/global.gd"
 JsonParser="*res://Scripts/JsonParser/JsonParser.gd"
+AudioManager="*res://Scripts/Base/AudioTree.tscn"
 
 [display]
 

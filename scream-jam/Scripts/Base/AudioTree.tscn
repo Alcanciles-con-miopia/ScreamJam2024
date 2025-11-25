@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bupgf2kkplvy"]
+
+[ext_resource type="Script" uid="uid://c5vxpfob8rk6" path="res://Scripts/Base/AudioManager.gd" id="1_j5v7l"]
+
+[node name="AudioTree" type="Node"]
+script = ExtResource("1_j5v7l")
+
+[node name="sfx_2D" type="FmodEventEmitter2D" parent="."]
+volume = 9.02
+
+[node name="music_2D" type="FmodEventEmitter2D" parent="."]
+volume = 9.02
+
+[node name="ambience_2D" type="FmodEventEmitter2D" parent="."]
+volume = 9.02
+
+[node name="FmodListener2D" type="FmodListener2D" parent="."]
+
+[node name="FmodBankLoader" type="FmodBankLoader" parent="."]

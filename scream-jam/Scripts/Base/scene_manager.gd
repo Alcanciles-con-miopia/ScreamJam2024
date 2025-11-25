@@ -52,8 +52,6 @@ func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es
 			$MainMenu.visible = true
 			$MainMenu.process_mode = Node.PROCESS_MODE_INHERIT
 			$MainMenu.on_enable()
-			ambient_sound.play()
-			ambient_sound_2.play()
 		Global.Scenes.CLAVIJAS:
 			$ClavijasScene.visible = true
 			$ClavijasScene.process_mode = Node.PROCESS_MODE_INHERIT
