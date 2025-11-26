@@ -1,9 +1,7 @@
 extends Node
 
-@onready var sfx_emitter: FmodEventEmitter2D = $sfx_2D
 @onready var music_emitter: FmodEventEmitter2D = $music_2D
 @onready var ambience_emitter: FmodEventEmitter2D = $ambience_2D
-@onready var listener: FmodListener2D = $FmodListener2D
 
 # --- MUSICA ----------------------------------------------------------------
 ## Reproduce musica.
@@ -27,12 +25,11 @@ func set_music_param(param: String, value: float):
 # --- SFX ----------------------------------------------------------------
 ## Reproduce un SFX sin posicion.
 func play_sfx(event_name: String):
-	# Paramos
-	sfx_emitter.stop()
-	# Setteamos
-	sfx_emitter.set_event_name(event_name)
-	# Reproducimos
-	sfx_emitter.play()
+	var emitter = FmodEventEmitter2D.new()
+	add_child(emitter)
+	emitter.set_event_name(event_name)
+	emitter.play()
+	emitter.auto_release = true
 
 ## Reproduce un sfx con posicion.
 func play_sfx_2d(event_name: String, pos: Vector2):
@@ -42,9 +39,7 @@ func play_sfx_2d(event_name: String, pos: Vector2):
 	emitter.global_position = pos
 	emitter.set_event_name (event_name)
 	emitter.play()
-	
-	# borramos automaticamente cuando termina.
-	emitter.finished.connect(emitter.queue_free)
+	emitter.auto_release = true
 
 # --- AMBIENCE ----------------------------------------------------------------
 
