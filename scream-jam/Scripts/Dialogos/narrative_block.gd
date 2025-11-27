@@ -4,6 +4,7 @@ class_name NarrativeBLock
 var callbacks : Array[Callable]
 var condition_continue: Callable = Callable()
 var text := ""
+var emitter = null
 var soundChannel := -1
 var character : NarrativeCharacter
 var emotion : NarrativeCharacter.Emotion
@@ -65,5 +66,8 @@ func reproduce() -> String:
 	for c in callbacks:
 		c.call()
 	# SONIDO AQUI
-	#SoundSystem.play_sfx(character.get_sound(emotion), soundChannel)
+	#if emitter != null:
+		#emitter.set_event_name("event:/talk")
+		#emitter.set_parameter("character", character.name)
+		#emitter.set_parameter("emotion", emotion)
 	return text

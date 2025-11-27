@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkeruh02gg7es"]
+[gd_scene load_steps=11 format=3 uid="uid://dkeruh02gg7es"]
 
 [ext_resource type="Script" uid="uid://oc2qmpbeqtjj" path="res://Scripts/Base/scene_manager.gd" id="1_iv1q4"]
 [ext_resource type="PackedScene" uid="uid://whxja3o8nmc6" path="res://Scenes/Flujo/CreditsScene.tscn" id="2_y28pb"]
 [ext_resource type="PackedScene" uid="uid://blbnh2wfdgbxj" path="res://Scenes/Flujo/PuertaScene.tscn" id="3_66sb8"]
 [ext_resource type="PackedScene" uid="uid://dyph5mqd443d5" path="res://Scenes/Flujo/MainMenuScene.tscn" id="3_b721g"]
+[ext_resource type="Script" uid="uid://cyudbiqwdrdso" path="res://Scenes/Flujo/puerta_scene.gd" id="4_58e5d"]
 [ext_resource type="PackedScene" uid="uid://5w0xl8fledrk" path="res://Scenes/Flujo/FadeScene.tscn" id="4_88r4u"]
 [ext_resource type="PackedScene" uid="uid://btqpasjgf1reh" path="res://Scenes/Flujo/MesaScene.tscn" id="4_w2nar"]
 [ext_resource type="PackedScene" uid="uid://c6ixnnj7d48qe" path="res://Scenes/Flujo/ClavijasScene.tscn" id="5_p2e8t"]
@@ -18,6 +19,7 @@ process_mode = 4
 
 [node name="PuertaScene" parent="." instance=ExtResource("3_66sb8")]
 process_mode = 4
+script = ExtResource("4_58e5d")
 
 [node name="MesaScene" parent="." instance=ExtResource("4_w2nar")]
 process_mode = 4
