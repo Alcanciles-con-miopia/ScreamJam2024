@@ -1,7 +1,7 @@
 extends RefCounted
 class_name NarrativeCharacter
 
-enum Emotion {NEUTRAL, HAPPY, SAD, ANGRY, SURPRISED, SUSPICIUS, NULL}
+enum Emotion {NEUTRAL, HAPPY, SAD, ANGRY, SURPRISED, SUSPICIUS}
 var sounds: Dictionary[Emotion,Array]
 var id:int = 0
 var name := ""

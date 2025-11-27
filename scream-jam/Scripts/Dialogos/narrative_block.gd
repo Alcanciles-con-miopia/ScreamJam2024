@@ -22,7 +22,7 @@ static func empty_block() -> NarrativeBLock:
 	var block = NarrativeBLock.new()
 	# No ponemos character, no ponemos texto → queda “vacío”
 	block.character = null
-	block.emotion = NarrativeCharacter.Emotion.NULL
+	block.emotion = NarrativeCharacter.Emotion.NEUTRAL
 	block.text = ""
 	return block
 
@@ -63,6 +63,6 @@ func reproduce() -> String:
 	if emitter != null:
 		emitter.set_event_name("event:/Emocion")
 		emitter.set_parameter("Personajes", character.id)
-		#emitter.set_parameter("Emociones", emotion)
+		emitter.set_parameter("Emociones", emotion)
 		emitter.play()
 	return text

@@ -12,7 +12,7 @@
     "Persons": [
         {
             "Name": "M.A.I.T.E.",
-            "Font": "",
+            "Font": "res://Fonts/Jersey20Charted-Regular.ttf",
             "Sound": {
                 "neutral": [
                     "res://Sounds/voces/vozMAITE.wav"
@@ -529,7 +529,7 @@
                 },
                 {
                     "Person": 0,
-                    "Emotion": "neutral",
+                    "Emotion": "happy",
                     "Text": "La luz indica la clavija con la llamada entrante, al pulsarla el abonado en cuestión le contará el sitio destino. Para ello conecte la clavija acorde al número de la bomiblla con el clavijero 2E. Compruebe la conexión utilizando el interruptor junto a las clavijas.@",
                     "Callbacks": []
                 },
