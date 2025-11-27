@@ -48,6 +48,7 @@ func generate_narrative() -> void:
 			# Por si hay varios sonidos para la emocion.
 			if paths is Array:
 				character.sounds[emo_enum] = paths.duplicate()
+		character.id = characters.size()
 		characters.push_back(character)
 	
 	# Guardamos los dialogos.

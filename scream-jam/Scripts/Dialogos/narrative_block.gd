@@ -5,7 +5,6 @@ var callbacks : Array[Callable]
 var condition_continue: Callable = Callable()
 var text := ""
 var emitter = null
-var soundChannel := -1
 var character : NarrativeCharacter
 var emotion : NarrativeCharacter.Emotion
 var continue_ := true
@@ -31,11 +30,6 @@ static func empty_block() -> NarrativeBLock:
 ## [code]txt[code] (String) texto a mostrar
 func set_text(txt:= "") -> void:
 	text = txt
-
-## Cambia el canal de reproduccion del sonido
-## [code]channel[code] (int) canal por el que quieres que salga, se asigna automaticamente
-func set_sound_channel(channel:= -1) -> void:
-	soundChannel = channel
 
 ## Aniade un callback que se ejecutara al reproducir
 ## [code]call[code] (Callable) metodo
@@ -66,8 +60,9 @@ func reproduce() -> String:
 	for c in callbacks:
 		c.call()
 	# SONIDO AQUI
-	#if emitter != null:
-		#emitter.set_event_name("event:/talk")
-		#emitter.set_parameter("character", character.name)
-		#emitter.set_parameter("emotion", emotion)
+	if emitter != null:
+		emitter.set_event_name("event:/Emocion")
+		emitter.set_parameter("Personajes", character.id)
+		#emitter.set_parameter("Emociones", emotion)
+		emitter.play()
 	return text

@@ -3,6 +3,7 @@ class_name NarrativeCharacter
 
 enum Emotion {NEUTRAL, HAPPY, SAD, ANGRY, SURPRISED, SUSPICIUS, NULL}
 var sounds: Dictionary[Emotion,Array]
+var id:int = 0
 var name := ""
 var color := Color.BLACK
 var font : Font

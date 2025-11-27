@@ -62,5 +62,4 @@ func _on_exit_button_down() -> void:
 	pass # Replace with function body.
 
 func on_enable() -> void:
-	AudioManager.play_ambience("event:/Tormenta_Ej1")
-	AudioManager.set_ambience_param("Volumen", 0.25)
+	pass
