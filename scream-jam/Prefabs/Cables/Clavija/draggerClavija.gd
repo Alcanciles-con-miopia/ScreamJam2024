@@ -26,7 +26,7 @@ func _input(event: InputEvent) -> void:
 				position = event.position
 
 # Called when the node enters the scene tree for the first time.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if clicked:
 		# posicion y rotacion de la clavija
 		global_position = get_global_mouse_position()
@@ -127,6 +127,7 @@ func _on_area_2d_mouse_exited():
 ## PRIVATE
 func _on_button_button_down() -> void:
 	# SONIDO AQUI
+	AudioManager.play_sfx("event:/SFX/CogerClavija")
 	# Coger una clavija
 	button.icon = CLAVIJA_SUELTA
 	clicked = true

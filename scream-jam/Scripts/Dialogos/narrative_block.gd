@@ -28,20 +28,20 @@ static func empty_block() -> NarrativeBLock:
 
 ## Cambia el texto a mostrar
 ## [code]txt[code] (String) texto a mostrar
-func set_text(txt:= "") -> void:
-	text = txt
+func set_text(_txt:= "") -> void:
+	text = _txt
 
 ## Aniade un callback que se ejecutara al reproducir
 ## [code]call[code] (Callable) metodo
-func add_callable(call:Callable) -> void:
-	if call:
-		callbacks.append(call)
+func add_callable(_callable:Callable) -> void:
+	if _callable:
+		callbacks.append(_callable)
 
 ## Aniade un callback condicion para continuar al siguiente dialogo
 ## [code]call[code] (Callable) metodo
-func add_condition(call:Callable) -> void:
-	if call.is_valid():
-		condition_continue = call
+func add_condition(_callable:Callable) -> void:
+	if _callable.is_valid():
+		condition_continue = _callable
 
 ## Configura la label segun el hablante
 func configure_label(label: Label) ->void:
@@ -59,10 +59,17 @@ func can_continue() -> bool:
 func reproduce() -> String:
 	for c in callbacks:
 		c.call()
+
 	# SONIDO AQUI
-	if emitter != null:
-		emitter.set_event_name("event:/Emocion")
-		emitter.set_parameter("Personajes", character.id)
-		emitter.set_parameter("Emociones", emotion)
-		emitter.play()
+	if emitter == null:
+		print("[NarrativeBLock] emitter es nulo, saltamos el audio")
+		return text
+	
+	emitter.event_name = "event:/Emocion"
+	emitter.set_event_name ("event:/Emocion")
+	emitter.set_parameter("Personajes", character.id)
+	#emitter.set_parameter("Emociones", int(emotion))
+	
+	emitter.play()
+
 	return text

@@ -38,7 +38,7 @@ visible = false
 layout_mode = 1
 
 [node name="Emitter" type="FmodEventEmitter2D" parent="Fondo"]
-event_guid = "{00000000-0000-0000-0000-000000000000}"
+preload_event = false
 
 [node name="ClavijasManager" parent="." instance=ExtResource("5_ok6cb")]
 position = Vector2(723, 770)

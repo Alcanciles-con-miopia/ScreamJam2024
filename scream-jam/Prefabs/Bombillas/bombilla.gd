@@ -37,6 +37,8 @@ func setCall(id:int) -> void:
 	llamadaID = id
 	if llamadaID <0: return
 	setState(Global.BombillaState.ENCENDIDA)
+	# SONIDO AQUI
+	AudioManager.play_sfx("event:/SFX/BombillaEnciende")
 	# Si la id de la llamada es 0, empezamos el tutorial
 	if id == 0:
 		Global.startTutorial.emit()
@@ -65,6 +67,7 @@ func check(correcta: bool) -> void:
 	if correcta:
 		setState(Global.BombillaState.BIEN)
 	else:
+		AudioManager.play_sfx("event:/SFX/BombillaMal")
 		setState(Global.BombillaState.MAL)
 
 func unPlug() -> void:
@@ -79,14 +82,12 @@ func _setImage() -> void:
 	match _state:
 		Global.BombillaState.ENCENDIDA:
 			visual.texture = BOMBILLA_ENCENDIDA
-			AudioManager.play_sfx("event:/SFX/BombillaEnciende")
 		Global.BombillaState.APAGADA:
 			visual.texture = BOMBILLA_APAGADA
 		Global.BombillaState.BIEN:
 			visual.texture = BOMBILLA_BIEN
 		Global.BombillaState.MAL:
 			visual.texture = BOMBILLA_MAL
-			AudioManager.play_sfx("event:/SFX/BombillaMal")
 
 func _PlayLlamada() -> void:
 	# Si no hay llamada return

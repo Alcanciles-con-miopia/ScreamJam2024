@@ -6,7 +6,11 @@ extends Node
 # --- MUSICA ----------------------------------------------------------------
 ## Reproduce musica.
 func play_music(event_name: String):
-	if not FmodServer.get_event(event_name): return
+	# Comprueba entrada vacía
+	if not event_name or event_name.strip_edges() == "":
+		push_error("AudioManager.play_sfx: event_path vacío. Callsite should provide valid event path.")
+		return
+	
 	# Paramos
 	music_emitter.stop()
 	# Setteamos
@@ -26,10 +30,14 @@ func set_music_param(param: String, value: float):
 # --- SFX ----------------------------------------------------------------
 ## Reproduce un SFX sin posicion.
 func play_sfx(event_name: String):
-	if not FmodServer.get_event(event_name): return
+	# Comprueba entrada vacía
+	if not event_name or event_name.strip_edges() == "":
+		push_error("AudioManager.play_sfx: event_path vacío. Callsite should provide valid event path.")
+		return
+	
 	var emitter = FmodEventEmitter2D.new()
 	emitter.auto_release = true
-	emitter.preload_event = true
+	emitter.preload_event = false
 	self.add_child(emitter)
 	emitter.event_name = event_name
 	emitter.set_event_name (event_name)
@@ -37,7 +45,11 @@ func play_sfx(event_name: String):
 
 ## Reproduce un sfx con posicion.
 func play_sfx_2d(event_name: String, pos: Vector2):
-	if not FmodServer.get_event(event_name): return
+	# Comprueba entrada vacía
+	if not event_name or event_name.strip_edges() == "":
+		push_error("AudioManager.play_sfx: event_path vacío. Callsite should provide valid event path.")
+		return
+	
 	# Creamos y colocamos el emitter
 	var emitter := FmodEventEmitter2D.new()
 	emitter.auto_release = true
@@ -51,7 +63,11 @@ func play_sfx_2d(event_name: String, pos: Vector2):
 
 ## Reproduce un sonido ambiente
 func play_ambience(event_name: String):
-	if not FmodServer.get_event(event_name): return
+	# Comprueba entrada vacía
+	if not event_name or event_name.strip_edges() == "":
+		push_error("AudioManager.play_sfx: event_path vacío. Callsite should provide valid event path.")
+		return
+	
 	# Paramos
 	ambience_emitter.stop()
 	# Setteamos

@@ -7,10 +7,12 @@ script = ExtResource("1_j5v7l")
 
 [node name="music_2D" type="FmodEventEmitter2D" parent="."]
 event_guid = "{00000000-0000-0000-e01d-f16900020000}"
+preload_event = false
 volume = 9.02
 
 [node name="ambience_2D" type="FmodEventEmitter2D" parent="."]
 event_guid = "{00000000-0000-0000-80a1-5191d6020000}"
+preload_event = false
 volume = 9.02
 
 [node name="FmodListener2D" type="FmodListener2D" parent="."]

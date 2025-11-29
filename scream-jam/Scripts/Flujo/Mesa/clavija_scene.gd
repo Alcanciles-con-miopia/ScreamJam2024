@@ -35,8 +35,9 @@ func _ready() -> void:
 	clavijas_manager.setBombillas(bombillas_manager._bombillas)
 
 func on_enable() -> void:
-	await get_tree().create_timer(2.0).timeout  # Espera 2 segundo
-	_startGame()
+	if Global.nivel <= 0:
+		await get_tree().create_timer(2.0).timeout  # Espera 2 segundo
+		_startGame()
 
 # --- METODOS PUBLICOS --------------------------------------------------------
 func check():
@@ -50,7 +51,7 @@ func play_call(id:int):
 	
 # --- METODOS PRIVADOS --------------------------------------------------------
 # Contador de llamadas atendidas
-func _endedCall(id: int) ->void:
+func _endedCall(_id:int) ->void:
 	completedCalls += 1
 	if completedCalls >= Global.niveles[Global.nivel]:
 		_new_level()

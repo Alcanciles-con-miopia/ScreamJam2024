@@ -6,9 +6,8 @@ var textDisplay: float = 0
 var aumentado: bool = false
 @onready var label: Label = $Label
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	Global.totransition.connect(_cambio_idioma)
+func on_enable() -> void:
+	_cambio_idioma()
 
 func _cambio_idioma():
 	label.text = JsonParser.json_data.UI.Context
