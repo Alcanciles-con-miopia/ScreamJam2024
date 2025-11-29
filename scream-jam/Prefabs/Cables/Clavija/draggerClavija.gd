@@ -41,8 +41,6 @@ func _process(_delta: float) -> void:
 	# el extremo del cable apuntando al origin (tambien convertido al espacio local de cable)
 	cable.points[1] = cable.to_local(origin.global_position)
 
-func _ready() -> void:
-	pass
 
 # --- METODOS PUBLICOS ------------------------------------------------
 
@@ -80,6 +78,8 @@ func _checkDropZone() -> void:
 	# Insertamos la clavija en el enchufe.
 	_dropzone = dz
 	_dropzone.insertar(get_parent())
+	#SONIDO AQUI
+	AudioManager.play_sfx("event:/SFX/PonerClavija")
 	global_position = dz.global_position
 	button.icon = CLAVIJA_INSER
 	clavijaVis.position = Vector2(0,0)

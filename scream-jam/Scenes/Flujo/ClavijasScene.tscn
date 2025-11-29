@@ -37,9 +37,6 @@ texture = ExtResource("2_1203f")
 visible = false
 layout_mode = 1
 
-[node name="Emitter" type="FmodEventEmitter2D" parent="Fondo"]
-preload_event = false
-
 [node name="ClavijasManager" parent="." instance=ExtResource("5_ok6cb")]
 position = Vector2(723, 770)
 separacion = 79

@@ -27,7 +27,6 @@ func next_dialogue() -> void:
 		label.visible_ratio = 1
 		return
 	
-	Global.narrativas[actualNarrative].emitter = $"../Emitter"
 	Global.narrativas[actualNarrative].advance_block(label)
 	label.visible_ratio = 0
 

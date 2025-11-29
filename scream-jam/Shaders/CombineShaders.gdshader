@@ -7,8 +7,8 @@ uniform vec2 g_displacement = vec2(0.0, 0.0);
 uniform vec2 b_displacement = vec2(-3.0, 0.0);
 
 uniform float wave_count : hint_range(1.0, 20.0) = 20.0;
-uniform float speed : hint_range(0.0, 10.0) = 5.0;
-uniform float height : hint_range(0.0, 0.1) = 0.005;
+uniform float speed : hint_range(0.0, 10.0) = 10.0;
+uniform float height : hint_range(0.0, 0.1) = 0.01;
 
 uniform sampler2D screen_texture : hint_screen_texture, filter_nearest;
 

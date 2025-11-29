@@ -89,8 +89,6 @@ func restart_block_end() -> void:
 	reproduce(block)
 
 func reproduce(block):
-	#SONIDO AQUI
-	block.emitter = emitter
 	block.configure_label(label)
 	label.text = block.reproduce()
 

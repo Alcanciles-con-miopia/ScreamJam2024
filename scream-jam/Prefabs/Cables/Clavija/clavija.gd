@@ -32,7 +32,6 @@ func check(correct):
 
 # CUANDO SUELTAS UNA CLAVIJA
 func unPlug() -> void:
-	#SONIDO AQUI
 	if bombilla!= null:
 		bombilla.unPlug()
 

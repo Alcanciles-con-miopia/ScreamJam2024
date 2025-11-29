@@ -23,6 +23,8 @@ func _on_area_2d_mouse_exited() -> void:
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	buton.texture_normal = texture_hover
+	if _area.get_parent() is Posit:
+		_area.get_parent().to_delete = true
 
 func _on_area_2d_area_exited(_area: Area2D) -> void:
 	buton.texture_normal = texture_normal

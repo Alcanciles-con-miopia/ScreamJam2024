@@ -35,8 +35,7 @@ func _ready() -> void:
 	clavijas_manager.setBombillas(bombillas_manager._bombillas)
 
 func on_enable() -> void:
-	if Global.nivel <= 0:
-		await get_tree().create_timer(2.0).timeout  # Espera 2 segundo
+	if Global.nivel < 0:
 		_startGame()
 
 # --- METODOS PUBLICOS --------------------------------------------------------
@@ -60,6 +59,7 @@ func _endedCall(_id:int) ->void:
 # Empieza el siguiente nivel
 func _new_level():
 	Global.nivel += 1
+	await get_tree().create_timer(2.0).timeout  # Espera 2 segundo
 	# Se han completado todos los niveles.
 	if Global.nivel >= len(Global.niveles):
 		noMasLlamadas = true
@@ -72,6 +72,8 @@ func _new_level():
 
 # --- CONEXIONES --------------------------------------------------------
 func _on_check_clavijas_button_down() -> void:
+	# SONIDO AQUI
+	AudioManager.play_sfx("event:/SFX/Checker")
 	check()
 
 func _start_tutorial():

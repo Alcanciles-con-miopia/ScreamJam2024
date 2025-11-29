@@ -4,7 +4,6 @@ class_name NarrativeBLock
 var callbacks : Array[Callable]
 var condition_continue: Callable = Callable()
 var text := ""
-var emitter = null
 var character : NarrativeCharacter
 var emotion : NarrativeCharacter.Emotion
 var continue_ := true
@@ -59,17 +58,19 @@ func can_continue() -> bool:
 func reproduce() -> String:
 	for c in callbacks:
 		c.call()
-
+		
 	# SONIDO AQUI
-	if emitter == null:
-		print("[NarrativeBLock] emitter es nulo, saltamos el audio")
-		return text
+	_emit_sound(int(character.id), int(emotion))
 	
-	emitter.event_name = "event:/Emocion"
-	emitter.set_event_name ("event:/Emocion")
-	emitter.set_parameter("Personajes", character.id)
-	#emitter.set_parameter("Emociones", int(emotion))
-	
-	emitter.play()
-
 	return text
+
+func _emit_sound(character_id: int, emotion_value: float) -> void:
+	# Instancia del evento.
+	var evt = FmodServer.create_event_instance("event:/Emocion")
+	# Parametros.
+	evt.set_parameter_by_name("Personajes", float(character_id))
+	evt.set_parameter_by_name("Emociones", emotion_value)
+	# Reproduce
+	evt.start()
+	# Libera la intancia
+	evt.release()
