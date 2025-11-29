@@ -1,77 +1,48 @@
 extends Node
 
-# Called when the node enters the scene tree for the first time.
+@export var scenes: Array     # un array de nodos “Scene” preinstanciados
+var actual_scene: Node = null
+var to_transition: int = -1
+
 func _ready() -> void:
 	Global.SceneManager = self
-	Global.totransition.connect(_on_totransition)
-	Global.transitioned.connect(_on_fade_scene_transitioned)
+	Global.totransition.connect(self._on_totransition)
+	Global.transitioned.connect(self._on_fade_scene_transitioned)
+	
+	for child in get_children():
+		if child is Scene:
+			scenes.append(child)
+			child.visible = false
+			child.process_mode = Node.PROCESS_MODE_DISABLED
+		
+	# Lanzamos transicion a intro.
+	Global.totransition.emit(Global.Scenes.INTRO)
 
-func _on_totransition() -> void: #fade in
+func _on_totransition(scene_index: int) -> void:
+	to_transition = scene_index
 	$FadeScene.transition()
 
-func _on_fade_scene_transitioned() -> void: #justo antes del fadeout, la idea es que esto sea un switch
-	#if Global.current_scene == Global.to_scene:
-		 #pass
-	match Global.current_scene:
-		Global.Scenes.MAIN_MENU:
-			$MainMenu.visible = false
-			$MainMenu.on_disable()
-			$MainMenu.process_mode = Node.PROCESS_MODE_DISABLED
-		Global.Scenes.CLAVIJAS:
-			$ClavijasScene.visible = false
-			$ClavijasScene.on_disable()
-			$ClavijasScene.process_mode = Node.PROCESS_MODE_INHERIT
-		Global.Scenes.MESA:
-			$MesaScene.visible = false
-			$MesaScene.on_disable()
-			$MesaScene.process_mode = Node.PROCESS_MODE_DISABLED
-		Global.Scenes.PUERTA:
-			$PuertaScene.visible = false
-			$PuertaScene.on_disable()
-			$PuertaScene.process_mode = Node.PROCESS_MODE_DISABLED
-		Global.Scenes.CREDITS:
-			$Credits.visible = false
-			$Credits.on_disable()
-			$Credits.process_mode = Node.PROCESS_MODE_DISABLED
-		Global.Scenes.INTRO:
-			$Intro.visible = false
-			$Intro.on_disable()
-			$Intro.process_mode = Node.PROCESS_MODE_DISABLED
-		Global.Scenes.CONTEXT:
-			$ContextoScene.visible = false
-			$ContextoScene.on_disable()
-			$ContextoScene.process_mode = Node.PROCESS_MODE_DISABLED
-		_:
-			print("hola")
-	match Global.to_scene:
-		Global.Scenes.MAIN_MENU:
-			$MainMenu.visible = true
-			$MainMenu.process_mode = Node.PROCESS_MODE_INHERIT
-			$MainMenu.on_enable()
-		Global.Scenes.CLAVIJAS:
-			$ClavijasScene.visible = true
-			$ClavijasScene.process_mode = Node.PROCESS_MODE_INHERIT
-			$ClavijasScene.on_enable()
-		Global.Scenes.MESA:
-			$MesaScene.visible = true
-			$MesaScene.process_mode = Node.PROCESS_MODE_INHERIT
-			$MesaScene.on_enable()
-		Global.Scenes.PUERTA:
-			$PuertaScene.visible = true
-			$PuertaScene.process_mode = Node.PROCESS_MODE_INHERIT
-			$PuertaScene.on_enable()
-		Global.Scenes.CREDITS:
-			$Credits.visible = true
-			$Credits.process_mode = Node.PROCESS_MODE_INHERIT
-			$Credits.on_enable()
-		Global.Scenes.INTRO:
-			$Intro.visible = true
-			$Intro.process_mode = Node.PROCESS_MODE_INHERIT
-			$Intro.on_enable()
-		Global.Scenes.CONTEXT:
-			$ContextoScene.visible = true
-			$ContextoScene.process_mode = Node.PROCESS_MODE_INHERIT
-			$ContextoScene.on_enable()
-		_:
-			print("hola")
-	Global.current_scene = Global.to_scene
+## Se ejecuta cuando termina la transicion (fade-out / fade-in)
+func _on_fade_scene_transitioned() -> void:
+	# Deshabilitar la escena actual
+	if actual_scene != null:
+		actual_scene.visible = false
+		if "on_disable" in actual_scene:
+			actual_scene.on_disable()
+		actual_scene.process_mode = Node.PROCESS_MODE_DISABLED
+
+	# Establecer la nueva escena
+	if to_transition >= 0 and to_transition < scenes.size():
+		actual_scene = scenes[to_transition]
+	else:
+		push_error("SceneManager: indice de escena invalido: %s" % to_transition)
+		return
+
+	# Habilitar la nueva escena
+	actual_scene.visible = true
+	actual_scene.process_mode = Node.PROCESS_MODE_INHERIT
+	if "on_enable" in actual_scene:
+		actual_scene.on_enable()
+
+	# Resetear to_transition
+	to_transition = -1

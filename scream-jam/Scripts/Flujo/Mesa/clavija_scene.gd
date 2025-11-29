@@ -63,9 +63,7 @@ func _new_level():
 	if Global.nivel >= len(Global.niveles):
 		noMasLlamadas = true
 		# TRANSICION A LA ESCENA FINAL.
-		Global.current_scene = Global.Scenes.CLAVIJAS
-		Global.to_scene = Global.Scenes.CREDITS
-		Global.totransition.emit()
+		Global.totransition.emit(Global.Scenes.CREDITS)
 		return
 	# Empieza nivel nuevo
 	await get_tree().create_timer(2.0).timeout  # Espera 1 segundo

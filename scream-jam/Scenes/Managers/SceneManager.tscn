@@ -14,27 +14,31 @@
 [node name="SceneManager" type="Node"]
 script = ExtResource("1_iv1q4")
 
-[node name="Credits" parent="." instance=ExtResource("2_y28pb")]
-process_mode = 4
-
-[node name="PuertaScene" parent="." instance=ExtResource("3_66sb8")]
-process_mode = 4
-script = ExtResource("4_58e5d")
-
-[node name="MesaScene" parent="." instance=ExtResource("4_w2nar")]
-process_mode = 4
-
-[node name="ClavijasScene" parent="." instance=ExtResource("5_p2e8t")]
-
-[node name="ContextoScene" parent="." instance=ExtResource("6_ce53t")]
-process_mode = 4
+[node name="Intro" parent="." instance=ExtResource("7_qf5p5")]
+visible = false
 
 [node name="MainMenu" parent="." instance=ExtResource("3_b721g")]
 process_mode = 4
+visible = false
 
-[node name="Intro" parent="." instance=ExtResource("7_qf5p5")]
+[node name="ContextoScene" parent="." instance=ExtResource("6_ce53t")]
+process_mode = 4
+visible = false
+
+[node name="ClavijasScene" parent="." instance=ExtResource("5_p2e8t")]
+visible = false
+
+[node name="MesaScene" parent="." instance=ExtResource("4_w2nar")]
+process_mode = 4
+visible = false
+
+[node name="PuertaScene" parent="." instance=ExtResource("3_66sb8")]
+process_mode = 4
+visible = false
+script = ExtResource("4_58e5d")
+
+[node name="Credits" parent="." instance=ExtResource("2_y28pb")]
+process_mode = 4
+visible = false
 
 [node name="FadeScene" parent="." instance=ExtResource("4_88r4u")]
-
-[connection signal="transitioned" from="FadeScene" to="." method="_on_fade_scene_transitioned"]
-[connection signal="transitioned" from="FadeScene" to="MainMenu" method="_on_fade_scene_transitioned"]

@@ -38,6 +38,7 @@ visible = false
 layout_mode = 1
 
 [node name="Emitter" type="FmodEventEmitter2D" parent="Fondo"]
+event_guid = "{00000000-0000-0000-0000-000000000000}"
 
 [node name="ClavijasManager" parent="." instance=ExtResource("5_ok6cb")]
 position = Vector2(723, 770)
@@ -59,9 +60,8 @@ offset_right = 1179.0
 offset_bottom = 900.0
 
 [node name="TransitionAreaManager" parent="." instance=ExtResource("8_ok6cb")]
-current_scene = 1
-to_scene_left = 3
-to_scene_right = 3
-to_scene_down = 2
+to_scene_left = 5
+to_scene_right = 5
+to_scene_down = 4
 
 [connection signal="button_down" from="CheckClavijas" to="." method="_on_check_clavijas_button_down"]

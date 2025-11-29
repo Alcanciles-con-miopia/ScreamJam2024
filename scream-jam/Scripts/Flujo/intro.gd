@@ -19,7 +19,5 @@ func _input(_event):
 
 func _to_main_menu():
 	elapsedTime = maxTime
-	Global.current_scene = Global.Scenes.INTRO
-	Global.to_scene = Global.Scenes.MAIN_MENU
-	Global.totransition.emit()
+	Global.totransition.emit(Global.Scenes.MAIN_MENU)
 	aumentado = true

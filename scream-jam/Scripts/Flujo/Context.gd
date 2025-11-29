@@ -33,7 +33,5 @@ func _input(_event):
 		_to_clavijas()
 		
 func _to_clavijas():
-	Global.current_scene = Global.Scenes.CONTEXT
-	Global.to_scene = Global.Scenes.CLAVIJAS
-	Global.totransition.emit()
+	Global.totransition.emit(Global.Scenes.CLAVIJAS)
 	aumentado = true

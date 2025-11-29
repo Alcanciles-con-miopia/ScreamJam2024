@@ -213,7 +213,6 @@ shape = SubResource("RectangleShape2D_n8drw")
 
 [node name="TransitionAreaManager" parent="." instance=ExtResource("10_oahgd")]
 layout_mode = 0
-current_scene = 2
 to_scene_top = 1
 
 [connection signal="button_down" from="PostitiTutoPapel/Button" to="PostitiTutoPapel" method="_on_button_button_down"]

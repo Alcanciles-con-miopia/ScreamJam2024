@@ -79,12 +79,14 @@ func _setImage() -> void:
 	match _state:
 		Global.BombillaState.ENCENDIDA:
 			visual.texture = BOMBILLA_ENCENDIDA
+			AudioManager.play_sfx("event:/SFX/BombillaEnciende")
 		Global.BombillaState.APAGADA:
 			visual.texture = BOMBILLA_APAGADA
 		Global.BombillaState.BIEN:
 			visual.texture = BOMBILLA_BIEN
 		Global.BombillaState.MAL:
 			visual.texture = BOMBILLA_MAL
+			AudioManager.play_sfx("event:/SFX/BombillaMal")
 
 func _PlayLlamada() -> void:
 	# Si no hay llamada return

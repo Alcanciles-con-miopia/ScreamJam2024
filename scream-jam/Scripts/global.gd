@@ -1,16 +1,14 @@
 extends Node
 
 # SENYALES
-signal totransition
+signal totransition(Scenes)
 signal transitioned
 signal endedCall(int)
 signal nextLevel # senial para avanzar el nivel
 signal narrativeLoaded # Senial para marcar cuando se han cargado las narrativas
 signal startTutorial
 # FLUJO
-enum Scenes { MAIN_MENU, CLAVIJAS, MESA, PUERTA, CREDITS, INTRO, CONTEXT, NULL }
-var to_scene : Scenes = 0
-var current_scene : Scenes = 0
+enum Scenes {INTRO, MAIN_MENU, CONTEXT, CLAVIJAS, MESA, PUERTA, CREDITS, NULL }
 
 enum BombillaState { ENCENDIDA, APAGADA, BIEN, MAL }
 
@@ -74,6 +72,4 @@ func generate_narrative() -> void:
 	narrativeLoaded.emit()
 
 func _poner_los_creditos()->void:
-	current_scene = Scenes.CLAVIJAS
-	to_scene = Scenes.CREDITS
-	totransition.emit()
+	totransition.emit(Scenes.CREDITS)
