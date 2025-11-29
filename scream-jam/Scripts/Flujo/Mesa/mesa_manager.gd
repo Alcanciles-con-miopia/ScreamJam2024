@@ -6,6 +6,9 @@ var postitsTraducidos: bool = false
 func _ready() -> void:
 	pass # Replace with function body.
 
+func on_enable() -> void:
+	# SONIDO AQUI
+	AudioManager.set_ambience_param("Mirada", 2)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

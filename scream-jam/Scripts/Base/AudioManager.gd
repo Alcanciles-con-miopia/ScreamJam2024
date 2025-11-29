@@ -8,7 +8,7 @@ extends Node
 func play_music(event_name: String):
 	# Comprueba entrada vacía
 	if not event_name or event_name.strip_edges() == "":
-		push_error("AudioManager.play_sfx: event_path vacío. Callsite should provide valid event path.")
+		push_error("AudioManager.play_sfx: event_path vacio.")
 		return
 	
 	# Paramos
@@ -32,7 +32,7 @@ func set_music_param(param: String, value: float):
 func play_sfx(event_name: String):
 	# Comprueba entrada vacía
 	if not event_name or event_name.strip_edges() == "":
-		push_error("AudioManager.play_sfx: event_path vacío. Callsite should provide valid event path.")
+		push_error("AudioManager.play_sfx: event_path vacio.")
 		return
 	
 	var emitter = FmodEventEmitter2D.new()
@@ -47,7 +47,7 @@ func play_sfx(event_name: String):
 func play_sfx_2d(event_name: String, pos: Vector2):
 	# Comprueba entrada vacía
 	if not event_name or event_name.strip_edges() == "":
-		push_error("AudioManager.play_sfx: event_path vacío. Callsite should provide valid event path.")
+		push_error("AudioManager.play_sfx: event_path vacio.")
 		return
 	
 	# Creamos y colocamos el emitter
@@ -65,7 +65,7 @@ func play_sfx_2d(event_name: String, pos: Vector2):
 func play_ambience(event_name: String):
 	# Comprueba entrada vacía
 	if not event_name or event_name.strip_edges() == "":
-		push_error("AudioManager.play_sfx: event_path vacío. Callsite should provide valid event path.")
+		push_error("AudioManager.play_sfx: event_path vacio.")
 		return
 	
 	# Paramos

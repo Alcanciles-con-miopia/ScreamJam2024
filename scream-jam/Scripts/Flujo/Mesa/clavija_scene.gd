@@ -35,6 +35,8 @@ func _ready() -> void:
 	clavijas_manager.setBombillas(bombillas_manager._bombillas)
 
 func on_enable() -> void:
+	# SONIDO AQUI
+	AudioManager.set_ambience_param("Mirada", 0)
 	if Global.nivel < 0:
 		_startGame()
 
@@ -59,6 +61,8 @@ func _endedCall(_id:int) ->void:
 # Empieza el siguiente nivel
 func _new_level():
 	Global.nivel += 1
+	# SONIDO AQUI
+	AudioManager.set_ambience_param("Nivel", Global.nivel)
 	await get_tree().create_timer(2.0).timeout  # Espera 2 segundo
 	# Se han completado todos los niveles.
 	if Global.nivel >= len(Global.niveles):
