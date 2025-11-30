@@ -10,4 +10,6 @@ func _on_mouse_exited() -> void:
 	flecha.scale = Vector2(1,1)
 
 func _on_click() -> void:
+	# SONIDO AQUI
+	AudioManager.play_sfx("event:/SFX/CascosTransicion")
 	Global.totransition.emit(to_scene)

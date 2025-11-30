@@ -65,8 +65,11 @@ func reset() -> void:
 
 func check(correcta: bool) -> void:
 	if correcta:
+		# SONIDO AQUI
+		AudioManager.play_sfx("event:/SFX/BombillaBien")
 		setState(Global.BombillaState.BIEN)
 	else:
+		# SONIDO AQUI
 		AudioManager.play_sfx("event:/SFX/BombillaMal")
 		setState(Global.BombillaState.MAL)
 

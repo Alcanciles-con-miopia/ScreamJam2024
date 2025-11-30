@@ -1,30 +1,32 @@
 extends Node
 
-@onready var music_emitter: FmodEventEmitter2D = $music_2D
-@onready var ambience_emitter: FmodEventEmitter2D = $ambience_2D
+# Evento donde se reproduce el ambiente
+var ambience
+# Evento donde se reproducen las voces
+var voice
 
-# --- MUSICA ----------------------------------------------------------------
-## Reproduce musica.
-func play_music(event_name: String):
-	# Comprueba entrada vacía
-	if not event_name or event_name.strip_edges() == "":
-		push_error("AudioManager.play_sfx: event_path vacio.")
-		return
-	
-	# Paramos
-	music_emitter.stop()
-	# Setteamos
-	music_emitter.set_event_name(event_name)
-	# Reproducimos
-	music_emitter.play()
-
-## Para la musica.
-func stop_music():
-	music_emitter.stop()
-	
-## Settea un parametro del evento musica actual
-func set_music_param(param: String, value: float):
-	music_emitter.set_parameter(param, value)
+# --- MUSICA (No funciona esta forma de hacerlo si queremos cambiar parametros en runtime) ----------------------------------------------------------------
+### Reproduce musica.
+#func play_music(event_name: String):
+	## Comprueba entrada vacía
+	#if not event_name or event_name.strip_edges() == "":
+		#push_error("AudioManager.play_sfx: event_path vacio.")
+		#return
+	#
+	## Paramos
+	#music_emitter.stop()
+	## Setteamos
+	#music_emitter.set_event_name(event_name)
+	## Reproducimos
+	#music_emitter.play()
+#
+### Para la musica.
+#func stop_music():
+	#music_emitter.stop()
+	#
+### Settea un parametro del evento musica actual
+#func set_music_param(param: String, value: float):
+	#music_emitter.set_parameter(param, value)
 
 
 # --- SFX ----------------------------------------------------------------
@@ -67,17 +69,28 @@ func play_ambience(event_name: String):
 	if not event_name or event_name.strip_edges() == "":
 		push_error("AudioManager.play_sfx: event_path vacio.")
 		return
-	
-	# Paramos
-	ambience_emitter.stop()
-	# Setteamos
-	ambience_emitter.set_event_name(event_name)
-	# Reproducimos
-	ambience_emitter.play()
-
+		
+	# Instancia del evento.
+	ambience = FmodServer.create_event_instance(event_name)
+	# Reproduce
+	ambience.start()
 
 func stop_ambience():
-	ambience_emitter.stop()
+	# Libera la instancia
+	ambience.release()
 
 func set_ambience_param(param: String, value: float):
-	ambience_emitter.set_parameter(param, value)
+	ambience.set_parameter_by_name(param, value)
+
+
+# --- VOCES ----------------------------------------------------------------
+func play_voice(character_id: int, emotion_value: float) -> void:
+	# Instancia del evento.
+	voice = FmodServer.create_event_instance("event:/Emocion")
+	# Parametros.
+	voice.set_parameter_by_name("Personajes", float(character_id))
+	voice.set_parameter_by_name("Emociones", emotion_value)
+	# Reproduce
+	voice.start()
+	# Libera la instancia
+	voice.release()
