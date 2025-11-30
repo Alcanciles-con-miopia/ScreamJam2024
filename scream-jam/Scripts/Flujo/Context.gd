@@ -7,6 +7,8 @@ var aumentado: bool = false
 @onready var label: Label = $Label
 
 func on_enable() -> void:
+	# SONIDO AQUI
+	AudioManager.set_ambience_param("Mirada", 0)
 	_cambio_idioma()
 
 func _cambio_idioma():

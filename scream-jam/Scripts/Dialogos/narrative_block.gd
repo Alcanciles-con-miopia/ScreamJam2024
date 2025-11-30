@@ -60,17 +60,6 @@ func reproduce() -> String:
 		c.call()
 		
 	# SONIDO AQUI
-	_emit_sound(int(character.id), int(emotion))
+	AudioManager.play_voice(int(character.id), int(emotion))
 	
 	return text
-
-func _emit_sound(character_id: int, emotion_value: float) -> void:
-	# Instancia del evento.
-	var evt = FmodServer.create_event_instance("event:/Emocion")
-	# Parametros.
-	evt.set_parameter_by_name("Personajes", float(character_id))
-	evt.set_parameter_by_name("Emociones", emotion_value)
-	# Reproduce
-	evt.start()
-	# Libera la intancia
-	evt.release()

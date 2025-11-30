@@ -15,8 +15,7 @@ func _ready() -> void:
 func _on_start_down() -> void:
 	Global.totransition.emit(Global.Scenes.CONTEXT)
 	# SONIDO AQUI
-	#Global.SceneManager.sfx.stream = load("res://Sounds/cascos/422651__trullilulli__sfx-player-action-phone-pick-up.wav")
-	#Global.SceneManager.sfx.play()
+	AudioManager.play_sfx("event:/SFX/CascosTransicion")
 
 
 func _on_exit_down() -> void:
@@ -54,4 +53,4 @@ func _on_exit_button_down() -> void:
 func on_enable() -> void:
 	AudioManager.play_ambience("event:/Juego")
 	# SONIDO AQUI
-	AudioManager.set_ambience_param("Mirada", 0)
+	AudioManager.set_ambience_param("Mirada", 3)
