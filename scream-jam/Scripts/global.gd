@@ -82,11 +82,12 @@ func _ready() -> void:
 	nPersonas = (randi() % 5) # Random entre 0 y 4 personas.
 	nextNPersonas = randfn(1.0, 10.0) # Tiempo para el siguente checkeo de nPersonas.
 	return
+
 # Para actualizar el aleatorio de gente en sala.
 func _process(_delta: float) -> void:
 	if nextNPersonas <= 0:
 		nPersonas = (randi() % 5) # Random entre 0 y 4 personas.
-		#AudioManager.set_ambience_param("Gente", nPersonas)
+		AudioManager.set_ambience_param("Gente", nPersonas)
 		nextNPersonas = randfn(1.0, 10.0) # Tiempo para el siguente checkeo de nPersonas.	
 	else:
 		nextNPersonas -= _delta
