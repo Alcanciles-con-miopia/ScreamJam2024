@@ -17,4 +17,6 @@ func _process(_delta: float) -> void:
 		postitsTraducidos = true
 		$PostitiTutoPapel/Label.text = JsonParser.json_data.UI.Papers
 		$PostitiTutoBasura/Label.text = JsonParser.json_data.UI.Discarts
+		$PostitiTutoMapa/Label.text = JsonParser.json_data.UI.Map
 		$PostitiTutoCalle/Label.text = JsonParser.json_data.UI.Clue
+		$PostitiTutoCalle2/Label.text = JsonParser.json_data.UI.Clue2

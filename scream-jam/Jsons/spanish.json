@@ -7,7 +7,9 @@
 		"Context": "21 de Noviembre, 1946\nTomillar del Alba\nEspaña",
 		"Papers": "<- Papeles",
 		"Discarts": "Descartes ->",
-		"Clue": "c/Reatas 15"
+		"Map": "Mapa de la ciudad",
+		"Clue": "c/Reatas 15",
+		"Clue2": "c/Esperanza 5"
 	},
 	"Persons": [
 		{
@@ -736,7 +738,7 @@
 				},
 				{
 					"Person": 6,
-					"Emotion": "suspicius",
+					"Emotion": "sad",
 					"Text": "Isaías…",
 					"Callbacks": []
 				},

@@ -38,6 +38,7 @@ visible = false
 layout_mode = 1
 
 [node name="ClavijasManager" parent="." instance=ExtResource("5_ok6cb")]
+z_index = 2
 position = Vector2(723, 770)
 separacion = 79
 

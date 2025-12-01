@@ -211,6 +211,110 @@ script = ExtResource("12_p2gf5")
 position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_n8drw")
 
+[node name="PostitiTutoCalle2" type="Node2D" parent="."]
+position = Vector2(540, 225)
+script = ExtResource("8_srlq0")
+
+[node name="Button" type="TextureButton" parent="PostitiTutoCalle2"]
+offset_left = -91.0
+offset_top = -35.0
+offset_right = 148.0
+offset_bottom = 56.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("8_atrgb")
+texture_hover = ExtResource("9_hr3oy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="PostitiTutoCalle2"]
+offset_left = -78.0
+offset_top = -26.0
+offset_right = 72.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.054902, 0.054902, 0.054902, 1)
+theme_override_fonts/font = ExtResource("10_mdqb7")
+theme_override_font_sizes/font_size = 16
+text = "Discarts ->"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="PostitiTutoCalle2"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -10.0
+offset_right = 62.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_mdqb7")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_443pt")
+caret_blink = true
+script = ExtResource("12_p2gf5")
+
+[node name="Area2D" type="Area2D" parent="PostitiTutoCalle2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostitiTutoCalle2/Area2D"]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_n8drw")
+
+[node name="PostitiTutoMapa" type="Node2D" parent="."]
+position = Vector2(977, 131)
+script = ExtResource("8_srlq0")
+
+[node name="Button" type="TextureButton" parent="PostitiTutoMapa"]
+offset_left = -91.0
+offset_top = -35.0
+offset_right = 148.0
+offset_bottom = 56.0
+scale = Vector2(0.75, 0.75)
+texture_normal = ExtResource("8_atrgb")
+texture_hover = ExtResource("9_hr3oy")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="PostitiTutoMapa"]
+offset_left = -78.0
+offset_top = -26.0
+offset_right = 72.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.054902, 0.054902, 0.054902, 1)
+theme_override_fonts/font = ExtResource("10_mdqb7")
+theme_override_font_sizes/font_size = 16
+text = "Discarts ->"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="PostitiTutoMapa"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -10.0
+offset_right = 62.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_mdqb7")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_443pt")
+caret_blink = true
+script = ExtResource("12_p2gf5")
+
+[node name="Area2D" type="Area2D" parent="PostitiTutoMapa"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PostitiTutoMapa/Area2D"]
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_n8drw")
+
 [node name="TransitionAreaManager" parent="." instance=ExtResource("10_oahgd")]
 layout_mode = 0
 to_scene_top = 3
@@ -221,5 +325,9 @@ to_scene_top = 3
 [connection signal="button_up" from="PostitiTutoBasura/Button" to="PostitiTutoBasura" method="_on_button_button_up"]
 [connection signal="button_down" from="PostitiTutoCalle/Button" to="PostitiTutoCalle" method="_on_button_button_down"]
 [connection signal="button_up" from="PostitiTutoCalle/Button" to="PostitiTutoCalle" method="_on_button_button_up"]
+[connection signal="button_down" from="PostitiTutoCalle2/Button" to="PostitiTutoCalle2" method="_on_button_button_down"]
+[connection signal="button_up" from="PostitiTutoCalle2/Button" to="PostitiTutoCalle2" method="_on_button_button_up"]
+[connection signal="button_down" from="PostitiTutoMapa/Button" to="PostitiTutoMapa" method="_on_button_button_down"]
+[connection signal="button_up" from="PostitiTutoMapa/Button" to="PostitiTutoMapa" method="_on_button_button_up"]
 
 [editable path="Basura"]

@@ -58,8 +58,9 @@ func can_continue() -> bool:
 func reproduce() -> String:
 	for c in callbacks:
 		c.call()
-		
-	# SONIDO AQUI
-	AudioManager.play_voice(int(character.id), int(emotion))
+	
+	if text != "":
+		# SONIDO AQUI
+		AudioManager.play_voice(int(character.id), int(emotion))
 	
 	return text
