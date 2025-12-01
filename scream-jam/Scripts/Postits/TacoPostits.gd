@@ -10,7 +10,7 @@ func _intro():
 	add_sibling(auxPostit)
 	auxPostit.position = mousepos
 	# SONIDO AQUI
-	AudioManager.play_ambience("event:/SFX/")
+	AudioManager.play_ambience("event:/SFX/CrearPapel")
 
 func _input(event):
 	if event is InputEventMouseMotion:

@@ -27,6 +27,7 @@ func _input(event: InputEvent) -> void:
 			_apply_text()
 
 func _apply_text() -> void:
+	if text_edit.visible == false: return
 	var new_text := text_edit.text.strip_edges()
 	if new_text != "":
 		label.text = new_text
@@ -36,13 +37,15 @@ func _apply_text() -> void:
 
 func _on_button_button_down() -> void:
 	_pressed = true
+	# SONIDO AQUI
+	AudioManager.play_sfx("event:/SFX/CogerPapel")
 
 func _on_button_button_up() -> void:
 	_pressed = false
 	if to_delete:
 		queue_free()
 		# SONIDO AQUI
-		# AudioManager.play_sfx("event:/SFX/")
+		AudioManager.play_sfx("event:/SFX/EliminarPapel")
 
 func _on_TextEdit_text_changed() -> void:
 	var new_text: String = text_edit.text

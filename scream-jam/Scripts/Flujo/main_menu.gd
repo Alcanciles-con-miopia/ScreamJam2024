@@ -53,6 +53,6 @@ func _on_exit_button_down() -> void:
 	get_tree().quit()
 
 func on_enable() -> void:
-	AudioManager.play_ambience("event:/Juego")
 	# SONIDO AQUI
+	AudioManager.play_ambience("event:/Juego")
 	AudioManager.set_ambience_param("Mirada", 3)
