@@ -76,15 +76,15 @@ func play_ambience(event_name: String):
 	ambience.start()
 
 func stop_ambience():
-	if ambience != null:
+	if ambience == null:
 		return
+	
 	# Libera la instancia
 	ambience.release()
 	ambience = null
 
 func set_ambience_param(param: String, value: float):
-	if ambience != null:
-		return
+	if ambience == null: return
 	ambience.set_parameter_by_name(param, value)
 
 
