@@ -29,6 +29,9 @@ var narrativas: Array = [] # Array para almacenar objetos Narrative
 var enchufes: Array = [] # Array de enchufes para obtener su callable
 var soluciones: Array = []
 
+var nPersonas: int
+var nextNPersonas: float
+
 ## Funcion para generar las narrativas del juego.
 func generate_narrative() -> void:
 	var persons = JsonParser.json_data["Persons"]
@@ -73,3 +76,16 @@ func generate_narrative() -> void:
 
 func _poner_los_creditos()->void:
 	totransition.emit(Scenes.CREDITS)
+
+func _ready() -> void:
+	nPersonas = (randi() % 5) # Random entre 0 y 4 personas.
+	nextNPersonas = randfn(1.0, 20.0) # Tiempo para el siguente checkeo de nPersonas.
+	return
+func _process(_delta: float) -> void:
+	if nextNPersonas <= 0:
+		nPersonas = (randi() % 5) # Random entre 0 y 4 personas.
+		AudioManager.set_ambience_param("Gente", nPersonas)
+		nextNPersonas = randfn(1.0, 20.0) # Tiempo para el siguente checkeo de nPersonas.	
+	else:
+		nextNPersonas -= _delta
+	return
