@@ -45,6 +45,8 @@ func _set_espaniol()->void:
 	_show_lenguages()
 
 func _on_start_button_down() -> void:
+	# SONIDO AQUI
+	AudioManager.play_sfx("event:/SFX/Cascos")
 	Global.totransition.emit(Global.Scenes.CLAVIJAS)
 
 func _on_exit_button_down() -> void:

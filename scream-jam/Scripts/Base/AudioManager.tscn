@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://bupgf2kkplvy"]
 
-[ext_resource type="Script" uid="uid://c5vxpfob8rk6" path="res://Scripts/Base/AudioManager.gd" id="1_j5v7l"]
+[ext_resource type="Script" uid="uid://c5vxpfob8rk6" path="res://Scripts/Base/AudioManager.gd" id="1_eabc4"]
 
-[node name="AudioTree" type="Node"]
-script = ExtResource("1_j5v7l")
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_eabc4")
 
 [node name="FmodListener2D" type="FmodListener2D" parent="."]
 
