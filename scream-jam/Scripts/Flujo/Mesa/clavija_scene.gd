@@ -62,7 +62,7 @@ func _endedCall(_id:int) ->void:
 func _new_level():
 	Global.nivel += 1
 	# SONIDO AQUI
-	AudioManager.set_ambience_param("Nivel", Global.nivel)
+	AudioManager.set_ambience_param("Nivel", 5)
 	await get_tree().create_timer(2.0).timeout  # Espera 2 segundo
 	# Se han completado todos los niveles.
 	if Global.nivel >= len(Global.niveles):
