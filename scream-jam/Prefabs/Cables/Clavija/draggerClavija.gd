@@ -20,11 +20,6 @@ const MAX_ATTACH_DISTANCE := 60
 var MOVEMENT_CLAVIJA_OFFSET := Vector2(0, 55)
 
 # --- BASE ------------------------------------------------
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _input(event: InputEvent) -> void:
-	if isDraggable and clicked and event is InputEventMouseMotion:
-				position = event.position
-
 # Called when the node enters the scene tree for the first time.
 func _process(_delta: float) -> void:
 	if clicked:
@@ -63,7 +58,6 @@ func reset():
 
 # --- METODOS PRIVADOS ------------------------------------------------
 
-## PRIVATE
 ## Comprueba que hacer con el dropzone cuando sueltas una clavija.
 func _checkDropZone() -> void:
 	# Busca una dropzone valida en la lista (la primera libre)
@@ -85,8 +79,8 @@ func _checkDropZone() -> void:
 	clavijaVis.position = Vector2(0,0)
 	# SONIDO AQUI
 
-## Hace que el nodo "mire" al objetivo `target_global` pero rotando alrededor de `pivot_global`.
-## offset_degrees sirve para compensar el "frente" del sprite (p. ej. la clavija esta rotada (0,90).
+## Hace que el nodo mire al objetivo target_global pero rotando alrededor de pivot_global.
+## offset_degrees sirve para compensar el frente del sprite (p. ej. la clavija esta rotada (0,90).
 func look_at_with_pivot(pivot_global: Vector2, target_global: Vector2, offset_degrees: float = 0.0) -> void:
 	# Vector desde pivot al objetivo y al nodo.
 	var to_target := target_global - pivot_global
@@ -102,7 +96,7 @@ func look_at_with_pivot(pivot_global: Vector2, target_global: Vector2, offset_de
 	# Rotacion.
 	global_rotation = angle_target + deg_to_rad(offset_degrees)
 
-## Rota el nodo alrededor de un punto global `pivot_global` por `angle` (grados).
+## Rota el nodo alrededor de un punto global pivot_global por angle (grados).
 func rotate_around_pivot_global(pivot_global: Vector2, angle: float) -> void:
 	# Pasamos a radianes.
 	var angle_rad = deg_to_rad(angle)

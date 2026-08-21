@@ -5,30 +5,6 @@ var ambience
 # Evento donde se reproducen las voces
 var voice
 
-# --- MUSICA (No funciona esta forma de hacerlo si queremos cambiar parametros en runtime) ----------------------------------------------------------------
-### Reproduce musica.
-#func play_music(event_name: String):
-	## Comprueba entrada vacía
-	#if not event_name or event_name.strip_edges() == "":
-		#push_error("AudioManager.play_sfx: event_path vacio.")
-		#return
-	#
-	## Paramos
-	#music_emitter.stop()
-	## Setteamos
-	#music_emitter.set_event_name(event_name)
-	## Reproducimos
-	#music_emitter.play()
-#
-### Para la musica.
-#func stop_music():
-	#music_emitter.stop()
-	#
-### Settea un parametro del evento musica actual
-#func set_music_param(param: String, value: float):
-	#music_emitter.set_parameter(param, value)
-
-
 # --- SFX ----------------------------------------------------------------
 ## Reproduce un SFX sin posicion.
 func play_sfx(event_name: String):
@@ -69,7 +45,10 @@ func play_ambience(event_name: String):
 	if not event_name or event_name.strip_edges() == "":
 		push_error("AudioManager.play_sfx: event_path vacio.")
 		return
-		
+	# Suelta el anterior para no dejar huerfanos (Creo que no hace falta en realidad)
+	if ambience != null and ambience.is_valid():
+		ambience.stop()
+		ambience.release()
 	# Instancia del evento.
 	ambience = FmodServer.create_event_instance(event_name)
 	# Reproduce
@@ -84,9 +63,9 @@ func stop_ambience():
 	ambience = null
 
 func set_ambience_param(param: String, value: float):
-	if ambience == null: return
+	if ambience == null or not ambience.is_valid():
+		return
 	ambience.set_parameter_by_name(param, value)
-
 
 # --- VOCES ----------------------------------------------------------------
 func play_voice(character_id: int, emotion_value: float) -> void:
