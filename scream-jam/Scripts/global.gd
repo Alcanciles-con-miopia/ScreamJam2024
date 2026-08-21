@@ -7,6 +7,7 @@ signal endedCall(int)
 signal nextLevel # senial para avanzar el nivel
 signal narrativeLoaded # Senial para marcar cuando se han cargado las narrativas
 signal startTutorial
+signal advance_story
 # FLUJO
 enum Scenes {INTRO, MAIN_MENU, CONTEXT, CLAVIJAS, MESA, PUERTA, CREDITS, NULL }
 
@@ -68,6 +69,9 @@ func generate_narrative() -> void:
 			if "@" in blq["Text"]:
 				bloq.add_condition(condition_lambda)
 				bloq.set_text(blq["Text"].replace("@", ""))
+			for cb_name in blq.get("Callbacks", []):
+				if cb_name == "emit_advance_story":
+					bloq.add_callable(func(): Global.advance_story.emit())
 			narrative.add_block(bloq)
 		
 		narrativas.push_back(narrative)

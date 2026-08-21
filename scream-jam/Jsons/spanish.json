@@ -17,22 +17,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozMAITE.wav"
+					"res://Sounds/voces/vozMAITE.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozMAITE.wav"
+					"res://Sounds/voces/vozMAITE.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozMAITE.wav"
+					"res://Sounds/voces/vozMAITE.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozMAITE.wav"
+					"res://Sounds/voces/vozMAITE.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozMAITE.wav"
+					"res://Sounds/voces/vozMAITE.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozMAITE.wav"
+					"res://Sounds/voces/vozMAITE.wav"
 				]
 			},
 			"Color": {
@@ -47,22 +47,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozJuan.wav"
+					"res://Sounds/voces/vozJuan.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozJuan.wav"
+					"res://Sounds/voces/vozJuan.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozJuan.wav"
+					"res://Sounds/voces/vozJuan.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozJuan.wav"
+					"res://Sounds/voces/vozJuan.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozJuan.wav"
+					"res://Sounds/voces/vozJuan.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozJuan.wav"
+					"res://Sounds/voces/vozJuan.wav"
 				]
 			},
 			"Color": {
@@ -77,22 +77,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozZacarias.wav"
+					"res://Sounds/voces/vozZacarias.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozZacarias.wav"
+					"res://Sounds/voces/vozZacarias.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozZacarias.wav"
+					"res://Sounds/voces/vozZacarias.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozZacarias.wav"
+					"res://Sounds/voces/vozZacarias.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozZacarias.wav"
+					"res://Sounds/voces/vozZacarias.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozZacarias.wav"
+					"res://Sounds/voces/vozZacarias.wav"
 				]
 			},
 			"Color": {
@@ -107,22 +107,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozFrancisco.wav"
+					"res://Sounds/voces/vozFrancisco.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozFrancisco.wav"
+					"res://Sounds/voces/vozFrancisco.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozFrancisco.wav"
+					"res://Sounds/voces/vozFrancisco.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozFrancisco.wav"
+					"res://Sounds/voces/vozFrancisco.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozFrancisco.wav"
+					"res://Sounds/voces/vozFrancisco.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozFrancisco.wav"
+					"res://Sounds/voces/vozFrancisco.wav"
 				]
 			},
 			"Color": {
@@ -137,22 +137,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozJorge.wav"
+					"res://Sounds/voces/vozJorge.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozJorge.wav"
+					"res://Sounds/voces/vozJorge.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozJorge.wav"
+					"res://Sounds/voces/vozJorge.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozJorge.wav"
+					"res://Sounds/voces/vozJorge.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozJorge.wav"
+					"res://Sounds/voces/vozJorge.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozJorge.wav"
+					"res://Sounds/voces/vozJorge.wav"
 				]
 			},
 			"Color": {
@@ -167,22 +167,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozIsaias.wav"
+					"res://Sounds/voces/vozIsaias.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozIsaias.wav"
+					"res://Sounds/voces/vozIsaias.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozIsaias.wav"
+					"res://Sounds/voces/vozIsaias.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozIsaias.wav"
+					"res://Sounds/voces/vozIsaias.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozIsaias.wav"
+					"res://Sounds/voces/vozIsaias.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozIsaias.wav"
+					"res://Sounds/voces/vozIsaias.wav"
 				]
 			},
 			"Color": {
@@ -197,22 +197,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozMagdalena.wav"
+					"res://Sounds/voces/vozMagdalena.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozMagdalena.wav"
+					"res://Sounds/voces/vozMagdalena.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozMagdalena.wav"
+					"res://Sounds/voces/vozMagdalena.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozMagdalena.wav"
+					"res://Sounds/voces/vozMagdalena.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozMagdalena.wav"
+					"res://Sounds/voces/vozMagdalena.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozMagdalena.wav"
+					"res://Sounds/voces/vozMagdalena.wav"
 				]
 			},
 			"Color": {
@@ -227,22 +227,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozDolores.wav"
+					"res://Sounds/voces/vozDolores.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozDolores.wav"
+					"res://Sounds/voces/vozDolores.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozDolores.wav"
+					"res://Sounds/voces/vozDolores.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozDolores.wav"
+					"res://Sounds/voces/vozDolores.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozDolores.wav"
+					"res://Sounds/voces/vozDolores.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozDolores.wav"
+					"res://Sounds/voces/vozDolores.wav"
 				]
 			},
 			"Color": {
@@ -257,22 +257,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozRosario.wav"
+					"res://Sounds/voces/vozRosario.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozRosario.wav"
+					"res://Sounds/voces/vozRosario.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozRosario.wav"
+					"res://Sounds/voces/vozRosario.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozRosario.wav"
+					"res://Sounds/voces/vozRosario.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozRosario.wav"
+					"res://Sounds/voces/vozRosario.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozRosario.wav"
+					"res://Sounds/voces/vozRosario.wav"
 				]
 			},
 			"Color": {
@@ -287,22 +287,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozAnonimo1.wav"
+					"res://Sounds/voces/vozAnonimo1.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozAnonimo1.wav"
+					"res://Sounds/voces/vozAnonimo1.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozAnonimo1.wav"
+					"res://Sounds/voces/vozAnonimo1.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozAnonimo1.wav"
+					"res://Sounds/voces/vozAnonimo1.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozAnonimo1.wav"
+					"res://Sounds/voces/vozAnonimo1.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozAnonimo1.wav"
+					"res://Sounds/voces/vozAnonimo1.wav"
 				]
 			},
 			"Color": {
@@ -317,22 +317,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozAnonimo2.wav"
+					"res://Sounds/voces/vozAnonimo2.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozAnonimo2.wav"
+					"res://Sounds/voces/vozAnonimo2.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozAnonimo2.wav"
+					"res://Sounds/voces/vozAnonimo2.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozAnonimo2.wav"
+					"res://Sounds/voces/vozAnonimo2.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozAnonimo2.wav"
+					"res://Sounds/voces/vozAnonimo2.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozAnonimo2.wav"
+					"res://Sounds/voces/vozAnonimo2.wav"
 				]
 			},
 			"Color": {
@@ -347,22 +347,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozSagrario.wav"
+					"res://Sounds/voces/vozSagrario.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozSagrario.wav"
+					"res://Sounds/voces/vozSagrario.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozSagrario.wav"
+					"res://Sounds/voces/vozSagrario.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozSagrario.wav"
+					"res://Sounds/voces/vozSagrario.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozSagrario.wav"
+					"res://Sounds/voces/vozSagrario.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozSagrario.wav"
+					"res://Sounds/voces/vozSagrario.wav"
 				]
 			},
 			"Color": {
@@ -377,22 +377,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozEncarna.wav"
+					"res://Sounds/voces/vozEncarna.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozEncarna.wav"
+					"res://Sounds/voces/vozEncarna.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozEncarna.wav"
+					"res://Sounds/voces/vozEncarna.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozEncarna.wav"
+					"res://Sounds/voces/vozEncarna.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozEncarna.wav"
+					"res://Sounds/voces/vozEncarna.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozEncarna.wav"
+					"res://Sounds/voces/vozEncarna.wav"
 				]
 			},
 			"Color": {
@@ -407,22 +407,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozFelipe.wav"
+					"res://Sounds/voces/vozFelipe.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozFelipe.wav"
+					"res://Sounds/voces/vozFelipe.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozFelipe.wav"
+					"res://Sounds/voces/vozFelipe.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozFelipe.wav"
+					"res://Sounds/voces/vozFelipe.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozFelipe.wav"
+					"res://Sounds/voces/vozFelipe.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozFelipe.wav"
+					"res://Sounds/voces/vozFelipe.wav"
 				]
 			},
 			"Color": {
@@ -437,22 +437,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozGonzalo.wav"
+					"res://Sounds/voces/vozGonzalo.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozGonzalo.wav"
+					"res://Sounds/voces/vozGonzalo.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozGonzalo.wav"
+					"res://Sounds/voces/vozGonzalo.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozGonzalo.wav"
+					"res://Sounds/voces/vozGonzalo.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozGonzalo.wav"
+					"res://Sounds/voces/vozGonzalo.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozGonzalo.wav"
+					"res://Sounds/voces/vozGonzalo.wav"
 				]
 			},
 			"Color": {
@@ -467,22 +467,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozYesbeth.wav"
+					"res://Sounds/voces/vozYesbeth.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozYesbeth.wav"
+					"res://Sounds/voces/vozYesbeth.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozYesbeth.wav"
+					"res://Sounds/voces/vozYesbeth.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozYesbeth.wav"
+					"res://Sounds/voces/vozYesbeth.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozYesbeth.wav"
+					"res://Sounds/voces/vozYesbeth.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozYesbeth.wav"
+					"res://Sounds/voces/vozYesbeth.wav"
 				]
 			},
 			"Color": {
@@ -497,22 +497,22 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozAntonio.wav"
+					"res://Sounds/voces/vozAntonio.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozAntonio.wav"
+					"res://Sounds/voces/vozAntonio.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozAntonio.wav"
+					"res://Sounds/voces/vozAntonio.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozAntonio.wav"
+					"res://Sounds/voces/vozAntonio.wav"
 				],
 				"surprised": [
-                    "res://Sounds/voces/vozAntonio.wav"
+					"res://Sounds/voces/vozAntonio.wav"
 				],
 				"suspicius": [
-                    "res://Sounds/voces/vozAntonio.wav"
+					"res://Sounds/voces/vozAntonio.wav"
 				]
 			},
 			"Color": {
@@ -527,16 +527,16 @@
 			"Font": "res://Fonts/Jersey20Charted-Regular.ttf",
 			"Sound": {
 				"neutral": [
-                    "res://Sounds/voces/vozRut.wav"
+					"res://Sounds/voces/vozRut.wav"
 				],
 				"happy": [
-                    "res://Sounds/voces/vozRut.wav"
+					"res://Sounds/voces/vozRut.wav"
 				],
 				"sad": [
-                    "res://Sounds/voces/vozRut.wav"
+					"res://Sounds/voces/vozRut.wav"
 				],
 				"angry": [
-                    "res://Sounds/voces/vozRut.wav"
+					"res://Sounds/voces/vozRut.wav"
 				],
 				"surprised": [],
 				"suspicius": []
@@ -556,7 +556,7 @@
 				{
 					"Person": 0,
 					"Emotion": "neutral",
-					"Text": "¡Hola, mi nombre es M.A.I.T.E (Máquina Altamente Integrada para la Telefonía Española)! Soy una grabación programada. Comencemos: comunique la calle de la Creación nº 114 con la calle de Las Reatas nº 15.",
+					"Text": "¡Hola, mi nombre es M.A.I.T.E (Máquina Altamente Integrada para la Telefonía Española)! Soy una grabación programada. Comencemos: conécteme con la calle de Las Reatas nº 15.",
 					"Callbacks": []
 				},
 				{
@@ -644,7 +644,7 @@
 				{
 					"Person": 14,
 					"Emotion": "neutral",
-					"Text": "Hola, ¿me conecta con la calle de Pedro Domecq 64?. La Pedro Domecq pilla por el centro, un poquito para arriba.@",
+					"Text": "Hola, ¿me conecta con la calle de Pedro Domecq 64? La Pedro Domecq pilla por el centro, un poquito para arriba.@",
 					"Callbacks": []
 				},
 				{
@@ -870,7 +870,9 @@
 					"Person": 10,
 					"Emotion": "neutral",
 					"Text": "¿Hola? Hola, hola hola…",
-					"Callbacks": []
+					"Callbacks": [
+						"emit_advance_story"
+					]
 				},
 				{
 					"Person": 9,
@@ -1053,7 +1055,9 @@
 					"Person": 9,
 					"Emotion": "neutral",
 					"Text": "Es un placer saludarle, Yesbeth.",
-					"Callbacks": []
+					"Callbacks": [
+						"emit_advance_story"
+					]
 				},
 				{
 					"Person": 15,
@@ -1142,7 +1146,9 @@
 					"Person": 10,
 					"Emotion": "suspicius",
 					"Text": "¿Sí?",
-					"Callbacks": []
+					"Callbacks": [
+						"emit_advance_story"
+					]
 				},
 				{
 					"Person": 9,
@@ -1272,7 +1278,9 @@
 					"Person": 17,
 					"Emotion": "neutral",
 					"Text": "Hola, buenas, tengo un problema. Soy Rut.",
-					"Callbacks": []
+					"Callbacks": [
+						"emit_advance_story"
+					]
 				},
 				{
 					"Person": 9,
